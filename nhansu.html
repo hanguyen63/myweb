@@ -1,0 +1,409 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation with Hidden Submenu</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 1; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+    /* Basic nav styling */
+    ul {
+      list-style: none;
+      padding: 3;
+      margin: 0;
+      background-color:   #003366;
+      border: 2px solid ;
+	font-size: 16px;
+   left: 0;
+
+
+    }
+
+    li {
+      position: relative;
+      display: inline-block;
+
+    }
+
+    li a {
+      display: block;
+      color: white;
+      padding: 5px 10px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color:#005599;
+    }
+
+    /* Hide submenu by default */
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color: #005599;
+      min-width: 160px;
+      z-index: 1;
+font-size: 16px;
+left:0;
+
+    }
+
+    .submenu li {
+      display: block;
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+      line-height: 1.6;
+
+    }
+    .gallery-item {
+      text-align: left;
+font-size: 16px;
+
+
+    }
+    .gallery-item img {
+      width: 350px;
+      height: 250px;
+      border-radius: 8px;
+
+    }
+    .gallery-item p {
+      margin-top: 10px;
+     
+    }
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+   
+
+    .container {
+      display: flex;
+      align-items: left;
+      gap: 10px;
+      padding: 10px;
+      line-height: 1.6;
+font-size: 16px;
+
+    }
+
+    .container img {
+      width:500px;
+      height: 350px;
+      border-radius: 4px;
+    }
+
+    .text-box {
+      flex: 1;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 16px;
+      line-height: 1.6;
+
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+ 
+footer {
+      background-color: #003366;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 14px;
+      text-decoration: none;
+    }
+  </style>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+
+    }
+    .banner {
+      background-color: #333333;
+      color: #ffcc00;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .banner img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .scrolling-text {
+      white-space: nowrap;
+      animation: scroll-left 30s linear infinite;
+
+
+    }
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+
+ 
+</head>
+
+
+
+<div class="navbar" style="font-size: 16px;" >
+ <ul class="navbar">
+    <li><a href="index.html" alt="Trang chủ">🏛️Trang chủ </a>  
+      <ul class="submenu">
+      <li> <a href="GIOITHIEU.html">Giới thiệu </a></li>      
+      
+</ul>
+
+  <li><a href="thoisu.html" >Thời sự  </a>  
+      <ul class="submenu">   
+	<li><a href= "nhansu.html">Nhân sự</a></li> 
+ <li><a href= "dautu.html">Chứng khoán</a></li>      
+        <li><a href= "BAOVIET.html">Xem báo Việt</a></li>      
+     
+</ul>
+
+      
+      <li><a href="doisong.html">Đời sống </a>
+      <ul class="submenu">
+      <li><a href="vieclam.html">Việc làm</a></li>
+     <li><a href="phapluat.html">Pháp luật</a></li>
+      <li><a href="suckhoe.html">Sức khỏe</a></li>
+
+	<li><a href="hinh.html">Thư Viện </a></li>
+
+</ul>
+
+      
+    <li>       
+
+      <li><a href="dulich.html">Du lịch </a>
+      <ul class="submenu">
+         <li><a href="diemden.html">Điểm đến</a></li>
+        <li><a href="amthuc.html>Ẩm thực</a></li>
+        <li><a href="tuvan.html">Tư vấn</a></li>
+
+      </ul>
+
+
+   <li><a href="hoidap.html">Chia Sẻ  </a>
+      <ul class="submenu">
+        <li><a href="https://script.google.com/macros/s/AKfycbybVt21OVZ_E_n68IQf0kjxxkJtHGPlHVCDPBjO-5RD0XulyCXikDltH6ExfOFOT1l1xg/exec">Kinh Nghiệm</a></li>
+        
+      </ul>
+
+
+<li>       
+
+      <li><a href="thethao1.html">Thể Thao </a>
+      <ul class="submenu">
+        
+	<li><a href="thanhvien.html">Thành viên</a></li> 
+
+        <li><a href="anh.html">Thư viện</a></li>
+
+      </ul>
+    </li>
+<li><a href="giaitri.html">Giải Trí </a>
+      
+    </li>
+
+ <li>
+
+ 	<li><a href="quangcaofilter.html">Rao vặt & Quảng cáo</a>
+
+      <ul class="submenu">
+        <li><a href="quangcao1.html">Liên hệ</a></li>
+       
+      </ul>
+    </li>
+ 
+  </ul>
+
+
+
+<div class="banner">
+  
+
+  <div class="scrolling-text" id="bannerText">
+    Dưới đây là tóm tắt cơ cấu lãnh đạo chính phủ Hoa Kỳ năm 2025, phản ánh sự thay đổi đáng kể dưới nhiệm kỳ thứ hai của Tổng thống Donald Trump
+
+  </div>
+</div>
+
+<script>
+  async function fetchWeatherAndNews() {
+    const apiKey = 'a9cdfaa28ffa1e116087f3df987bb108'; // Thay bằng API key thật của bạn
+    const city = 'Fairfax';
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    const newsUrl = 'https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=YOUR_NEWSAPI_KEY'; // Thay bằng News API key thật
+
+    let weatherText = '';
+    let newsText = '';
+  
+
+
+try {
+      const weatherResponse = await fetch(weatherUrl);
+      const weatherData = await weatherResponse.json();
+      const temp = Math.round(weatherData.main.temp);
+      const desc = weatherData.weather[0].description;
+      const humidity = weatherData.main.humidity;
+      const wind = weatherData.wind.speed;
+
+      weatherText = 📢 Dưới đây là tóm tắt cơ cấu lãnh đạo chính phủ Hoa Kỳ năm 2025, phản ánh sự thay đổi đáng kể dưới nhiệm kỳ thứ hai của Tổng thống Donald Trump `;
+
+    } catch (error) {
+      weatherText = 'Không thể tải dữ liệu thời tiết | ';
+    }
+
+   
+    document.getElementById('bannerText').textContent = weatherText ;
+  }
+
+  fetchWeatherAndNews();
+  setInterval(fetchWeatherAndNews, 300000); // Cập nhật mỗi 5 phút
+</script>
+
+<div class="sub-nav">
+<a href="thoisu.html">Thời sự </a>
+    <a href= "nhansu.html">Nhân sự</a>
+      <a href= "dautu.html">Chứng khoán</a>
+    <a href= "BAOVIET.html">Xem báo Việt</a>
+    
+  </div>
+
+
+    <div class="container">
+    <img src="chat.JPG" alt="Ảnh 1" >
+    <img src="1.JPG" >
+    <div class="text-box">
+<p> Chính phủ liên bang Hoa Kỳ được tổ chức theo ba nhánh quyền lực chính: Hành pháp (Executive Branch), Lập pháp (Legislative Branch), và Tư pháp (Judicial Branch) </p>
+
+<p><b><u> Hành pháp (Executive Branch)</u> </b></p>
+<p>Tổng thống (President of the United States) <b> Donald Trump </b> (Đảng Cộng hòa) – Nhậm chức ngày 20 tháng 1 năm 2025.​ Là người đứng
+     đầu nhà nước và chính phủ, chịu trách nhiệm điều hành đất nước và chính sách đối ngoại </p> </div>    </div>
+<hr style="border: none; height: 2px; background-color: #ccc;">    
+      
+   
+
+
+
+ <div class="gallery">
+    <div class="gallery-item">
+            <img src="4.webp" alt="Ảnh 1">
+       <p> Phó Tổng thống (Vice President): <b> JD Vance </b> (Đảng Cộng hòa) – Nhậm chức cùng ngày với Tổng thống Trump.​ Là người kế nhiệm nếu
+     Tổng thống không thể tiếp tục nhiệm kỳ. Chủ tọa Thượng viện Hoa Kỳ (không bỏ phiếu trừ khi có kết quả hòa) </p>
+  </div>
+
+ <div class="gallery-item">
+       <img src="5.webp" alt="Ảnh 2">
+      <p> Chánh Văn phòng Nhà Trắng (Chief of Staff)<b> Susie Wiles </b> Trách nhiệm chính: </p>
+<p>Cố vấn và hỗ trợ Tổng thống, Điều phối công việc trong Nhà Trắng, Kiểm soát lịch trình và tiếp xúc của Tổng thống, Liên lạc giữa Tổng thống và các cơ quan chính phủ, Xử lý các tình huống khẩn cấp hoặc khủng hoảng</p>
+    </div>
+
+ <div class="gallery-item">       
+      <img src="15.JPG" alt="Ảnh 1">
+      <p> <b><u>Lập pháp (Legislative Branch)</u></b> </p>
+<p>Quốc hội Hoa Kỳ (United States Congress) gồm hai viện: Thượng viện (Senate) và Hạ viện (House of Representatives)</p>
+<p>Thượng viện (Senate): 100 Thượng nghị sĩ (mỗi bang có 2 người). Lãnh đạo đa số Thượng viện: <b>John Thune </b> (Đảng Cộng hòa,
+     bang South Dakota) – Nhậm chức ngày 3 tháng 1 năm 2025. </p>
+    </div>
+
+<div class="gallery-item">
+      <img src="16.JPG"  alt="Ảnh 3">      
+      <p> Lãnh đạo thiểu số Thượng viện:<b> Chuck Schumer </b>(Đảng Dân chủ, bang New York)</p>
+
+  </div></div>
+
+
+<hr style="border: none; height: 2px; background-color: #ccc;">
+
+ <div class="gallery">
+ <div class="gallery-item">
+      <img src="17.JPG" alt="Ảnh 2">
+      <p> Hạ viện (House of Representatives): 435 thành viên, đại diện theo dân số các bang. Chủ tịch Hạ viện <b>Mike Johnson</b> (Đảng Cộng
+    hòa, bang Louisiana). </p></div>
+
+
+ <div class="gallery-item">
+ <img src="18.JPG" alt="Ảnh 2">
+<p><b><u>Tư pháp (Judicial Branch)</u> </b> </p>
+<p>Tòa án Tối cao Hoa Kỳ (Supreme Court). Gồm 9 Thẩm phán, đứng đầu là Chánh án <b>John Roberts</b> có vai trò giám sát Hiến pháp và luật pháp
+    quốc gia. </p>
+</div>
+
+<div class="gallery-item">
+ <p><b><u> Các Bộ trưởng Nội các:</u></b></p>
+<p> Ngoại trưởng: <b>Marco Rubio</b></p> 
+<p> Bộ trưởng Tài chính:<b> Scott Bessent</b></p>
+<p> Bộ trưởng Quốc phòng: <b>Pete Hegseth</b></p>
+<p> Bộ trưởng Tư pháp: <b>Pam Bondi</b></p>
+<p> Bộ trưởng Nội vụ: <b>Doug Burgum</b></p>
+<p> Bộ trưởng Nông nghiệp:<b> Brooke Rollins</b></p>
+<p> Bộ trưởng Thương mại:<b> Howard Lutnick</b></p>
+<p> Bộ trưởng Lao động:<b> Lori Chavez-DeRemer </b></p></div>
+
+<div class="gallery-item">
+<p> Bộ trưởng Y tế và Dịch vụ Nhân sinh: <b>Robert F. Kennedy Jr.</b></p>
+<p> Bộ trưởng Nhà ở và Phát triển Đô thị:<b> Scott Turner</b></p>
+<p> Bộ trưởng Giao thông Vận tải:<b> Sean Duffy</b></p>
+<p> Bộ trưởng Năng lượng:<b> Chris Wright</b></p>
+<p> Bộ trưởng Giáo dục:<b> Linda McMahon</b></p>
+<p> Bộ trưởng Cựu chiến binh:<b> Doug Collins</b></p>
+<p> Bộ trưởng An ninh Nội địa: <b> Kristi Noem</b> </p>
+
+</div></div>
+
+<hr style="border: none; height: 2px; background-color: #ccc;">
+
+          
+  
+
+
+<footer>
+        <p> © 2025 Bản quyền thuộc về Ha Nguyen | Chính sách bảo mật |📬<a href="lienhe1.html"><font color="white">Liên hệ </a> </p>
+  </footer>
+
+
+
+
+</body>
+</html>

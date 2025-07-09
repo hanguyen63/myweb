@@ -1,0 +1,510 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THOI SU</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #004080; color: white; padding: 01px; text-align: center; }
+
+     
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 3;
+      background-color:    #003366;
+      display: flex;
+      align-items: center;
+ border: 2px solid ;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding:6px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color:  #005599;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #005599;
+      min-width: 120;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 10;
+            left: 0;
+
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+.btn {
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 350; border-radius: 10px; }
+
+ 
+  
+ .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .left-column, .center-column .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .left-column {
+      width: 60%;
+    }
+
+    .right-column {
+      width: 38%;
+    }
+    .item {
+      display: flex;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .item img {
+      width: 200px;
+      height: 100%;
+      object-fit: cover;
+    }
+    .item .text {
+      padding: 10px;
+    }
+    .item .text h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+    .item .text p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+ 
+
+.grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .grid-item {
+      text-align: left;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f2f2f2;
+    }
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      max-height:250px;
+      object-fit: cover;
+    }
+    .grid-item h3 {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    /* Responsive cho điện thoại */
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+footer {
+      background-color: #003366;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+    </style>
+
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .banner {
+      background-color: #333333;
+      color: #ffcc00;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .banner img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .scrolling-text {
+      white-space: nowrap;
+   font-size: 16px;
+      
+ 
+      animation: scroll-left 15s linear infinite;
+    }
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+
+<style>
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+  
+
+
+</head>
+<body>
+<header>
+    
+  </header>
+
+   <ul class="navbar">
+    <li><a href="index.html">🏛️Trang chủ </a>
+ <ul class="submenu">
+<a href="GIOITHIEU.html">Giới Thiệu </a></li>
+    
+</ul>
+
+<li><a href="thoisu.html" alt="Thoisu">Thời sự  </a>  
+      <ul class="submenu">          
+          <li><a href= "nhansu.html">Nhân sự</a></li>
+	  <li><a href= "dautu.html">Chứng khoán</a></li>
+      <li><a href= "BAOVIET.html">Xem báo Việt</a></li>
+</ul>
+
+
+
+    <li>       
+
+      <li><a href="doisong.html">Đời Sống </a>
+      <ul class="submenu">
+        <li><a href="vieclam.html">Việc làm</a></li>
+       <li><a href="phapluat.html">Pháp luật</a></li>
+      <li><a href="suckhoe.html">Sức khỏe</a></li>
+
+       <li><a href="hinh.html">Thư Viện </a></li>
+
+      </ul>
+    </li>
+<li>       
+
+      <li><a href="dulich.html">Du lịch </a>
+      <ul class="submenu">
+        <li><a href="diemden.html">Điểm đến</a></li>
+        <li><a href="amthuc.html">Ẩm thực</a></li>
+        <li><a href="tuvan.html">Tư vấn</a></li>
+
+      </ul>
+ 
+
+     <li><a href="hoidap.html">Chia Sẻ  </a>
+      <ul class="submenu">
+        <li><a href="https://script.google.com/macros/s/AKfycbybVt21OVZ_E_n68IQf0kjxxkJtHGPlHVCDPBjO-5RD0XulyCXikDltH6ExfOFOT1l1xg/exec">Kinh Nghiệm</a></li>
+        
+      </ul>
+
+<li>       
+
+    <li><a href="thethao1.html">Thể Thao </a>
+      <ul class="submenu">
+        
+	<li><a href="thanhvien.html">Thành viên</a></li> 
+
+        <li><a href="anh.html">Thư viện</a></li>
+
+      </ul>
+    </li>
+
+ <li><a href="giaitri.html"> Giải Trí </a>
+    
+    </li>
+
+
+ <li>
+
+ 	<li><a href="quangcaofilter.html">Rao vặt & Quảng cáo </a>
+      <ul class="submenu">
+        <li><a href="quangcao1.html">Liên hệ</a></li>
+        
+      </ul>
+    </li>
+ 
+  </ul>
+
+
+
+
+<div class="banner">
+  
+  <div class="scrolling-text" id="bannerText">
+    Cập nhật các thông tin nóng tại Hoa Kỳ và cộng đồng người Việt..
+  </div>
+</div>
+
+<script>
+  async function fetchWeatherAndNews() {
+    const apiKey = 'a9cdfaa28ffa1e116087f3df987bb108'; // Thay bằng API key thật của bạn
+    const city = 'Fairfax';
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    const newsUrl = 'https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=YOUR_NEWSAPI_KEY'; // Thay bằng News API key thật
+
+    let weatherText = '';
+    let newsText = '';
+  
+
+
+try {
+      const weatherResponse = await fetch(weatherUrl);
+      const weatherData = await weatherResponse.json();
+      const temp = Math.round(weatherData.main.temp);
+      const desc = weatherData.weather[0].description;
+      const humidity = weatherData.main.humidity;
+      const wind = weatherData.wind.speed;
+
+      weatherText = `Thời tiết tại ${city}: ${temp}°F, ${desc}, Độ ẩm: ${humidity}%, Gió: ${wind} mph | | 
+📢 Dưới đây là tin tức mới nhất tại Hoa Kỳ tháng 7 năm 2025 `;
+
+    } catch (error) {
+      weatherText = 'Không thể tải dữ liệu thời tiết | ';
+    }
+
+   
+    document.getElementById('bannerText').textContent = weatherText ;
+  }
+
+  fetchWeatherAndNews();
+  setInterval(fetchWeatherAndNews, 300000); // Cập nhật mỗi 5 phút
+</script>
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+  
+
+// Hàm cập nhật ngày giờ
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="sub-nav">
+<a href="thoisu.html">Thời sự </a>
+    <a href= "nhansu.html">Nhân sự</a>
+       <a href= "dautu.html">Chứng khoán</a>
+    <a href= "BAOVIET.html">Xem báo Việt</a>
+    
+  </div>
+
+
+  <div class="section">
+    <h3>Tin tức Hoa Kỳ</h3>
+    <div class="columns">
+      <div class="card">
+        <img src="moi2.png" alt="Ảnh 1">
+
+        <h3>🏛️ Chính trị & Đối ngoại</h3>
+
+	<p><b> Donald Trump đã tiếp đón Thủ tướng Israel, Benjamin Netanyahu</b>, 
+    tại Nhà Trắng hôm nay. Chuyến thăm diễn ra khi các cuộc đàm phán gián 
+    tiếp giữa Israel và Hamas về lệnh ngừng bắn và thỏa thuận con tin ở Gaza 
+    tiếp tục sang ngày thứ hai vào thứ Hai. Phát biểu với các phóng viên, 
+    Netanyahu cho biết ông đã gửi một bức thư tới ủy ban Nobel đề cử Trump 
+    cho giải Nobel hòa bình. Trước đó trong ngày, Netanyahu đã gặp gỡ với Ngoại
+     trưởng Mỹ, Marco Rubio, và đặc phái viên Trung Đông, Steve Witkoff. 
+    Ông sẽ gặp Chủ tịch Hạ viện Mike Johnson vào ngày mai.</p>
+
+        	<p><b>Donald Trump</b> tiếp tục gửi vũ khí cho Ukraine và ký lệnh hành pháp 
+            kéo dài đóng băng tuyển dụng liên bang và bãi bỏ các tín dụng thuế năng lượng xanh. 
+            Đồng thời áp thuế quan mới lên 14 quốc gia, gồm Nhật – Hàn (25%), Myanmar – Lào (40%) </p>
+
+        <p><b>Danh sách nghị viên mới</b>: Tổng thống Trump đã đề cử Cố vấn An ninh quốc gia Mike Waltz làm Đại sứ Mỹ tại Liên hợp quốc (LHQ), đồng thời bổ nhiệm Ngoại trưởng Marco Rubio kiêm nhiệm vị trí 
+          Cố vấn An ninh quốc gia trong thời gian tìm người khác thay thế ông Waltz. 
+          
+</p>
+   
+</div>
+
+              
+      <div class="card">
+        <img src="stock.jpg">
+        <h3>📉 Kinh tế & Đầu tư </h3>
+         <p><b>Wall Street lạc quan:</b> Các ngân hàng lớn như Goldman Sachs, Bank of America dự báo S&P 500 
+          tăng 6–11% trong năm tới, dựa vào lợi nhuận doanh nghiệp mạnh và 
+          Fed có thể cắt giảm lãi suất sớm.</p>
+
+        <p><b>Trump tung “Trump Effect”:</b> Chính phủ Trump tuyên bố liên quan đến 14 tỷ USD đầu tư vào Mỹ, nhưng điều tra Reuters cho thấy khoảng một nửa là tiếp nối cam kết dưới thời Biden.</p>
+
+      </div>       
+            
+
+     
+
+      <div class="card">
+<img src="moi3.jpg" alt="Ảnh 1">        
+        <h3>⚖️ Pháp luật</h3>
+
+<p><b>Hạ viện Mỹ đề nghị công bố hồ sơ Epstein:</b> Các đảng viên Dân chủ tại Hạ viện hôm thứ Ba đã yêu 
+  cầu Bộ Tư pháp công bố các tài liệu liên quan đến vụ án buôn người tình dục của nhà tài chính bị
+   tai tiếng Jeffrey Epstein có đề cập hoặc nhắc đến Donald Trump,
+   trích dẫn một bình luận của Elon Musk sau khi ông này mâu thuẫn với tổng thống vào năm nay.</p>
+
+<p><b>Tòa án Tối cao Mỹ: </b>Chấp thuận xem xét luật cấm TikTok nếu ByteDance không bán cổ phần — một vấn đề về An toàn Quốc gia.</p>
+   <p><b>Viv luật bump‐stock:</b> Trong vụ Garland v. Cargill, Tòa Tối 
+    cao khẳng định ATF đã vượt quyền khi phân loại bump-stocks như súng máy.</p>     
+     </div> </div>  
+
+      
+
+ <div class="section">   
+    <div class="columns">
+<div class="card">
+        <img src="lu.png" alt="Ảnh 1">  
+        <h3>🌍Thế giới</h3>
+
+    <p> <b>Gaza & Ukraine: </b>Thủ tướng Netanyahu gặp lãnh đạo Quốc hội Mỹ để tìm giải pháp ngừng bắn;
+       Mỹ cũng gửi thêm vũ khí cho Ukraine. </p> 
+
+<p><b>Lũ lụt Texas: </b>Hơn 100 người thiệt mạng, các đội cứu hộ vẫn tích cực tìm kiếm .</p>
+ 
+<p><b>Rò rỉ tin nhắn quân đội Mỹ:</b> Các đoạn chat rò rỉ làm dấy lên lo ngại nghiêm trọng giữa Mỹ và đồng minh 
+  châu Âu.</p>
+
+        
+ </div>
+
+   
+ 
+<div class="card">
+        <img src="el.jpg" alt="Ảnh 1">
+
+        <h3>📰 Tin tức khác</h3>
+        <p><b>Elon Musk</b> thành lập “America Party”: Musk ra mắt đảng mới, lời cảnh tỉnh từ Bộ trưởng 
+          Tài chính đề nghị ông tránh xa chính trị; phản ứng đang được quan sát từ các chiến lược gia và thị trường.</p>
+
+        <p><b>AI tái định hình đầu tư:</b> AI ngày càng đóng vai trò trung tâm trong chiến lược đầu tư, 
+          thay thế nhiều chỉ số kinh tế truyền thống.</p>
+
+
+  </div> </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+        <p> © 2025 Bản quyền thuộc về Ha Nguyen | Chính sách bảo mật |📬<a href="lienhe1.html"><font color="white">Liên hệ </a> </p>
+  </footer>
+
+
+
+
+
+    
+</body>
+</html>

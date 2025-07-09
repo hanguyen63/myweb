@@ -1,0 +1,285 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 3;
+      background-color:  #003366;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #005599;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color: #005599;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+     left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+footer {
+      background-color: #005599;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .banner {
+      background-color: #333333;
+      color: #ffcc00;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .banner img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .scrolling-text {
+      white-space: nowrap;
+      font-size: 20px;
+ 
+      animation: scroll-left 15s linear infinite;
+    }
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+
+  
+  <title>Tin Tức RSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 20px;
+    }
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: black;
+      text-align: left;
+    }
+    .news-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .news-box {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 15px;
+    }
+    .news-box ul {
+      padding-left: 18px;
+    }
+    .news-box li {
+      margin-bottom: 8px;
+    }
+    .news-box a {
+      text-decoration: none;
+      color: #0077cc;
+
+    }
+  </style>
+</head>
+<body>
+
+     <ul class="navbar">
+    <li><a href="index.html">🏛️Trang chủ </a>
+ <ul class="submenu">
+<a href="GIOITHIEU.html">Giới Thiệu </a></li>
+   
+</ul>
+<li><a href="thoisu.html" alt="Thoisu">Thời sự  </a>  
+      <ul class="submenu">          
+    
+      <li><a href= "nhansu.html">Nhân sự</a></li>
+      <li><a href= "dautu.html">Chứng khoán</a></li>  
+  <li><a href= "BAOVIET.html">Xem báo Việt</a></li>
+      
+</ul>
+
+
+    <li>
+       
+
+      <li><a href="doisong.html">Đời Sống </a>
+      <ul class="submenu">
+
+        <li><a href="Vieclam.html">Việc làm</a></li>
+      <li><a href="phapluat.html">Pháp luật</a></li>
+      <li><a href="suckhoe.html">Sức khỏe</a></li>
+
+	<li><a href="hinh.html">Thư Viện </a></li>
+
+
+      </ul>
+    </li>
+
+   <li>       
+
+      <li><a href="dulich.html">Du lịch </a>
+      <ul class="submenu">
+       <li><a href="diemden.html">Điểm đến</a></li>
+        <li><a href="amthuc.html">Ẩm thực</a></li>
+        <li><a href="tuvan.html">Tư vấn</a></li>
+
+      </ul>
+
+
+    <li><a href="hoidap.html">Chia Sẻ  </a>
+      <ul class="submenu">
+        <li><a href="https://script.google.com/macros/s/AKfycbybVt21OVZ_E_n68IQf0kjxxkJtHGPlHVCDPBjO-5RD0XulyCXikDltH6ExfOFOT1l1xg/exec">Kinh Nghiệm</a></li>
+        
+      </ul>
+
+<li>       
+
+     <li><a href="thethao1.html">Thể Thao </a>
+      <ul class="submenu">
+        
+	<li><a href="thanhvien.html">Thành viên</a></li> 
+
+        <li><a href="anh.html">Thư viện</a></li>
+
+      </ul>
+    </li>
+<li><a href="giaitri.html">Giải Trí </a>
+      
+    </li>
+
+
+ <li>
+
+ 	<li><a href="quangcaofilter.html">Rao vặt & Quảng cáo</a>
+
+      <ul class="submenu">
+        <li><a href="quangcao1.html">Liên hệ</a></li>
+       
+      </ul>
+    </li>
+ 
+  </ul>
+
+
+
+<div class="banner">
+  
+  <div class="scrolling-text" id="bannerText">
+    📢 Dưới đây là cập nhật tin tức mới nhất tổng Hợp từ nhiều tòa báo khác nhau..
+  </div>
+</div>
+
+<div class="sub-nav">
+<a href="thoisu.html">Thời sự </a>
+    <a href= "nhansu.html">Nhân sự</a>
+       <a href= "dautu.html">Đầu tư</a>
+    <a href= "BAOVIET.html">Xem báo Việt</a>
+    
+  </div>
+    <div class="news-container">
+
+    <div class="news-box" id="vnexpress"></div>
+    <div class="news-box" id="thanhnien">thanhnien</div>
+    <div class="news-box" id="tuoitre">tuoitre</div>
+    <div class="news-box" id="bbc">bbc</div>    
+
+          
+ </div>
+
+  <script>
+    function loadRSS(containerId, rssUrl, title) {
+      const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          let html = `<h2>${title}</h2><ul>`;
+          data.items.slice(0, 5).forEach(item => {
+            html += `<li><a href="${item.link}" target="_blank">${item.title}</a></li>`;
+          });
+          html += "</ul>";
+          document.getElementById(containerId).innerHTML = html;
+        })
+        .catch(() => {
+          document.getElementById(containerId).innerHTML = `<h2>${title}</h2><p>Không thể tải tin.</p>`;
+        });
+    }
+
+    loadRSS("vnexpress", "https://vnexpress.net/rss/tin-moi-nhat.rss", "VnExpress");
+    loadRSS("thanhnien", "https://thanhnien.vn/rss/home.rss", "Thanh Niên");
+    loadRSS("tuoitre", "https://tuoitre.vn/rss/tin-moi-nhat.rss", "Tuổi Trẻ");
+    loadRSS("bbc", "https://www.bbc.com/vietnamese/index.xml", "BBC Tiếng Việt");
+
+          
+
+  </script>
+
+<footer>
+        <p> © 2025 Bản quyền thuộc về Ha Nguyen | Chính sách bảo mật |📬<a href="lienhe1.html"><font color="white">Liên hệ </a> </p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,368 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rao Vặt Quảng Cáo</title>
+  <style>
+    
+<style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #004080; color: white; padding: 01px; text-align: center; }
+
+     
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 3;
+      background-color:  #003366;
+      display: flex;
+      align-items: center;
+ border: 2px solid #00695c;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding:6px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color:  #005599;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #005599;
+      min-width: 120;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 10;
+            left: 0;
+
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+
+
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+font-size: 16px;
+    }
+  nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .filter-bar {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .filter-bar select {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .ad-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .ad-card img {
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+      border-right: 1px solid #eee;
+    }
+
+    .ad-details {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .ad-details h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .ad-details p {
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .ad-card[data-category] {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .ad-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .ad-card img {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .ad-details {
+        padding: 20px;
+      }
+    }
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+      </style>
+
+</head>
+<body>
+<ul class="navbar">
+    <li><a href="index.html" alt="Trang chủ">🏛️Trang chủ </a>  
+      <ul class="submenu">
+      <li> <a href="GIOITHIEU.html">Giới Thiệu </a></li>     
+      
+</ul>
+
+  <li><a href="thoisu.html" >Thời sự  </a>  
+      <ul class="submenu"> 
+      <li><a href= "nhansu.html">Nhân sự</a></li>
+      <li><a href= "dautu.html">Chứng khoán</a>        
+      <li><a href= "BAOVIET.html">Báo Việt</a></li>
+      
+      </ul>
+      
+      <li><a href="doisong.html">Đời Sống </a>
+      <ul class="submenu">
+      <li><a href="Vieclam.html">Việc làm</a></li>
+     <li><a href="phapluat.html">Pháp luật</a></li>
+      <li><a href="suckhoe.html">Sức khỏe</a></li>
+     <li><a href="hinh.html">Thư Viện </a></li>
+
+</ul>
+      
+     <li>       
+
+      <li><a href="dulich.html">Du lịch </a>
+      <ul class="submenu">
+        <li><a href="Việclàm.html">Điểm đến</a></li>
+        <li><a href="#">Ẩm thực</a></li>
+        <li><a href="#">Tư vấn</a></li>
+      </ul>
+
+     <li><a href="hoidap.html">Chia Sẻ  </a>
+      <ul class="submenu">
+        <li><a href="https://script.google.com/macros/s/AKfycbybVt21OVZ_E_n68IQf0kjxxkJtHGPlHVCDPBjO-5RD0XulyCXikDltH6ExfOFOT1l1xg/exec">Kinh Nghiệm</a></li>
+        
+      </ul>
+
+<li>       
+
+   <li><a href="thethao1.html">Thể Thao </a>
+      <ul class="submenu">
+        
+	<li><a href="thanhvien.html">Thành viên</a></li> 
+
+        <li><a href="anh.html">Thư viện</a></li>
+
+      </ul>
+    </li>
+
+  <li><a href="giaitri.html">Giải Trí </a>
+      
+    </li>
+
+
+
+ <li>
+
+ 	<li><a href="quangcaofilter.html">Rao vặt & Quảng cáo</a>
+      <ul class="submenu">
+        <li><a href="quangcao1.html">Liên hệ</a></li>
+      
+      </ul>
+    </li>
+ 
+  </ul>
+
+<div class="banner">
+    <img src="mua.jpg" >
+    <div class="banner-text">
+     <h1>Rao Vặt & Quảng Cáo  </h1>
+
+         </div>
+  </div>
+
+ 
+<nav>
+    <a href="quangcaofilter.html" >Rao Vặt & Quảng Cáo </a>
+<a href="quangcao1.html" >Liên hệ  </a>
+
+  
+  </nav>
+
+
+  <div class="container">
+    <div class="filter-bar">
+      <label for="category">Lọc theo danh mục: </label>
+      <select id="category" onchange="filterAds()">
+        <option value="all">Tất cả</option>
+        <option value="nha-dat">Nhà đất</option>
+        <option value="viec-lam">Việc làm</option>
+        <option value="dich-vu">Dịch vụ</option>
+        <option value="mua-ban">Mua bán</option>
+      </select>
+    </div>
+
+    <div class="ad-card" data-category="nha-dat">
+      <img src="ad1.jpg" alt="Nhà đất" />
+      <div class="ad-details">
+        <h2>Bán nhà gần trung tâm</h2>
+        <p>Nhà 3 phòng ngủ, 2 phòng tắm, gần chợ và trường học. Giá tốt!</p>
+        <p><strong>Liên hệ:</strong> 703-555-1111</p>
+      </div>
+    </div>
+<div class="ad-card" data-category="nha-dat">
+      <img src="ad1.jpg" alt="Nhà đất" />
+      <div class="ad-details">
+        <h2>Bán nhà gần trung tâm</h2>
+        <p>Nhà 3 phòng ngủ, 2 phòng tắm, gần chợ và trường học. Giá tốt!</p>
+        <p><strong>Liên hệ:</strong> 703-555-1111</p>
+      </div>
+    </div>
+
+
+    <div class="ad-card" data-category="viec-lam">
+      <img src="ad2.jpg" alt="Việc làm" />
+      <div class="ad-details">
+        <h2>Tuyển thợ nail gấp</h2>
+        <p>Tiệm nail khu vực Fairfax cần tuyển thợ gấp, lương cao + tip.</p>
+        <p><strong>Liên hệ:</strong> 703-555-2222</p>
+      </div>
+    </div>
+
+    <div class="ad-card" data-category="dich-vu">
+      <img src="ad3.jpg" alt="Dịch vụ" />
+      <div class="ad-details">
+        <h2>Dịch vụ sửa điện nước</h2>
+        <p>Chuyên sửa điện nước tại nhà, uy tín – nhanh chóng – giá rẻ.</p>
+        <p><strong>Liên hệ:</strong> 703-555-3333</p>
+      </div>
+    </div>
+
+    <div class="ad-card" data-category="mua-ban">
+      <img src="ad4.jpg" alt="Mua bán" />
+      <div class="ad-details">
+        <h2>Bán xe Toyota Camry</h2>
+        <p>Xe đời 2015, chạy tốt, nội thất sạch sẽ. Giá thương lượng.</p>
+        <p><strong>Liên hệ:</strong> 703-555-4444</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function filterAds() {
+      const selected = document.getElementById("category").value;
+      const ads = document.querySelectorAll(".ad-card");
+
+      ads.forEach(ad => {
+        if (selected === "all" || ad.dataset.category === selected) {
+          ad.style.display = "flex";
+        } else {
+          ad.style.display = "none";
+        }
+      });
+    }
+
+    // Show all ads on initial load
+    window.onload = filterAds;
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,496 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> V</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+     
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 3;
+      background-color: #003366;
+      display: flex;
+      align-items: center;
+ border: 2px solid #00695c;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #005599;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #005599;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+.btn {
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+
+    .section { padding: 0.5rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 350px; border-radius: 10px; }
+
+
+  
+ .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .left-column, .center-column .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .left-column {
+      width: 60%;
+    }
+
+    .right-column {
+      width: 38%;
+    }
+    .item {
+      display: flex;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .item img {
+      width: 200px;
+      height: 400px;
+      object-fit: cover;
+    }
+    .item .text {
+      padding: 10px;
+    }
+    .item .text h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+    .item .text p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+ 
+
+
+footer {
+      background-color:  #003366;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+     </style>
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .banner {
+      background-color: #333333;
+      color: #ffcc00;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .banner img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .scrolling-text {
+      white-space: nowrap;
+      animation: scroll-left 30s linear infinite;
+    }
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+<style>
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+
+}
+</style>
+
+
+ 
+</head>
+<body>
+
+
+
+<ul class="navbar">
+    <li><a href="index.html" alt="Trang chủ">🏛️Trang chủ </a>  
+      <ul class="submenu">
+      <li> <a href="GIOITHIEU.html">Giới Thiệu </a></li>     
+      
+</ul>
+
+  <li><a href="thoisu.html" >Thời sự  </a>  
+      <ul class="submenu"> 
+      <li><a href= "nhansu.html">Nhân sự</a></li>  
+	<li><a href= "dautu.html">Chứng khoán</a></li>         
+      <li><a href= "BAOVIET.html">Xem Báo Việt</a></li>
+      
+      </ul>
+      
+      <li><a href="doisong.html">Đời Sống </a>
+      <ul class="submenu">
+      <li><a href="Vieclam.html">Việc làm</a></li>
+      <li><a href="phapluat.html">Pháp luật</a></li>
+      <li><a href="suckhoe.html">Sức khỏe</a></li>
+
+	<li><a href="hinh.html">Thư Viện </a></li>
+
+</ul>
+      
+      <li>       
+
+      <li><a href="dulich.html">Du lịch </a>
+      <ul class="submenu">
+        <li><a href="diemden.html">Điểm đến</a></li>
+        <li><a href="amthuc.html">Ẩm thực</a></li>
+        <li><a href="tuvan.html">Tư vấn</a></li>
+
+      </ul>
+
+
+     <li><a href="hoidap.html">Chia Sẻ  </a>
+      <ul class="submenu">
+        <li><a href="https://script.google.com/macros/s/AKfycbybVt21OVZ_E_n68IQf0kjxxkJtHGPlHVCDPBjO-5RD0XulyCXikDltH6ExfOFOT1l1xg/exec">Kinh Nghiệm</a></li>
+        
+      </ul>
+
+
+<li>       
+
+     <li><a href="thethao1.html">Thể Thao </a>
+      <ul class="submenu">
+        
+	<li><a href="thanhvien.html">Thành viên</a></li> 
+
+        <li><a href="anh.html">Thư viện</a></li>
+
+      </ul>
+    </li>
+
+  <li><a href="giaitri.html">Giải Trí </a>
+      
+    </li>
+ <li>
+
+ 	<li><a href="quangcaofilter.html">Rao vặt & Quảng cáo</a>
+      <ul class="submenu">
+        <li><a href="quangcao1.html">Liên hệ</a></li>
+       
+      </ul>
+    </li>
+ 
+  </ul>
+
+
+
+<div class="banner">
+  
+
+  <div class="scrolling-text" id="bannerText">
+    Đang tải dữ liệu thời tiết và tin tức mới nhất...
+
+  </div>
+</div>
+
+<script>
+  async function fetchWeatherAndNews() {
+    const apiKey = 'a9cdfaa28ffa1e116087f3df987bb108'; // Thay bằng API key thật của bạn
+    const city = 'Fairfax';
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    const newsUrl = 'https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=YOUR_NEWSAPI_KEY'; // Thay bằng News API key thật
+
+    let weatherText = '';
+    let newsText = '';
+  
+
+
+try {
+      const weatherResponse = await fetch(weatherUrl);
+      const weatherData = await weatherResponse.json();
+      const temp = Math.round(weatherData.main.temp);
+      const desc = weatherData.weather[0].description;
+      const humidity = weatherData.main.humidity;
+      const wind = weatherData.wind.speed;
+
+      weatherText = `📢 Dưới đây là tổng quan về cơ hội việc làm cho người Việt tại Mỹ năm 2025, bao gồm các ngành nghề phổ biến, mức lương ước tính và các tiểu bang có nhu cầu tuyển dụng cao. `;
+
+    } catch (error) {
+      weatherText = 'Không thể tải dữ liệu thời tiết | ';
+    }
+
+   
+    document.getElementById('bannerText').textContent = weatherText ;
+  }
+
+  fetchWeatherAndNews();
+  setInterval(fetchWeatherAndNews, 300000); // Cập nhật mỗi 5 phút
+</script>
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="sub-nav">
+<a href="doisong.html">Đời Sống </a> 
+   <a href="Vieclam.html">Việc làm</a>
+      <a href="phapluat.html">Pháp luật</a>
+    <a href="suckhoe.html">Sức khỏe</a>
+<a href="hinh.html">Thư Viện </a>
+    
+  </div>
+
+<div class="section">   
+    <div class="columns">
+      <div class="card"> 
+        <img src="viet37.jpg" alt="Ảnh 1">
+   
+         <p>Việc làm phổ biến cho người Việt tại Mỹ năm 2025 đang mở ra nhiều cơ hội hấp dẫn, đặc biệt trong các ngành nghề phù hợp với kỹ năng và thế mạnh của cộng đồng. Dưới đây là tổng quan về những ngành nghề, địa điểm và cách tìm việc hiệu quả:</p>
+
+   </div>        
+      
+
+      <div class="card">        
+        
+<H3> 🔝Ngành nghề phổ biến và tiềm năng cho người Việt tại Mỹ</H3>
+<p > 1.	Ngành Y tế và Điều dưỡng: Nhu cầu nhân lực cao do dân số già hóa. Mức lương trung bình từ $70,000 – $200,000/năm tùy vị trí.<BR>
+<p > 2. Ngành Nhà hàng – Khách sạn và Ẩm thực: Phục hồi mạnh sau đại dịch, không yêu cầu bằng cấp cao. Thu nhập từ $30,000 – $60,000/năm cộng thêm tiền tip.<BR>
+ <p >    3.	Ngành Dịch vụ Làm đẹp (Nail, Phun xăm, Nối mi): Phổ biến trong cộng đồng người Việt, dễ học và dễ làm. Thu nhập ổn định từ $30,000 – $50,000/năm.<BR>
+<p >     4.	Ngành Kỹ thuật và Xây dựng: Nhu cầu cao trong phát triển hạ tầng. Mức lương trung bình từ $80,000 – $130,000/năm.<BR>
+ <p >    5.	Ngành Logistics và Vận tải: Nhiều công việc ổn định, không yêu cầu bằng đại học. Thu nhập từ $40,000 – $60,000/năm.</p>
+
+</div>
+
+
+
+ <div class="card">  
+               <h3>📍 Top 5 tiểu bang có cơ hội việc làm tốt nhất cho người Việt</h3>
+
+      <p>1.	<b>Texas: </b>Nền kinh tế đa dạng, chi phí sinh hoạt hợp lý, không có thuế thu nhập tiểu bang. Cộng đồng người Việt lớn mạnh với khoảng 272,000 người .</p>
+      <p>2.	<b>California:</b> Trung tâm công nghệ và sáng tạo, cộng đồng người Việt đông đảo.</p>
+      <p>3.	<b>Washington:</b> Phát triển mạnh trong lĩnh vực công nghệ và hàng không.</p>
+      <p>4.	<b>Massachusetts:</b> Nổi tiếng về giáo dục và y tế, chất lượng sống cao.</p>
+      <p>5.	<b>Florida:</b> Khí hậu ấm áp, ngành du lịch và dịch vụ phát triển mạnh.</p>
+</div>  </div>  
+
+
+<div class="section">   
+    <div class="columns">
+      <div class="card"> 
+        <img src="900.jpg" alt="Ảnh 1">
+
+<p> Tại Virginia, đặc biệt là ở Fairfax và Falls Church, cộng đồng người Việt đóng vai trò quan trọng trong nhiều lĩnh vực nghề nghiệp, phản ánh sự đa dạng và hội nhập sâu rộng vào đời sống kinh tế và xã hội của khu vực. </p>
+</div> 
+
+ <div class="card">
+<p>Dưới đây là những ngành nghề phổ biến Tại Virginia, đặc biệt là ở Fairfax và Falls Church. </p>
+<h3>🧑‍⚕️ Ngành y tế & chăm sóc sức khỏe</h3>
+<p> Nhiều người Việt tại Fairfax và Falls Church làm việc trong lĩnh vực y tế, bao gồm:
+	Điều phối viên chăm sóc sức khỏe (Care Coordinator): NOVA Home Health Care tại Fairfax tuyển dụng điều phối viên song ngữ Anh–Việt để hỗ trợ bệnh nhân trong cộng đồng. <a href=https://novahomehealthcare.applicantpro.com/jobs/ class="btn"> 👉 Tìm hiểu thêm →</a></p>
+	
+        <p>Chăm sóc tại nhà (Caregiver): Always Family HomeCare tại Falls Church tuyển dụng nhân viên chăm sóc người cao tuổi, yêu cầu khả năng giao tiếp bằng tiếng Việt để phục vụ khách 	hàng gốc Việt. <a href= https://alwaysfamilyhc.com/home-care-personal-care class="btn"> 👉 Tìm hiểu thêm →</a></p>
+
+<h3> Biên – phiên dịch và ngôn ngữ</h3>
+Với nhu cầu giao tiếp đa ngôn ngữ trong khu vực, nhiều cơ hội nghề nghiệp dành cho người Việt bao gồm:<br>
+
+
+</div>   
+
+ <div class="card"> 
+<p>Phiên dịch viên tự do (Freelance Interpreter). Liberty Language Services tại Fairfax cung cấp cơ hội làm việc linh hoạt cho phiên dịch viên tiếng Việt, đặc biệt trong lĩnh vực y tế. <br> <a href=https://www.libertylanguageservices.com/on-site-interpretation/ class="btn"> 👉 Tìm hiểu thêm →</a></p>
+
+<p>Giáo viên tiếng Việt. Trường công lập Fairfax County tuyển dụng giáo viên tiếng Việt cho các chương trình ngôn ngữ bậc trung học, phản ánh nhu cầu duy trì và phát triển ngôn ngữ trong cộng đồng. <br> <a href= https://www.indeed.com/viewjob?jk=990a6c5ebdb112ef class="btn"> 👉 Tìm hiểu thêm →</a></p>
+
+	<h3>💼 Tài chính và dịch vụ khách hàng</h3>
+	Ngân hàng: Bank of America tại Falls Church tuyển dụng nhân viên ngân hàng cao cấp yêu cầu thông thạo tiếng Việt để phục vụ khách hàng trong cộng đồng. <a href= https://www.indeed.com/q-bank-of-america-l-falls-church,-va-jobs.html?vjk=f226a8ebeb21c003 class="btn"> 👉 Tìm hiểu thêm →</a></p>
+
+	</div>   
+
+<div class="card"> 
+
+<h3>🛍️ Kinh doanh và thương mại</h3>
+<p>Eden Center tại Falls Church Virginia đang tuyển dụng nhân viên <a href="https://www.pop-updistrict.com/?fbclid=IwY2xjawKkBA5leHRuA2FlbQIxMABicmlkETFPaEE4U01QQ1p2cElQaUVHAR4LltSJVOpRbfD08k5quG2wrBwmw6BsTQSr9KJ0nom2H_6SC2_UvhamHvVWLA_aem_AIZKbvs8UG7aHFUaEBFqtg " class="btn"> 👉 Tìm hiểu thêm →</a> </p>
+<p><img src="999.jpg" alt=""></a></p>
+
+
+  </div>  </div>    
+
+
+      <div class="section">   
+    <div class="columns">
+<div class="card">
+        <img src="2.png" alt="">
+<h3>🔎 Cách tìm việc hiệu quả tại Mỹ</h3>
+
+<p> 1. kết nối nhanh chóng với người Việt , tìm kiếm cơ hội việc làm qua trang web: <a href=https://www.nguoivietabc.com/job/search-results.html>Nguoi Viet</a> ; và trang web: <a href=https://nguoiviet.us/rao-vat/?state=virginia&category=all> Rao Vặt </a>. </p>
+
+<p> 2. Tại Hoa Kỳ, hệ thống <a href=https://www.careeronestop.org/LocalHelp/AmericanJobCenters/find-american-job-centers.aspx?location=22032&radius=25>American Job Centers (AJCs)</a> do Bộ Lao động Hoa Kỳ quản lý, cung cấp các dịch vụ miễn phí như: Tư vấn nghề nghiệp và hỗ trợ viết sơ yếu lý lịch. Đào tạo kỹ năng và chương trình học nghề. Truy cập máy tính và internet để tìm kiếm việc làm. Hỗ trợ nộp đơn xin trợ cấp thất nghiệp. Hội thảo và sự kiện tuyển dụng</p>
+
+<p> 3.Tìm kiếm cơ hội việc làm qua trang web Boat People SOS, Inc. (BPSOS) là tổ chức phi lợi nhuận chuyên hỗ trợ người Việt tại Hoa Kỳ. Tại Virginia, nằm ở Falls Church (6606 Leesburg Pike, Suite 100 Falls Church, VA 22041).</p>
+
+<p>BPSOS cung cấp:
+
+<li> Lớp học tiếng Anh (ESL) và hội nhập nghề nghiệp.</li>
+<li> Hỗ trợ điền đơn xin việc, hướng dẫn viết resume và chuẩn bị phỏng vấn.</li>
+
+<li> Tư vấn về bảo hiểm y tế, hỗ trợ pháp lý , di trú và các dịch vụ xã hội khác.</li>
+
+<a href="https://bpsos.org/virginia" class="btn"> 👉 Biết thêm chi tiết →</a> </p>
+
+</div>
+
+
+
+      <div class="card">
+        <img src="5.png" alt="">
+<h3>🗣️ Hướng dẫn về quy trình xin việc làm trong các cơ quan chính phủ Hoa Kỳ.</h3>
+<p>Thực hiện theo các bước sau để tìm và ứng tuyển vào các vị trí trong chính phủ liên bang Hoa Kỳ:</p>
+<p>🧭<b> <u>Bước 1: Tạo hồ sơ trên USAJOBS</u> </b></p>
+<p>   • Truy cập <a href=https://www.usajobs.gov/>USAJOBS.gov</a>, trang web tuyển dụng chính thức của chính phủ liên bang Hoa Kỳ. </p>
+<p>   •	Tạo tài khoản: Đăng ký và hoàn thiện hồ sơ cá nhân.</p>
+<p>   •	Tải lên sơ yếu lý lịch (résumé): Bạn có thể sử dụng công cụ tạo résumé trực tuyến của USAJOBS để đảm bảo đáp ứng các yêu cầu cụ thể của liên bang. </p>
+<p>   •	Tải lên các tài liệu cần thiết: Chẳng hạn như bảng điểm, thư giới thiệu, giấy chứng nhận ưu tiên cho cựu chiến binh (nếu có).</p>
+<p>🔍<b> <u>Bước 2: Tìm kiếm công việc phù hợp</u></b></p>
+<p>• Sử dụng bộ lọc tìm kiếm: Lọc theo vị trí địa lý, mức lương, cơ quan tuyển dụng, hoặc loại công việc. </p>
+<p> 📌 <b>Lưu ý quan trọng: </b>Trong hệ thống tuyển dụng liên bang của Hoa Kỳ, “Merit Promotion” and “All U.S. Citizens” là hai loại thông báo tuyển dụng khác nhau. Ví dụ trên USAJOBS bạn có thể thấy một công việc liên bang được liệt kê hai lần. <b>"This job is open to Federal Employees – Competitive service” or “Merit Promotion”</b>.
+
+</div>
+
+
+<div class="card">
+
+Vị trí này mở cho các nhân viên liên bang hiện tại; Cựu nhân viên liên bang có tình trạng nghề nghiệp; Cựu chiến binh đủ điều kiện theo VEOA; Các ứng viên có quyền bổ nhiệm đặc biệt (ví dụ: Lịch trình A, cựu sinh viên Peace Corps). Đảm bảo bạn phải đáp ứng các yêu cầu đủ điều kiện nộp đơn. </p> 
+<p> "This job is open to <b>“All U.S. Citizens” </b>là loại thông báo tuyển tất cả công dân Hoa Kỳ bất kể có làm việc cho liên bang trước đó hay không.</p>
+<p><b>📄 <u>Bước 3: Chuẩn bị hồ sơ ứng tuyển</u></b></p>
+<p> Đọc kỹ thông báo tuyển dụng: Đảm bảo bạn đáp ứng đầy đủ các yêu cầu và tiêu chí. Chuẩn bị résumé theo định dạng liên bang: Résumé liên bang thường chi tiết hơn, bao gồm thông tin về công việc trước đây, giờ làm việc, mức lương, và thông tin liên hệ của người giám sát. </p>
+
+<p><b>📤 <u>Bước 4: Nộp hồ sơ</u></b></p>
+<p> Nhấn "Apply" trên USAJOBS: Hệ thống sẽ hướng dẫn bạn qua quy trình nộp hồ sơ, bao gồm đính kèm résumé và các tài liệu cần thiết. Hoàn thành các bước bổ sung: Một số cơ quan có thể yêu cầu bạn hoàn thành bảng câu hỏi hoặc nộp thêm tài liệu. Biết thêm chi tiết <a href=https://help.usajobs.gov/faq/application/process?utm_source=chatgpt.com </a>Quy trình nộp đơn hoạt động như thế nào?</a></p>
+<p>Viết thư xin việc (cover letter): Nếu được yêu cầu, hãy viết thư xin việc nêu rõ lý do bạn phù hợp với vị trí.</p>
+<p><b>⏳<u> Bước 5: Theo dõi và chờ phản hồi</u></b></p>
+<p> Theo dõi trạng thái hồ sơ: Đăng nhập vào tài khoản USAJOBS để xem trạng thái ứng tuyển. </p>
+<p>Chờ phản hồi từ cơ quan tuyển dụng: Quá trình xem xét hồ sơ có thể mất vài tuần đến vài tháng.</p>
+<p> Phỏng vấn: Nếu được chọn, bạn sẽ được mời tham gia phỏng vấn, có thể qua điện thoại, chat team hoặc trực tiếp. <a href=https://www.youtube.com/watch?v=SJ0enL8KoeI class="btn"> 👉 Biết thêm chi tiết →</a></p>
+</div></div>
+
+
+ <div class="section">   
+    <div class="columns">
+ <div class="card">
+
+<p>💡<b> Notes:</b> Tham khảo trang web này để biết thêm thông tin và hướng dẫn chi tiết nộp đơn vào các chương trình thực tập và công việc toàn thời gian. <a href=https://gogovernment.org/>Go-Government </a>
+<p> 📌<b>Lưu ý quan trọng</b> Chuẩn bị kỹ lưỡng: Hồ sơ ứng tuyển vào chính phủ liên bang yêu cầu chi tiết và tuân thủ nghiêm ngặt các hướng dẫn. </p>
+<p>Kiên nhẫn: Quá trình tuyển dụng có thể kéo dài, do đó hãy kiên nhẫn và theo dõi thường xuyên.</p>
+
+
+
+  </div></div>
+
+
+
+
+
+<footer>
+        <p> © 2025 Bản quyền thuộc về Ha Nguyen | Chính sách bảo mật |📬<a href="lienhe1.html"><font color="white">Liên hệ </a> </p>
+  </footer>
+
+
+
+</body>
+</html>

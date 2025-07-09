@@ -1,0 +1,302 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="danangbaner.JPG" >
+    <div class="banner-text">
+     <h1>Du Lịch Đà Nẵng</h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="dan.webp" >
+        <h3 >Thời Điểm</h3>
+        <ul><li>Tháng 3 đến tháng 8: Thời tiết khô ráo, nắng đẹp, biển trong xanh – thích hợp tắm biển, tham quan ngoài trời.
+
+</li>           
+        </ul>     
+              </div>
+
+      <div class="card">
+        <img src="Son.jpg" >
+         <h3 >🌟 Điểm đến nổi bật ở Đà Nẵng</h3>
+         <ul><li>🐒 Bán đảo Sơn Trà – Chùa Linh Ứng	Nơi linh thiêng và có tượng Quan Thế Âm cao nhất Việt Nam</li>
+          <li>🏖️ Bãi biển Mỹ Khê top bãi biển đẹp nhất hành tinh (theo Forbes)</li>
+<li>🏞️ Bà Nà Hills – Cầu Vàng	Khu du lịch nổi tiếng với khí hậu mát lạnh và kiến trúc châu Âu</li>
+<li>🌉 Cầu Rồng – Cầu Tình Yêu – Cầu sông Hàn	Biểu tượng của Đà Nẵng, có trình diễn phun lửa/phun nước cuối tuần</li>
+<li>🏞️ Ngũ Hành Sơn	Danh thắng gồm núi đá vôi, chùa chiền, hang động huyền bí</li>
+<li>🎆 Asia Park – Sun World Đà Nẵng Wonders	Công viên giải trí với vòng quay mặt trời, trò chơi mạo hiểm</li>
+<li>🛍️ Chợ Cồn, Chợ Hàn	Thiên đường ẩm thực và quà lưu niệm giá rẻ</li> 
+         
+                   
+        </ul>
+        
+        
+       
+             </div>
+
+              <div class="card">
+        <img src="hotel.jpg" >
+         <h3 >🛏️ Khách sạn & homestay</h3>
+         <ul><li>⭐ Cao cấp (4-5 sao)	Furama Resort, Hyatt Regency, Vinpearl Condotel Riverfront, Danang Golden Bay
+ </li> 
+          <li> 💰 Tầm trung (2-3 sao)	Minh Toan Galaxy, Serene Beach Hotel, Mandila Beach Hotel</li> 
+              <li>🏠 Homestay – Giá rẻ	Lupin Danang, Memory Hostel, Posiki Dorm & Cafe </a>
+ </li>       
+             </ul>
+            
+                   
+       
+        
+        
+       
+             </div>
+              <div class="card">
+        <img src="bamua.jpg" >
+         <h3 >🍜  Ẩm thực Đà Nẵng </h3>
+         <ul><li>Mì Quảng Bà Mua, Mì Quảng 1A</li>
+          <li>Bánh tráng cuốn thịt heo Trần, Mậu, Quê Xưa</li>
+          <li>Hải sản tươi sống	Bé Mặn, Bà Thôi, 4U Restaurant</li>
+          <li>Nem lụi, bánh xèo	Bánh xèo Bà Dưỡng</li>
+          <li>Chè xoa xoa hạt lựu	Chè Liên (quán nổi tiếng tại Đà Nẵng)</li>
+
+  
+                   
+        </ul>
+        
+        
+       
+             </div> </div>
+
+      <div class="card">
+        <img src="dananglogo.png" >
+        <h3 >Dịch vụ hỗ trợ</h3>
+           Là nơi bạn có thể liên hệ để được hỗ trợ, tư vấn, phản ánh hoặc giải quyết các vấn đề liên quan đến hoạt động du lịch khi đến Đà Nẵng.
+<ul><li>☎️ Tổng đài hỗ trợ du khách Đà Nẵng	0236 3550 111</li>
+  <li>🚔 Công an Thành phố Đà Nẵng	113 hoặc 0236 3822 158</li>
+<li>🚑 Bệnh viện Đà Nẵng	0236 3821 118 (Cấp cứu 24/7)</li>
+<li>📞 Sở Du lịch Đà Nẵng (phản ánh dịch vụ)	0236 3863 495 hoặc email: sdl@danang.gov.vn</li>
+        </ul>
+            
+     <h3> 💡 lưu ý: </h3>
+<ul><li>🧣 Đặt vé máy bay – phòng sớm nếu đi vào dịp hè (tháng 6–8).</li>
+<li>Tránh đi xe dù, nên đặt xe qua app (Grab, Be, Xanh SM).</li>
+<li>Nên mang áo khoác nhẹ nếu đi Bà Nà Hills (nhiệt độ se lạnh).</li>
+<li>Không mang theo nhiều tiền mặt, dùng thẻ hoặc ví điện tử.</li>
+
+
+        </ul>        
+     
+        
+     </div>   </div> 
+    
+      
+
+
+
+    
+</body>
+</html>

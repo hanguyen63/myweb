@@ -1,0 +1,646 @@
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>HOME PAGE</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #004080; color: white; padding: 01px; text-align: center; }
+
+     
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 3px;
+      background-color:  #003366;
+      display: flex;
+      align-items: center;
+ border: 2px solid #00695c;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding:6px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #005599;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #005599;
+      min-width: 120;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 10;
+            left: 0;
+
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.btn {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: auto; border-radius: 10px; }
+
+ .banner1 {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .banner1 img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+
+      
+     
+    }
+
+    .banner1-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner1-text h1 {
+      font-size: 36px;
+      margin: 10;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner1-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+  
+ .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .left-column, .center-column .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .left-column {
+      width: 60%;
+    }
+
+    .right-column {
+      width: 38%;
+    }
+    .item {
+      display: flex;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .item img {
+      width: 200px;
+      height: 100%;
+      object-fit: cover;
+    }
+    .item .text {
+      padding: 10px;
+    }
+    .item .text h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+    .item .text p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+ 
+
+.grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .grid-item {
+      text-align: left;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f2f2f2;
+    }
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      max-height:250px;
+      object-fit: cover;
+    }
+    .grid-item h3 {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    /* Responsive cho điện thoại */
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+footer {
+      background-color: #003366;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+    .right-menu {
+      margin-left: auto;
+    }
+    /* Dropdown submenu */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #005599;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      right: 0; /* Align to right side */
+    }
+    .dropdown-content a {
+      color: #003366;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #f2f2f2;
+    }
+    /* Show submenu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+ 
+
+    body.lock-scroll {
+    overflow: hidden;
+  }
+  .popup {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7); z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  .popup-content input, .popup-content button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .popup-content button {
+    background-color: #ffc107;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+  </style>
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .banner {
+      background-color: #003366;
+      color: white;
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .banner img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .scrolling-text {
+      white-space: nowrap;
+      animation: scroll-left 30s linear infinite;
+    }
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+
+<style>
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+ <body>
+ <div id="popupForm" class="popup">
+  <div class="popup-content">
+    <img src="500.JPG" width="390px" height="250px" alt="Ảnh 1">
+    <form id="registrationForm">
+      <label>Họ và tên:</label>
+      <input type="text" name="name" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Điện thoại:</label>
+      <input type="tel" name="phone">
+
+      <button type="submit">Gửi</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Hiển thị popup sau 30 giây nếu chưa từng gửi
+  window.onload = function () {
+    if (!localStorage.getItem("formSubmitted")) {
+      setTimeout(() => {
+        document.getElementById("popupForm").style.display = "flex";
+        document.body.classList.add("lock-scroll");
+      }, 20000);
+    }
+  };
+
+  // Gửi form và xử lý kết quả
+  document.getElementById("registrationForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("https://formspree.io/f/mdkgaylo", {
+      method: "POST",
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("✅ Gửi thành công!");
+        localStorage.setItem("formSubmitted", "true");
+        document.getElementById("popupForm").style.display = "none";
+        document.body.classList.remove("lock-scroll");
+        form.reset();
+      } else {
+        return response.json().then(data => {
+          throw new Error(data.error || "❌ Lỗi khi gửi. Vui lòng thử lại.");
+        });
+      }
+    })
+    .catch(error => {
+      alert(error.message);
+      console.error("Lỗi gửi form:", error);
+    });
+  });
+</script>
+
+
+<header >
+  
+
+  </header>
+
+<ul class="navbar">
+    <li><a href="index.html" alt="Trang chủ">🏛️Trang chủ </a>  
+      <ul class="submenu">
+      <li> <a href="GIOITHIEU.html">Giới thiệu </a></li>      
+      
+</ul>
+
+  <li><a href="thoisu.html" >Thời sự  </a>  
+      <ul class="submenu">   
+	<li><a href= "nhansu.html">Nhân sự</a></li> 
+        <li><a href= "dautu.html">Chứng khoán</a></li>         
+        <li><a href= "BAOVIET.html">Xem báo Việt</a></li>      
+     
+</ul>
+
+      
+      <li><a href="doisong.html">Đời sống </a>
+      <ul class="submenu">
+      <li><a href="vieclam.html">Việc làm</a></li>
+      <li><a href="phapluat.html">Pháp luật</a></li>
+      <li><a href="suckhoe.html">Sức khỏe</a></li>
+
+      <li><a href="hinh.html">Thư Viện </a></li>
+
+</ul>
+
+      
+     <li>       
+
+      <li><a href="dulich.html">Du lịch </a>
+      <ul class="submenu">
+         <li><a href="diemden.html">Điểm đến</a></li>
+        <li><a href="amthuc.html">Ẩm thực</a></li>
+        <li><a href="tuvan.html">Tư vấn</a></li>
+
+      </ul>
+
+
+    <li><a href="hoidap.html">Chia Sẻ  </a>
+      <ul class="submenu">
+        <li><a href="https://script.google.com/macros/s/AKfycbybVt21OVZ_E_n68IQf0kjxxkJtHGPlHVCDPBjO-5RD0XulyCXikDltH6ExfOFOT1l1xg/exec">Kinh Nghiệm</a></li>
+        
+      </ul>
+
+ <li>
+
+  <li>       
+
+      <li><a href="thethao1.html">Thể Thao </a>
+      <ul class="submenu">
+        
+	<li><a href="thanhvien.html">Thành viên</a></li> 
+
+        <li><a href="anh.html">Thư viện</a></li>
+
+    </ul>
+    </li>
+
+ <li>
+
+           <li><a href="giaitri.html"> Giải Trí </a>
+      
+    </li>
+
+ <li>
+
+ 	<li><a href="quangcaofilter.html">Rao vặt & Quảng cáo</a>
+      <ul class="submenu">
+        <li><a href="quangcao1.html">Liên hệ</a></li>
+       
+      </ul>
+    </li>
+
+
+<li class="right-menu dropdown">
+      <a href="#">Đăng Nhập ▼</a>
+      <div class="dropdown-content">
+        <a href="https://script.google.com/macros/s/AKfycbxrOoBMmOibJWRI_JNnLDmq01KzmpUN1GZkAtXyKs39Tc3l3vE0Byv-sr2fOxyKgu8/exec" target="_blank">Quản Trị</a>
+         </div>
+    </li>
+
+     </ul>
+<div class="banner1">
+    <img src="233.JPG" ">
+    <div class="banner1-text">
+      <h1>Chào Mừng Quý Đồng Hương! </h1>
+      
+    </div>
+  </div>
+
+
+
+<div class="banner">
+  <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="weather icon">
+
+  <div class="scrolling-text" id="bannerText">
+    Đang tải dữ liệu thời tiết và tin tức mới nhất...
+
+  </div>
+</div>
+
+<script>
+  async function fetchWeatherAndNews() {
+    const apiKey = 'a9cdfaa28ffa1e116087f3df987bb108'; // Thay bằng API key thật của bạn
+    const city = 'Fairfax';
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    const newsUrl = 'https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=YOUR_NEWSAPI_KEY'; // Thay bằng News API key thật
+
+    let weatherText = '';
+    let newsText = '';
+  
+
+
+try {
+      const weatherResponse = await fetch(weatherUrl);
+      const weatherData = await weatherResponse.json();
+      const temp = Math.round(weatherData.main.temp);
+      const desc = weatherData.weather[0].description;
+      const humidity = weatherData.main.humidity;
+      const wind = weatherData.wind.speed;
+
+      weatherText = `Thời tiết tại ${city}: ${temp}°F, ${desc}, Độ ẩm: ${humidity}%, Gió: ${wind} mph | | 
+📢 Dưới đây là tin tức mới nhất tại Hoa Kỳ tháng 7 năm 2025 `;
+
+    } catch (error) {
+      weatherText = 'Không thể tải dữ liệu thời tiết | ';
+    }
+
+   
+    document.getElementById('bannerText').textContent = weatherText ;
+  }
+
+  fetchWeatherAndNews();
+  setInterval(fetchWeatherAndNews, 300000); // Cập nhật mỗi 5 phút
+</script>
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+  
+
+// Hàm cập nhật ngày giờ
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+	<div class="section">
+       
+  Trang Website này phục vụ cộng đồng người Việt tại tại Virginia đặc biệt là tại Fairfax County, Falls Church, Annandale, Centreville, Arlington và vùng phụ cận - nơi bạn có thể cập nhật tin tức, sự kiện, tìm việc làm, chia sẻ kinh nghiệm và kết nối cùng người Việt tại địa phương. Hãy đăng ký tham gia để cộng đồng ngày càng lớn mạnh và gắn bó hơn! 
+  </div>
+
+  <div class="section">    
+    <div class="columns">
+      <div class="card">
+       <img src="moi.jpg" alt="Tin tức">
+        <h3>Thời sự Hoa Kỳ</h3>     
+        <UL><LI>Trump–Netanyahu gặp tại Nhà Trắng: 
+          Tổng thống Trump đã tiếp Thủ tướng Netanyahu để thảo luận ngừng bắn gián tiếp tại Gaza. </LI>
+         <LI> Trump tiếp tục gửi vũ khí cho Ukraine </LI>
+         <LI> Danh sách nghị viên mới</LI>
+         </UL>
+ 
+<a href=" thoisu.html" class="btn"> 👉 Xem thêm chi tiết →</a>
+      </div>
+
+      <div class="card"> 
+<img src="18.webp" alt="">
+        <h3> Tin tức cộng đồng</h3>
+
+       
+<UL><LI>Lễ tưởng niệm 50 năm quốc hận 30 tháng tư. </LI>
+<LI>Hội đồng quận Fairfax vinh danh cộng đồng người Việt.</LI>
+<LI>Lễ hội châu Á – Old Town Fairfax.</LI> 
+<LI>Triển lãm nghệ thuật tại Eden Center.</LI></UL>
+
+
+ <a href="doisong.html " class="btn"> 👉 Xem thêm chi tiết →</a>
+
+      </div>
+
+<div class="card">
+        <img src="184.jpg" alt="">  
+        <h3>Việc làm</h3>
+      <UL><LI>Cơ hội việc làm cho người Việt tại Fairfax và khu vực lân cận.</LI>
+
+       <LI>Cơ hội việc làm cho người Việt trong khu vực chính phủ liên bang</LI>
+	<LI>Dịch vụ giới thiệu việc làm miễn phí cho người Việt</LI></p>
+
+      
+<a href="vieclam.html" class="btn"> 👉 Xem thêm chi tiết →</a>
+
+      </div>
+
+     
+<div class="card">
+        <img src="55.png" alt="">
+        <h3>Sự kiện sắp tới</h3>
+
+<UL><LI> 📅 Vietnamese Heritage Day – Falls Church City</LI>
+<LI>🏮 Lễ hội Trung Thu – Eden Center Falls Church City. </LI>
+<LI>🎉 Tết Nguyên Đán - Eden Center Falls Church City. </LI></p>
+
+
+<a href="sukien.html" class="btn"> 👉 Xem thêm chi tiết →</a>
+
+      </div>  </div>
+      
+    <div class="section">    
+    <div class="columns">
+      <div class="card">
+           <img src="24.jpg" alt="Tin tức"> 
+       
+        <h3>Thể Thao </h3>
+       
+        <p> Thể thao cuối tuần. Wakefield Park và Mason District Park là một công viên lớn tại Fairfax, Virginia, cộng đồng người Việt thường xuyên tổ chức các buổi chơi tennis và pickleball vào cuối tuần mọi người đều có thể tham gia.</p>
+
+       
+
+<a href="thethao1.html" class="btn"> 👉 Xem thêm chi tiết →</a>
+
+     </div>    
+
+<div class="card"> 
+<img src="183.jpg" >        
+        <h3>Du lịch </h3>  
+ 
+<a href="dulich.html" class="btn"> 👉 Xem thêm chi tiết →</a>
+  
+
+     </div> 
+
+      <div class="card">
+<img src="21.png" >
+         <h3>Rao vặt & Quảng cáo</h3>
+
+        <p>Đăng tin quảng cáo và rao vặt miễn phí phục vụ cộng đồng.</p>
+
+
+<a href="QUANGCAOFILTER.HTML  " class="btn"> 👉 Xem thêm chi tiết →</a>
+
+
+
+
+   </div> </div> 
+
+
+<footer>
+        <p> © 2025 Bản quyền thuộc về Ha Nguyen | Chính sách bảo mật |📬<a href="lienhe1.html"><font color="white">Liên hệ </a> </p>
+  </footer>
+
+
+
+    
+</body>
+</html>

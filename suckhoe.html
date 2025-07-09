@@ -1,0 +1,619 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Sức Khỏe Cộng Đồng </title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 1; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+     
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 2;
+      background-color: #003366;
+      display: flex;
+      align-items: center;
+ border: 2px solid #00695c;
+    }
+
+    .navbar  li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #005599;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #005599;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+
+
+
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+   .nav  {
+      background-color: #005599;
+      color: white;
+      padding: 5px;
+      text-align: center;
+    }
+    .nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+ .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 450;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+.section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 2rem;
+      background-color: #fafafa;
+       font-size:16;
+    }
+    .card img { width: 100%; height: auto; border-radius: 10px; }
+
+ 
+   
+    iframe {
+      width: 100%;
+      border: none;
+    }
+
+footer {
+      background-color: #003366;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+.comment-box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    .comment {
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+    .comment.hidden {
+      display: none;
+    }
+    .reply-section {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    .reply-input {
+      margin-top: 5px;
+    }
+    .reply-input input, .reply-input textarea {
+      width: 100%;
+      margin-bottom: 5px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .reply-input button {
+      padding: 5px 10px;
+    }
+    .replies {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    #toggleOldComments {
+      margin-top: 10px;
+      cursor: pointer;
+      color: #007BFF;
+      background: none;
+      border: none;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+<ul class="navbar">
+    <li><a href="index.html" alt="Trang chủ">🏛️Trang chủ </a>  
+      <ul class="submenu">
+      <li> <a href="GIOITHIEU.html">Giới Thiệu </a></li>     
+      
+</ul>
+
+  <li><a href="thoisu.html" >Thời sự  </a>  
+      <ul class="submenu"> 
+      <li><a href= "nhansu.html">Nhân sự</a></li>
+      <li><a href= "dautu.html">Chứng khoán</a>        
+      <li><a href= "BAOVIET.html">Báo Việt</a></li>
+      
+      </ul>
+      
+      <li><a href="doisong.html">Đời Sống </a>
+      <ul class="submenu">
+      <li><a href="Vieclam.html">Việc làm</a></li>
+     <li><a href="phapluat.html">Pháp luật</a></li>
+      <li><a href="suckhoe.html">Sức khỏe</a></li>
+     <li><a href="hinh.html">Thư Viện </a></li>
+
+</ul>
+      
+     <li>       
+
+      <li><a href="dulich.html">Du lịch </a>
+      <ul class="submenu">
+        <li><a href="diemden.html">Điểm đến</a></li>
+        <li><a href="amthuc.html">Ẩm thực</a></li>
+        <li><a href="tuvan.html">Tư vấn</a></li>
+
+      </ul>
+
+     <li><a href="hoidap.html">Chia Sẻ  </a>
+      <ul class="submenu">
+        <li><a href="https://script.google.com/macros/s/AKfycbybVt21OVZ_E_n68IQf0kjxxkJtHGPlHVCDPBjO-5RD0XulyCXikDltH6ExfOFOT1l1xg/exec">Kinh Nghiệm</a></li>
+        
+      </ul>
+
+
+<li>       
+
+   <li><a href="thethao1.html">Thể Thao </a>
+      <ul class="submenu">
+        
+	<li><a href="thanhvien.html">Thành viên</a></li> 
+
+        <li><a href="anh.html">Thư viện</a></li>
+
+      </ul>
+    </li>
+
+  <li><a href="giaitri.html">Giải Trí </a>
+
+    </li>
+
+
+
+ <li>
+
+ 	<li><a href="quangcaofilter.html">Rao vặt & Quảng cáo</a>
+      <ul class="submenu">
+        <li><a href="quangcao1.html">Liên hệ</a></li>
+      
+      </ul>
+    </li>
+ 
+  </ul>
+<div class="banner">
+    <img src="cc.png" alt="Wakefield Park Tennis and Pickleball">
+    <div class="banner-text">
+     
+ </div></div>
+
+   <div class="nav">
+    <a href="#benhly">Bệnh lý</a>
+    <a href="#dinhduong">Dinh dưỡng</a>
+    <a href="#tinhthan">Tinh thần</a>
+    <a href="#diendan">Diễn đàn</a>
+   </nav></div></div>
+
+
+ 
+<div class="section">
+        <h2>🔍 Chủ đề sức khỏe</h2>
+        <p>Dưới đây là tóm tắt các bệnh phổ biến như tiểu đường, huyết áp cao, tim mạch và ung thư, bao gồm triệu chứng và phòng ngừa:
+  
+      <div class="section" id="benhly">
+        <div class="columns">     
+          <div class="card">
+<h3>🩸 1. Bệnh tiểu đường (Diabetes)</h3>
+<p>Triệu chứng:</br><img src="tieu.jpg">
+
+<ul> <li> Khát nước nhiều , tiểu nhiều.</li>
+<li> Mệt mỏi, sụt cân không rõ lý do vết thương lâu lành, mờ mắt.</li></ul>
+
+
+<p>Phòng ngừa:<br>
+ <ul> <li>Hạn chế đường và tinh bột</li>
+
+
+<li>Tập thể dục đều đặn</li>
+
+
+<li>Duy trì cân nặng hợp lý</li>
+
+
+<li>Kiểm tra đường huyết định kỳ (đặc biệt nếu có người thân mắc bệnh)</li></p></ul>
+</div>
+
+
+ <div class="card">
+
+<h3>🧠 2. Cao huyết áp (Hypertension)</h3>
+
+<p>Triệu chứng (thường không rõ ràng):<img src="huyetap.jpg"></br>
+
+<li>Nhức đầu, chóng mặt, mệt mỏi</li>
+
+<li>Khó thở (khi huyết áp quá cao)</li>
+
+<li>Một số người không có triệu chứng</li>
+
+<p>Phòng ngừa:</br>
+
+
+<li>Giảm muối, mỡ động vật</li>
+
+<li>Tăng rau xanh, trái cây</li>
+
+<li>Tập thể dục đều đặn</li>
+
+<li>Tránh stress, không hút thuốc</li>
+
+<li>Đo huyết áp thường xuyên</li>
+
+</div>
+
+
+<div class="card">
+
+<h3>❤️ 3. Bệnh tim mạch (Heart Disease)</h3>
+
+<p>Triệu chứng:</br>
+
+
+<li>Đau ngực, tức ngực, khó thở, mệt nhanh</li>
+
+<li>Tim đập nhanh hoặc không đều</li>
+
+
+<li>Phù chân (trong suy tim)</li>
+
+
+<p>Phòng ngừa:<img src="tim.jpg"></br>
+
+
+<li>Kiểm soát huyết áp, cholesterol, tiểu đường</li>
+
+
+<li>Không hút thuốc, hạn chế rượu bia</li>
+
+
+<li>Tập thể dục thường xuyên</li>
+
+
+<li>Ăn uống lành mạnh, ít chất béo bão hòa</li>
+
+</div>
+ 
+ 
+      <div class="card">
+     <h3>🎗️ 4. Ung thư (Cancer)</h3>
+
+       <p>Triệu chứng (tùy loại ung thư):<img src="ung.jpg"></br>
+
+<li>Sụt cân không rõ nguyên nhân</li>
+
+
+<li>Khối u, vết loét không lành</li>
+
+
+<li>Ho kéo dài, khó nuốt</li>
+
+
+<li>Thay đổi thói quen đại tiểu tiện</li>
+
+
+<p>Phòng ngừa:</br>
+
+<li>Tầm soát định kỳ (như: vú, cổ tử cung, đại tràng…)</li>
+
+
+<li>Không hút thuốc, hạn chế rượu, thức ăn nướng cháy, thực phẩm chế biến sẵn</li>
+
+<li>Giữ lối sống lành mạnh và vận động đều đặn</li></ul> 
+<p>✅ Lưu ý chung: Nếu bạn có tuổi, tiền sử gia đình hoặc triệu chứng bất thường, nên khám định kỳ và tư vấn bác sĩ để phát hiện sớm các bệnh lý này.</p>
+      
+</div></div>
+
+
+ <div class="section">
+
+<h2>🥗 Dinh dưỡng & Lối sống</h2>
+        <p>Thực đơn lành mạnh, cách vận động phù hợp với người cao tuổi, và bài tập hàng ngày.</p> 
+<div class="section" id="dinhduong">
+        <div class="columns">     
+          <div class="card">
+
+        <p> Dưới đây là thông tin chi tiết và dễ áp dụng cho người cao tuổi về thực đơn lành mạnh, cách vận động phù hợp, và bài tập hàng ngày để duy trì sức khỏe tốt, phòng bệnh và nâng cao chất lượng cuộc sống.</p>
+
+<h3>🥗 1. Thực đơn lành mạnh cho người cao tuổi.</h3>
+<img src="an.png">
+🍴 Nguyên tắc chung: Ăn đủ chất, đa dạng và hạn chế muối, đường, chất béo bão hòa.<br>
+
+Tăng cường rau xanh, trái cây, thực phẩm giàu chất xơ. Uống đủ nước (1.5–2 lít/ngày), kể cả khi không thấy khát.</p>
+
+<p>📅 Gợi ý thực đơn 1 ngày:<br>
+<ul>
+<li>Sáng Cháo yến mạch với sữa tách béo + 1 quả chuối nhỏ + trà xanh không đường.</li>
+<li>Phụ sáng 1 hũ sữa chua ít đường hoặc 1 nắm hạt (óc chó, hạnh nhân).</li>
+
+<li>Trưa Cơm gạo lứt + cá hấp hoặc gà luộc + rau luộc + canh mướp.</li>
+
+<li>Tối Cháo đậu xanh hoặc súp rau củ + trứng luộc.</li>
+<li>Trước khi ngủ Ly sữa ấm ít béo.</li>
+
+✅ Nên dùng dầu thực vật (dầu oliu, dầu đậu nành) thay vì mỡ động vật.<br>
+✅ Giảm muối, mắm, đường – tăng các gia vị tự nhiên như hành, gừng, nghệ.</ul></p>
+
+</div>
+ <div class="card">
+
+<h3>🤸‍♀️ 2. Cách vận động phù hợp với người cao tuổi <img src="sinh.jpg"></h3>
+
+<p>⚠️ Lưu ý trước khi tập: Khởi động kỹ (5–10 phút).Tập sau ăn 1 giờ, tránh lúc đói hay quá no.
+
+Mang giày mềm, có đệm lót tốt.</p>
+
+<p>🕒 Thời lượng: 150 phút mỗi tuần (ví dụ: 30 phút/ngày, 5 ngày/tuần).<p>
+
+<p>🏃‍♂️ Các hình thức vận động an toàn:<br>
+<ul><li>
+Đi bộ nhanh: tốt cho tim mạch, xương khớp.</li>
+
+
+<li>Thái cực quyền / khí công / yoga nhẹ nhàng: giúp thư giãn, tăng thăng bằng.</li>
+
+
+<li>Đạp xe chậm, bơi lội, hoặc làm vườn.</li>
+
+
+<li>Tập tạ nhẹ (chai nước, tạ 1–2 kg) để duy trì cơ bắp.</ul></p>
+
+</div>
+<div class="card">
+
+<h3>💪 3. Bài tập hàng ngày cho người cao tuổi<img src="tap.jpg"></h3>
+
+<p>🔄 Bài khởi động (5 phút mỗi buổi):<br>
+Xoay cổ, vai, cổ tay, hông, đầu gối. Gập duỗi tay – chân chậm rãi.</p>
+
+<p>📌 Bài tập mẫu đơn giản tại nhà:<br>
+<ul><li>🧍‍♂️ Đứng lên – ngồi xuống từ ghế (10 lần). Giúp tăng sức mạnh chân và thăng bằng.</li>
+
+
+<li>🚶‍♀️ Đi bộ tại chỗ (3–5 phút).</li>
+
+Tăng nhịp tim, tuần hoàn máu.</li>
+
+
+<li>🧘‍♀️ Tập thở sâu và giãn cơ:</li>
+
+<li>Hít vào 4 giây – giữ 2 giây – thở ra 6 giâ.y</li>
+
+
+<li>Gập người chạm ngón tay – giữ 10 giây.</li>
+
+
+<li>🧴 Cầm chai nước làm tạ tay (2 set x 10 lần). Tập tay – vai nhẹ nhàng.</li></ul>
+
+📋 Lưu ý đặc biệt:<br>
+Luôn theo dõi huyết áp trước/sau tập nếu có bệnh nền, dừng lại ngay nếu đau ngực, chóng mặt, hụt hơi. Tập luyện nên có người thân hỗ trợ nếu cần</p>
+
+
+</div></div>
+
+<div class="section">
+ <div class="section" id="tinhthan">
+<h2>🧠 Sức khỏe tinh thần</h2>
+        <p>Thông tin về stress, trầm cảm, cách tìm sự giúp đỡ và chăm sóc tâm lý tại địa phương.</p>
+ 
+
+        <div class="columns">     
+          <div class="card">         
+     
+   
+        <p>Dưới đây là bản tổng hợp đầy đủ về các nguồn hỗ trợ tâm lý, ứng phó với stress & trầm cảm, cùng địa chỉ tư vấn chuyên nghiệp tại Fairfax, VA:</p>
+
+<h3>🧠 1. Nguồn hỗ trợ miễn phí & công cộng </h3>
+ <p>Healthy Minds Fairfax <a href="https://www.fairfaxcounty.gov/healthymindsfairfax/" class="btn"> 👉 Fairfax County</a>.  
+
+<ul><li> Cung cấp tư vấn ngắn hạn, hướng dẫn chuyên gia, danh bạ nhà cung cấp dịch vụ mới .</li>
+
+<li>Hotline 24/7: 703‑324‑5235 (TTY 711).</li>
+
+<li>Email: DFSHealthyMinds@fairfaxcounty.gov</li>
+
+<li>Địa chỉ: 12011 Government Center Pkwy, Pennino Bldg, Fairfax, VA 22035</li>
+
+ <li>Hỗ trợ khủng hoảng, tiêm chủng tâm lý cho mọi nhóm tuổi</li> </ul>
+
+<p>🆘 Fairfax‑Falls Church Community Services Board <a href="https://www.fairfaxcounty.gov/community-services-board/" class="btn"> 👉 (CSB)</a>
+
+<ul><li>Dịch vụ tư vấn, cấp thuốc, khủng hoảng 24/7.</li>
+
+<li>Hotline khẩn cấp: 703‑573‑5679 (cả lúc không khẩn cấp).</li> </ul>
+
+</div>
+
+  <div class="card"> 
+<p>🆓 NAMI Northern Virginia <a href="https://nami-northernvirginia.org/" class="btn"> 👉 NAMI</a>
+ 
+<ul><li>Hỗ trợ miễn phí cho người trầm cảm, stress, và gia đình.</li>
+
+<li>Nhóm tự lực, giáo dục, advocacy cộng đồng.</li></ul>
+
+  
+<h3>💻 2. Dịch vụ tư vấn – trả phí / bảo hiểm</h3>
+<p>📍 Renewal of the Mind (Fairfax)</p>
+<ul><li>Chuyên trị cá nhân, gia đình, EMDR (trauma), stress, trầm cảm .</li>
+
+<li>Chấp nhận bảo hiểm Aetna, Cigna, BCBS, United… </li>
+<li> Web.site: vapsychotherapy.com </li></ul>
+
+
+<p>📍 Fairfax Mental Health & Wellness Center <a href="https://www.fairfaxpsych.com/" class="btn"> 👉 FMHW</a><BR>
+ 
+Bao gồm testing tâm lý, quản lý thuốc, telehealth .</p>
+
+<h3>🛠 3. Cách đối phó stress & trầm cảm</h3>
+<ul><li>Ghi nhật ký: Ghi lại cảm xúc hàng ngày, tìm nguyên nhân căng thẳng.</li>
+
+
+<li>Thực hành thể chất nhẹ: Đi bộ, thiền, yoga, giúp giảm căng thẳng.</li>
+
+
+<li>Tìm kết nối: Tham gia nhóm hỗ trợ, chia sẻ để giảm cảm giác cô lập.</li>
+
+</div>
+<div class="card"> 
+
+<li>Kỹ thuật thư giãn: Hít thở sâu, mindful breathing, progressive muscle relaxation.</li>
+
+
+<li>Tìm chuyên gia khi cần: nếu stress kéo dài >2 tuần, ảnh hưởng tới giấc ngủ/công việc thì nên gặp chuyên gia để hỗ trợ sớm.</li></ul>
+
+  
+<h3>📞 4. Danh bạ khẩn cấp</h3>
+<ul><li>Mục đích Số liên hệ: Nhóm khủng hoảng PRS CrisisLink	703‑527‑4077 hoặc TEXT “CONNECT” tới 85511</li>
+
+<li>CSB Fairfax khẩn cấp 703‑573‑5679</li>
+
+<li>Trung tâm khủng hoảng trẻ em 1‑844‑627‑4747</li>
+
+<li>Quốc gia (suicide hotline) 988 hoặc 1‑800‑273‑TALK</li>
+
+<li>Bệnh viện Dominion (emergency psych) 703‑536‑2000</li>
+
+<li>Bệnh viện Inova (ED psych) 703‑289‑7560</li></ul>
+
+
+        </div>  </div>
+
+
+  <div class="section" id="hoi">
+        <div class="columns">     
+          <div class="card">  
+<div class="section">
+      <h2>💬 Diễn đàn cộng đồng</h2>
+        <p>Tham gia thảo luận và chia sẻ kinh nghiệm sức khỏe tại diễn đàn người Việt Fairfax.</p>
+
+
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url = window.location.href;
+            this.page.identifier = 'vietnam-fairfax-sports';
+          };
+          (function() {
+            var d = document, s = d.createElement('script');
+            s.src = ' https://suckhoe-1.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>           
+  </div> 
+  </div>
+
+<div class="card"> 
+
+
+ <h2>🌤 Thời tiết trực tiếp</h2>
+
+        <iframe src="https://www.meteoblue.com/en/weather/widget/three/annandale_united-states_4744468?geoloc=fixed&nocurrent=0&noforecast=0&days=4&tempunit=FAHRENHEIT&windunit=MILE_PER_HOUR&layout=image"  width="100%" height="550" frameborder="0" 
+  scrolling="yes"></iframe>
+
+</div></div>
+
+
+
+ 
+
+   
+
+ 
+     
+ 
+        
+
+  <footer>
+        <p> © 2025 Bản quyền thuộc về Ha Nguyen | Chính sách bảo mật |📬<a href="lienhe2.html"><font color="white">Liên hệ </a> </p>
+  </footer>
+
+
+</body>
+</html>

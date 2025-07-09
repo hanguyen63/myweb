@@ -1,0 +1,257 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  
+ <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #004080; color: white; padding: 01px; text-align: center; }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 75%; border-radius: 10px; }
+
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+
+        }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 250%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+.btn {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+
+
+
+<style>
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+<div class="banner">
+    <img src="y.jpg" >
+    <div class="banner-text">
+     <h1>Những Điểm Đến - Việt Nam</h1>
+      <p>Dành cho Cộng đồng người Việt tại Hoa Kỳ</p>
+    </div>
+  </div>
+
+
+  <div class="sub-nav">
+<a href="diemden.html">Điểm đến</a>
+        <a href="amthuc.html">Ẩm thực</a>
+        <a href="tuvan.html">Tư vấn</a>
+
+      </div>
+
+<div class="section">      
+    <div class="columns">
+      <div class="card">
+        <a href="hue.html"><h3>Huế</h3></a>
+        <img src="hue1.jpg" >
+              </div>
+
+      <div class="card">
+        <a href="dalat.html"><h3 >Đà Lạt</h3></a>
+        <img src="dalat.jpg" >
+             </div>
+
+      <div class="card">
+        <a href="danang.html"><h3 >Đà Nẵng</h3></a>       
+        <img src="danang.jpg" alt="Sự kiện">
+              </div>
+
+      <div class="card">
+         <a href="nhatrang.html"><h3 >Nha Trang</h3></a>
+        <img src="nhatrang.jpg" alt="Quảng cáo">
+        
+     </div>   </div> 
+    
+      
+<div class="section">    
+    <div class="columns">
+      <div class="card">
+        <a href="hochiminh.html"><h3 >TP. Hồ Chí Minh</h3></a>       
+        <img src="saigon1.jpg" alt="Tin tức">
+          </div>  
+
+ 
+      <div class="card">
+         <a href="hanoi.html"><h3 >Hà Nội</h3></a>        
+        <img src="hanoi.jpg" alt="Tin tức">
+              </div>
+
+      <div class="card">
+        <a href="vungtau.html"><h3 >Vũng Tàu</h3></a>         
+        <img src="vungtau.jpg" alt="Việc làm">
+             </div> 
+
+     
+	<div class="card">
+    <a href="hoian.html"><h3 >Hội An</h3></a>     
+        <img src="hoian.jpg" alt="Sự kiện">
+
+              </div></div>
+
+      <div class="section">    
+    <div class="columns">
+      <div class="card">
+        <a href="phuquoc.html"><h3 >Phú Quốc</h3></a>         
+        <img src="phuquoc.jpg" alt="Quảng cáo">
+        
+     </div> 
+     
+      <div class="card">
+        <a href="halong.html"><h3 >Hạ Long</h3></a>      
+        <img src="halong.jpg" alt="Tin tức">
+          </div> 
+ 
+<div class="card">
+  <a href="cantho.html"><h3 >Cần Thơ</h3></a>   
+        <img src="cantho.jpg" alt="Quảng cáo">
+         </div>  
+
+
+<div class="card">
+  <a href="angiang.html"><h3 >An Giang</h3></a> 
+        <img src="angiang.jpg" alt="Quảng cáo">
+         </div>  </div> 
+
+
+
+    
+ 
+
+
+
+
+
+    
+
+
+    
+</body>
+</html>

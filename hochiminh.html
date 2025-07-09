@@ -1,0 +1,307 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="sai.jpg" >
+   
+    <div class="banner-text">  
+       <h1>Du Lịch TP. Hồ Chí Minh</h1>   
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="saigon3.jpg" >
+        <h3 >Thời Điểm</h3>
+        <ul><li>Thích hợp quanh năm – khí hậu nhiệt đới, chia 2 mùa:
+
+<li>☀️ Mùa khô (tháng 12 – tháng 4): thời tiết đẹp, ít mưa, thích hợp tham quan ngoài trời.</li>
+
+<li>🌧 Mùa mưa (tháng 5 – tháng 11): thường mưa vào chiều tối, nhưng vẫn có thể đi du lịch.</li>
+
+        
+        </ul>     
+              </div>
+
+      <div class="card">
+        <img src="dinhdoclap.jpg" >
+         <h3 >🌟 Điểm đến nổi bật ở TP. Hồ Chí Minh</h3>
+         <ul><li>🏛 Dinh Độc Lập	Di tích lịch sử quan trọng, từng là Phủ Tổng thống VNCH</li>
+<li>🗼 Nhà thờ Đức Bà & Bưu điện TP	Biểu tượng kiến trúc Pháp cổ kính</li>
+<li>🏙 Bitexco Skydeck	Ngắm toàn cảnh TP từ tầng cao</li>
+<li>🏛 Bảo tàng Chứng tích Chiến tranh	Nơi tìm hiểu về chiến tranh Việt Nam</li>
+<li>🏞 Công viên Tao Đàn, Thảo Cầm Viên	Không gian xanh giữa lòng TP</li>
+<li>🛍 Chợ Bến Thành	Trung tâm mua sắm, ăn uống và quà lưu niệm</li>
+<li>🛶 Bến Bạch Đằng – Du thuyền Sài Gòn River	Trải nghiệm ăn tối trên sông về đêm</li>
+<li>🌉 Phố đi bộ Nguyễn Huệ, chợ đêm Bùi Viện	Nơi nhộn nhịp, đông vui về đêm</li>
+
+                       
+        </ul>               
+                    </div>
+
+              <div class="card">
+        <img src="niko.jpg" >
+         <h3 >🛏️ Khách sạn & homestay</h3>
+         <ul><li>⭐ 5 sao	Hotel Nikko, Caravelle, The Reverie, Lotte Legend</li>
+<li>🏨 3-4 sao	Liberty Central, Bay Hotel, Silverland Sakyo</li>
+<li>🏠 Homestay – Boutique	The Hammock Hotel, Maison De Camille, 1986 Home</li>
+
+ 
+             </ul>
+            
+                   
+       
+        
+        
+       
+             </div>
+              <div class="card">
+        <img src="com.jpg" >
+         <h3 >🍜  Ẩm thực TP. Hồ Chí Minh </h3>
+         <ul><li>🍜 Phở – Bún bò Huế – Bún riêu	Phở Lệ, Bún bò Út Hưng, Bún riêu Gánh</li>
+<li>🍳 Cơm Tấm Ba Ghiền, Cơm Tấm Cali</li>
+<li>🍲 Hủ tiếu Nam Vang	Hủ tiếu Liến Húa, Hủ tiếu Nhân Quán</li>
+<li>🥖 Bánh mì Sài Gòn	Bánh mì Huỳnh Hoa, Bánh mì Như Lan</li>
+<li>🍡 Các món ăn vặt – chè	Chè Kỳ Đồng, Chè Hiển Khánh</li>
+<li>🍤 Hải sản	Ốc Đào, Quán Ốc Khánh</li>
+           
+                   
+        </ul>
+        
+        
+       
+             </div> </div>
+
+      <div class="card">
+        <img src="saigonlogo.png" >
+        <h3 >Dịch vụ hỗ trợ</h3>
+           Là nơi bạn có thể liên hệ để được hỗ trợ, tư vấn, phản ánh hoặc giải quyết các vấn đề liên quan đến hoạt động du lịch khi đến TP. Hồ Chí Minh.
+<ul><li>☎️ Tổng đài du lịch TP.HCM	028 38 272 944</li>
+<li>🚓 Công an Thành phố	113 hoặc 028 3838 7222</li>
+<li>🚑 Cấp cứu – Bệnh viện Chợ Rẫy	028 3855 4137</li>
+<li>🏥 Bệnh viện FV (quốc tế)	028 5411 3333</li>
+<li>🏢 Sở Du lịch TP. HCM	028 3823 0602 – Email: sdl@tphcm.gov.vn/</li>
+  
+        </ul>
+            
+     <h3> 💡 lưu ý: </h3>
+<ul><li>🚕 Nên dùng các app đặt xe (Grab, Gojek, Be) thay vì bắt xe ngoài đường.</li>
+<li>💳 Tránh mang quá nhiều tiền mặt; nên dùng ví điện tử, thẻ.</li>
+<li>👝 Cẩn thận móc túi, giật đồ, nhất là nơi đông người.</li>
+<li>🌧 Nếu đi mùa mưa, nên mang theo ô hoặc áo mưa mỏng.</li>
+
+
+        </ul>        
+     
+        
+     </div>   </div> 
+    
+      
+
+
+
+    
+</body>
+</html>

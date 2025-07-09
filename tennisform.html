@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tennis Registration Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+    .form-container {
+      background: #fff;
+      padding: 30px;
+      max-width: 500px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #2e7d32;
+    }
+    label {
+      margin-top: 15px;
+      display: block;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 20px;
+      background: #2e7d32;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Đăng Ký Học Tennis</h2>
+     <form id="contactForm" action="https://formspree.io/f/mdkgaylo" method="POST">
+      <label for="name">Họ và Tên:</label>
+      <input type="text" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" required>
+
+      <label for="phone">Số điện thoại:</label>
+      <input type="text" name="phone" required>
+
+      <label for="level">Trình độ chơi:</label>
+      <select name="level" required>
+        <option value="">-- Chọn trình độ --</option>
+        <option value="beginner">Mới bắt đầu</option>
+        <option value="intermediate">Trung bình</option>
+        <option value="advanced">Nâng cao</option>
+      </select>
+
+      <label for="notes">Ghi chú thêm (nếu có):</label>
+      <textarea name="notes" rows="4"></textarea>
+
+      <button type="submit">Gửi Đăng Ký</button>
+    </form>
+  </div>
+
+ <script>
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            form.reset();
+            window.location.href = "thanktennis.html";
+          } else {
+            alert("Có lỗi xảy ra khi gửi. Vui lòng thử lại.");
+          }
+        })
+        .catch(() => {
+          alert("Không thể gửi biểu mẫu. Kiểm tra kết nối Internet.");
+        });
+    });
+  </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="angiang1.png" >
+    <div class="banner-text">
+     <h1>Du Lịch An Giang</h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="angiang2.webp" >
+        <h3 >Thời Điểm</h3>
+        <ul><li>🌿 Tháng 8–11	Mùa nước nổi – ngắm lũ về, săn ảnh rừng tràm, cá linh, bông điên điển</li> 
+          <li>🌾 Tháng 4	Lễ hội Vía Bà Chúa Xứ (23/4 âm lịch), rộn ràng nhất năm</li>
+<li>☀️ Tháng 12 – tháng 3	Mùa khô – nắng đẹp, thích hợp leo núi, khám phá tâm linh</li>
+<li>👉 Lý tưởng: đi vào mùa nước nổi (tháng 9–11) hoặc dịp lễ hội Vía Bà Chúa Xứ.</li>
+        </ul>
+       
+              </div>
+
+      <div class="card">
+        <img src="nuicam.jpg" >
+         <h3 >🌟 Điểm đến nổi bật ở An Giang</h3>
+         <ul><li>🏯 Miếu Bà Chúa Xứ núi Sam – Châu Đốc	Nơi linh thiêng nhất miền Tây, hàng triệu người hành hương</li> 
+          <li>🏔 Núi Cấm (Thiên Cấm Sơn)	Cao nhất miền Tây, khí hậu mát mẻ như Đà Lạt thu nhỏ</li>
+<li>🌾 Rừng Tràm Trà Sư	Đi xuồng giữa rừng tràm xanh mướt, mùa nước nổi cực đẹp</li>
+          <li>🌈 Làng Chăm Châu Giang	Cầu tre, thánh đường Hồi giáo, làng nghề dệt thổ cẩm độc đáo</li>
+          <li>🕌 Chùa Hang – Phật Cô Đơn – Núi Sam	Quần thể di tích tâm linh đặc sắc </li>       
+          <li>🐘 Núi Dài – Núi Sập – Núi Cô Tô	Dành cho người mê trekking nhẹ</li>            
+        </ul>
+               
+                    </div>
+
+              <div class="card">
+        <img src="chaudoc1.webp" >
+         <h3 >🛏️ Khách sạn & homestay</h3>
+         <ul><li>🏨 Khách sạn tại TP. Châu Đốc	Victoria Châu Đốc Hotel (4⭐), Châu Phố Hotel (3⭐), 
+          Khách sạn Bến Đá Núi Sam </li> 
+          <li>🏡 Homestay / nghỉ dưỡng	Trà Sư Lodge, Núi Cấm Bungalow, Victoria Nui Sam Lodge 
+            (view thung lũng cực đẹp)</li> 
+                 
+             </ul>
+               
+        
+        
+       
+             </div>
+              <div class="card">
+        <img src="bunca.png" >
+         <h3 >🍜  Ẩm thực An Giang </h3>
+         <ul><li>🍲 Bún cá Châu Đốc	Đậm đà, nấu bằng cá lóc, nghệ, ngải bún</li> 
+          <li>🍤 Gỏi sầu đâu – mắm thái	Độc đáo miền Tây, chua chát béo bùi </li>
+          <li>🐟 Mắm cá linh, cá sặc	Ăn với rau sống, bún, khô cá lóc</li>
+<li>🍗 Cơm tấm Long Xuyên	Hạt gạo nhỏ dẻo, ăn với sườn, trứng</li>
+<li>🌮 Bánh xèo, bánh bò thốt nốt, bánh phồng Phú Mỹ	Đặc sản địa phương ngon lạ</li>
+<li>🧃 Thốt nốt (nước, bánh, đường)	Đặc sản vùng Bảy Núi</li>
+                    
+        </ul>
+        
+        
+       
+             </div> </div>
+
+      <div class="card">
+        <img src="angianglogo.png" >
+        <h3 >Dịch vụ hỗ trợ</h3>
+           Là nơi bạn có thể liên hệ để được hỗ trợ, tư vấn, phản ánh hoặc giải quyết các vấn đề liên quan đến hoạt động du lịch khi đến An Giang.
+<ul><li> ☎️ Trung tâm hỗ trợ khách du lịch An Giang	📞 0296 3866 500</li>
+  <li>🚓 Công an tỉnh An Giang	113 – 114 – 115</li>
+<li>🚑 Bệnh viện Đa khoa Trung tâm An Giang	 0296 3841 775</li>
+<li>🚌 Bến xe Long Xuyên – Châu Đốc	 0296 3841 210</li>
+
+        </ul>
+            
+ <h3> 💡 lưu ý: </h3>
+<ul><li>⛪ Tôn trọng nơi linh thiêng (Miếu Bà Chúa Xứ, chùa, thánh đường Chăm – Khmer).</li>
+<li>🛶 Nếu đi rừng tràm nên mặc áo tay dài, mang kem chống muỗi.</li>
+<li>🌡 Nên mang theo nước, mũ, kính vì thời tiết nắng gắt ở vùng núi.</li>
+<li>🚙 Nên đặt xe từ TP.HCM – An Giang (xe Phương Trang, Huệ Nghĩa).</li>
+
+        </ul>        
+     
+             </div>   </div>             
+   
+      
+
+</body>
+</html>

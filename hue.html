@@ -1,0 +1,294 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="huebaner.webp" >
+    <div class="banner-text">
+     <h1>Du Lịch Huế</h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="hue2.jpg" >
+        <h3 >Thời Điểm</h3>
+        <ul><li>Du lịch Huế lý tưởng nhất là từ tháng 3 đến tháng 5. khi thời tiết khô ráo, nắng đẹp và ít mưa Nhiệt độ dễ chịu (~25–32°C)</li> 
+          <li>Thuận lợi để đi tham quan Đại Nội, lăng tẩm, chùa chiền, và ngắm sông Hương, cầu Tràng Tiền.</li>
+<li>Có nhiều lễ hội truyền thống và Festival Huế (diễn ra 2 năm/lần, thường vào tháng 4 hoặc 6).</li>
+        </ul>
+       <b>Chú ý:</b> 🌧️ Nên tránh mùa mưa lũ: Tháng 9 – tháng 12 
+              </div>
+
+      <div class="card">
+        <img src="dai.jpg" >
+         <h3 >🌟 Điểm đến nổi bật ở Huế</h3>
+         <ul><li>🏯 Đại Nội Huế (Hoàng Thành)	Di sản UNESCO, kiến trúc cung đình (ticket sale)</li> 
+          <li>🛕 Chùa Thiên Mụ	Biểu tượng của Huế.(ticket sale)</li>
+<li>🌉 Cầu Tràng Tiền – Sông Hương	Đi dạo, ngắm cảnh & nghe ca Huế trên thuyền</li>
+          <li>🛶 Phá Tam Giang – Đầm Chuồn	Ngắm hoàng hôn, ăn hải sản dân dã</li>
+          <li>🏖 Biển Thuận An / Lăng Cô	Gần TP. Huế, biển trong xanh, mát lành </li>
+                   
+        </ul>
+        
+        
+       
+             </div>
+
+              <div class="card">
+        <img src="huehotel.webp" >
+         <h3 >🛏️ Khách sạn & homestay</h3>
+         <ul><li>Bạn nên đặt phòng ở trung tâm, gần các bến tàu, xe để dễ đi lại cũng như tham quan các địa điểm du lịch nội đô và điểm ăn uống.  </li> 
+          <li> Homestay - Giá rẻ & sạch sẽ phù hợp cho người đi một mình hoặc nhóm bạn trẻ: Hue Happy Homestay (~250k/đêm); Amy 2 Hostel Huế (~200–300k/đêm)</li> 
+              <li>Khách sạn - <a href="https://www.agoda.com/search?city=3738&checkIn=2025-07-11&los=1&rooms=1&adults=2&children=0&cid=1908612&locale=en-us&ckuid=6a49aa0b-8272-493e-b799-f88501487d92&prid=0&currency=USD&correlationId=73c99ab0-4e75-441b-80f7-79890ea3ccf8&analyticsSessionId=-365830928011362132&pageTypeId=1&realLanguageId=1&languageId=1&origin=US&stateCode=VA&userId=6a49aa0b-8272-493e-b799-f88501487d92&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=7&currencyCode=USD&htmlLanguage=en-us&cultureInfoName=en-us&machineName=as-pc-3f-acm-web-user-cbdfb65cb-lqp2q&trafficGroupId=4&trafficSubGroupId=849&aid=296180&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Firefox&cdnDomain=agoda.net&checkOut=2025-07-12&priceCur=USD&textToSearch=Hue&travellerType=1&familyMode=off&hotelStarRating=5&hotelArea=93617&benefits=78322&productType=-1&sort=reviewAll">Phù hợp cho gia đình </a>
+ </li>       
+             </ul>
+            <b>Chú ý: </b>đặt phòng trực tiếp với khách sạn thường đắt hơn so với đặt qua các nền tảng như Booking.com, Expedia, Agoda. <br>
+            💡<b>Mẹo:</b> Kiểm tra Booking.com, sau đó gọi điện hoặc gửi email cho khách sạn và hỏi,
+"Các bạn có thể khớp giá này nếu tôi đặt trực tiếp không?" → Thường thì họ sẽ — và còn tặng thêm nhiều ưu đãi nữa! 
+            
+                   
+       
+        
+        
+       
+             </div>
+              <div class="card">
+        <img src="hen.jpg" >
+         <h3 >🍜  Ẩm thực Huế </h3>
+         <ul><li>Cơm Hến Hoa Đông - Địa chỉ: 64 Kiệt 7 Ưng Bình, Tp. Huế, Huế Số - điện thoại: 0234 3848 359</li> 
+          <li>Bún bò Huế. </li>
+          <li>Tốt nhất thưởng thức các món ăn tại nhà hàng. </li>
+          <li><a href="https://madamthu.com/">Madam Thu Restaurant</a> </li>
+<li><a href="http://banhkhoaihongmai.com/">Bánh Khoái Hồng Mai </a></li>
+ <li><a href="https://www.huonggianghotel.com.vn/vi/nha-hang/">Huong Giang Restaurant</a> </li>
+  <li><a href="https://lecerclesportif.com/le-cercle-bistro/">Nhà Hàng Bistro </a> </li>
+                   
+        </ul>
+        
+        
+       
+             </div> </div>
+
+      <div class="card">
+        <img src="huelogo.png" >
+        <h3 >Dịch vụ hỗ trợ</h3>
+           Là nơi bạn có thể liên hệ để được hỗ trợ, tư vấn, phản ánh hoặc giải quyết các vấn đề liên quan đến hoạt động du lịch khi đến Huế.
+<ul><li>Mất đồ / bị lừa đảo	☎️ 0234 3501 111</li>
+  <li>Cần hỗ trợ y tế	🏥 Gọi 115 hoặc 0234 3501 111</li>
+<li>Thắc mắc điểm đến / tour / khách sạn	📞 0919 155 991</li>
+<li>Phản ánh chất lượng dịch vụ	📧 sdl@thuathienhue.gov.vn</li>
+        </ul>
+            
+     
+        
+     </div>   </div> 
+    
+      
+
+
+
+    
+</body>
+</html>

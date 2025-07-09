@@ -1,0 +1,288 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="phuquocbanner.webp" >
+    <div class="banner-text">
+     <h1>Du Lịch Phú Quốc</h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="phuquoc1.webp" >
+        <h3 >Thời Điểm</h3>
+        <ul><li>☀️ Tháng 11 – Tháng 4	Mùa khô, trời nắng đẹp, biển xanh trong, ít mưa</li> 
+          <li>👉 Tốt nhất: Từ tháng 12 đến tháng 3 — thời tiết đẹp nhất trong năm.</li>
+<li>🌦 Tháng 5 – Tháng 10	Mùa mưa, vé máy bay & phòng rẻ, nhưng có thể mưa bất chợt</li>
+        </ul>
+       
+              </div>
+
+      <div class="card">
+        <img src="chodem.webp" >
+         <h3 >🌟 Điểm đến nổi bật ở Phú Quốc</h3>
+         <ul><li>🏖️ Bãi Sao, Bãi Dài	Tắm biển, thư giãn với cát trắng, nước trong</li> 
+          <li>🚠 Cáp treo Hòn Thơm	Dài nhất thế giới, ngắm biển từ trên cao</li>
+<li>🏝 Hòn Móng Tay, Hòn Gầm Ghì, Hòn Xưởng	Lặn ngắm san hô, tour 4 đảo</li>
+          <li>🕌 Dinh Cậu, chùa Hộ Quốc	Tâm linh và ngắm hoàng hôn</li>
+          <li>🐠 VinWonders + Safari Phú Quốc	Công viên giải trí, vườn thú bán hoang dã </li>
+       <li>🌅 Sunset Sanato Beach Club	Chill biển, chụp ảnh hoàng hôn đẹp nhất đảo</li>            
+        </ul>
+               
+                    </div>
+
+              <div class="card">
+        <img src="phu.avif" >
+         <h3 >🛏️ Khách sạn & homestay</h3>
+         <ul><li>⭐ Cao cấp (5 sao)	JW Marriott Phu Quoc, InterContinental, Vinpearl Resort</li> 
+          <li> 🏝 Resort ven biển 4 sao	Lahana Resort, Seashells Hotel, Famiana Resort</li> 
+              <li>👨‍👩‍👧‍👦 Resort cho gia đình	Mövenpick Phu Quoc, Premier Residences  </li> 
+              <li>🏠 Homestay đẹp, giá hợp lý	9Station Hostel, Phu House, Sen Lodge Bungalow </li>      
+             </ul>
+               
+        
+        
+       
+             </div>
+              <div class="card">
+        <img src="bien.jpg" >
+         <h3 >🍜  Ẩm thực Phú Quốc </h3>
+         <ul><li>🦀 Ghẹ Hàm Ninh	Quán Biển Xanh, nhà bè Hàm Ninh</li> 
+          <li>🍜 Bún quậy Kiến Xây	Cực nổi tiếng – tự trộn, nước dùng trong </li>
+          <li>🍲 Lẩu hải sản / nướng BBQ	Xin Chào Restaurant, Ra Khơi, Hương Biển </li>
+<li>🦞 Nhum nướng, cá sòng nướng	Chợ đêm Dinh Cậu</li>
+                    
+        </ul>
+        
+        
+       
+             </div> </div>
+
+      <div class="card">
+        <img src="phuquoclogo.png" >
+        <h3 >Dịch vụ hỗ trợ</h3>
+           Là nơi bạn có thể liên hệ để được hỗ trợ, tư vấn, phản ánh hoặc giải quyết các vấn đề liên quan đến hoạt động du lịch khi đến Phú Quốc.
+<ul><li> 📞Tổng đài hỗ trợ du lịch Kiên Giang	0297 3828 188</li>
+  <li>🚓 Công an TP. Phú Quốc	0297 3980 112</li>
+<li>🚑 Bệnh viện Đa khoa Phú Quốc	0297 3846 961 – 127 Đường 30/4, TT Dương Đông</li>
+<li>🧭 Trung tâm hỗ trợ du khách	Có tại sân bay Phú Quốc và bến tàu</li>
+<li>📱 App tham khảo	Google Maps, Zalo, PhuQuocGo, TripAdvisor</li>
+        </ul>
+            
+ <h3> 💡 lưu ý: </h3>
+<ul><li>🧴 Chống nắng kỹ vì nắng biển khá gắt.</li>
+<li>🐠 Nếu đi tour 4 đảo: nhớ mang đồ bơi, khăn, kính bơi, thuốc say sóng.</li>
+<li>💳 Nhiều nơi không nhận thẻ – nên chuẩn bị tiền mặt.</li>
+<li>🚗 Đi lại: thuê xe máy (~120–150k/ngày) hoặc đặt taxi/Grab.</li>
+<li>📸 Có rất nhiều điểm sống ảo đẹp – nhớ sạc đầy pin điện thoại!</li>
+        </ul>        
+     
+             </div>   </div>             
+   
+      
+
+</body>
+</html>

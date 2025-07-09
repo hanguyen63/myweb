@@ -1,0 +1,300 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="dalatbanner.webp" >
+    <div class="banner-text">
+     <h1>Du Lịch Đà Lạt</h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="dalat1.webp" >
+        <h3 >Thời Điểm</h3>
+        <ul><li>Tháng 11 – Tháng 3	Mùa hoa dã quỳ, mai anh đào, cải trắng, trời se lạnh, lý tưởng nhất.
+
+</li> 
+          <li>Tháng 4 – Tháng 6	Nắng nhẹ, khí hậu dễ chịu, ít mưa, phù hợp đi chơi ngoài trời.</li>
+<li>Tháng 7 – Tháng 9	Mùa mưa, cảnh đẹp nhưng nên mang áo mưa và hạn chế lịch trình ngoài trời.</li>
+        </ul>
+                    </div>
+
+      <div class="card">
+        <img src="thung.jpg" >
+         <h3 >🌟 Điểm đến nổi bật ở Đà Lạt</h3>
+         <ul><li>🌸 Quảng trường Lâm Viên	Check-in với bông hoa atiso & view hồ Xuân Hương.</li> 
+          <li>🏞️ Đồi chè Cầu Đất	Rộng lớn, đẹp như tranh, ngắm bình minh rất đẹp.</li>
+<li>🪟 Nhà ga Đà Lạt cổ	Ga xe lửa cổ kiểu Pháp, nổi bật với kiến trúc đặc trưng.</li>
+          <li>📸 Kombi Land – Tiểu sa mạc	Khu chụp ảnh cực hot, phong cách hoang dã Mỹ.</li>
+          <li>🏛️ Dinh Bảo Đại – Biệt thự cổ	Tìm hiểu lịch sử và kiến trúc xưa. </li>
+                    <li>🌲 Thung Lũng Tình Yêu / Đồi Mộng Mơ	Cảnh quan lãng mạn, trò chơi và vườn hoa.</li>
+<li>🛕 Thiền viện Trúc Lâm – Hồ Tuyền Lâm	Không gian thanh tịnh, gần rừng và hồ.</li>
+                    <li>🧊 Chợ Đà Lạt đêm & Hồ Xuân Hương	Đi dạo, ăn uống, mua đặc sản.</li>
+        </ul>
+        
+        
+       
+             </div>
+
+              <div class="card">
+        <img src="dalatho.jpg" >
+         <h3 >🛏️ Khách sạn & homestay</h3>
+         <ul><li>🌟 Khách sạn sang trọng	Dalat Palace, Ana Mandara Villas, Ladalat Hotel</li> 
+          <li> 🏡 Homestay đẹp - giá rẻ	The Wilder-nest, Tổ Chim Homestay, Là Nhà Homestay</li> 
+              <li> 🛏️ Gần trung tâm tiện đi lại	Tulip Hotel, Hotel Colline, Dalat Plaza </a>
+ </li>       
+             </ul>
+                 
+        
+        
+       
+             </div>
+              <div class="card">
+        <img src="lau.jpg" >
+         <h3 >🍜  Ẩm thực Huế </h3>
+         <ul><li>🍲 Lẩu gà lá é	Quán Tao Ngộ – nổi tiếng nhất Đà Lạt</li> 
+          <li>🍡 Bánh tráng nướng (Pizza Đà Lạt)	112 Nguyễn Văn Trỗi, chợ đêm Đà Lạt</li>
+          <li>🍢 Nem nướng Bà Hùng	328 Phan Đình Phùng</li>
+<li>🍲 Lẩu bò Ba Toa	1/29 Hoàng Diệu – nổi tiếng đậm đà</li>
+ <li>🍠 Khoai lang nướng, bắp nướng, sữa đậu nóng	Chợ đêm Đà Lạt</li>
+  <li>🍓 Dâu tây tươi – sinh tố dâu	Quán Thanh Thảo, vườn dâu Biofresh</li>
+  
+                   
+        </ul>
+        
+        
+       
+             </div> </div>
+
+      <div class="card">
+        <img src="dalatlogo.png" >
+        <h3 >Dịch vụ hỗ trợ</h3>
+           Là nơi bạn có thể liên hệ để được hỗ trợ, tư vấn, phản ánh hoặc giải quyết các vấn đề liên quan đến hoạt động du 
+           lịch khi đến Đà Lạt.
+<ul><li>🚔 Công an thành phố Đà Lạt	0263 3822 215 hoặc 113 (khẩn cấp)</li>
+  <li>☎️ Trung tâm hỗ trợ du khách Lâm Đồng (Tourist Support Center)	0263 3516 888 – hỗ trợ du khách khi gặp khó khăn, lạc đường, bị chèo kéo</li>
+<li>🛎️ Đường dây nóng Sở Du lịch Lâm Đồng	0919 522 577 hoặc 0263 3511 666 – tiếp nhận phản ánh du lịch</li>
+   
+</ul>
+ <h3> 💡 lưu ý: </h3>
+<ul><li>🧣 Mang đồ ấm, nhất là sáng sớm và ban đêm (nhiệt độ 12–17°C).</li>
+<li>☔ Mang theo dù/áo mưa nếu đi mùa mưa.</li>
+<li>🛵 Nên thuê xe máy để dễ di chuyển (giá khoảng 120–150k/ngày).</li>
+<li>🗺️ Chuẩn bị sẵn bản đồ địa điểm ăn chơi, tránh đi nhiều nơi quá xa trong 1 ngày.</li>
+
+
+        </ul>        
+     
+        
+     </div>   </div> 
+    
+      
+
+
+
+    
+</body>
+</html>

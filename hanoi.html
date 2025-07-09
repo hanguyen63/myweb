@@ -1,0 +1,294 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="hanoi2.png" >
+   
+    <div class="banner-text">  
+       <h1>Du Lịch Hà Nội</h1>   
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="hanoi1.webp" >
+        <h3 >Thời Điểm</h3>
+        <ul><li>🌸 Mùa xuân (tháng 2–4) và mùa thu (tháng 9–11) là đẹp nhất: 
+Trời mát, ít mưa, hoa nở và không khí trong lành.</li>
+<li>❄️ Mùa đông (tháng 12–1): lạnh, thích hợp thưởng thức món nóng như phở, bún chả.</li>
+<li>🌧 Mùa hè (tháng 5–8): nắng nóng và dễ mưa lớn.</li>
+        
+        </ul>     
+              </div>
+
+      <div class="card">
+        <img src="hanoi4.jpg" >
+         <h3 >🌟 Điểm đến nổi bật ở Hà Nội</h3>
+         <ul><li>🏛 Văn Miếu – Quốc Tử Giám	Trường đại học đầu tiên của VN</li>
+<li>🕌 Chùa Một Cột – Chùa Trấn Quốc	Biểu tượng tâm linh</li>
+<li>🏰 Hoàng thành Thăng Long	Di sản UNESCO</li>
+<li>🏞 Hồ Hoàn Kiếm – Tháp Rùa – Đền Ngọc Sơn	Trung tâm du lịch cổ</li>
+<li>🚶‍♂️ Phố cổ Hà Nội	36 phố phường, kiến trúc xưa</li>
+<li>🏯 Lăng Chủ tịch Hồ Chí Minh	Lăng Bác, quảng trường Ba Đình</li>
+<li>🖼 Nhà hát lớn, Bảo tàng mỹ thuật, Bảo tàng dân tộc học	Văn hóa – nghệ thuật</li>
+<li>🌆 Phố đi bộ – Phố bia Tạ Hiện – Phố sách Đinh Lễ	Vui chơi, thư giãn</li>
+                       
+        </ul>               
+                    </div>
+
+              <div class="card">
+        <img src="hanoi3.webp" >
+         <h3 >🛏️ Khách sạn & homestay</h3>
+         <ul><li>⭐ 5 sao	Sofitel Legend Metropole, Lotte Hotel, JW Marriott</li>
+<li>🏨 3-4 sao	The Light Hotel, Tirant Hotel, Hanoi Pearl</li>
+<li>🏠 Homestay – Boutique Hotel	Satori Homestay, Hanoi La Siesta, Maison d’Hanoi</li>
+
+              </ul>
+       
+         
+             </div>
+              <div class="card">
+        <img src="cha.jpeg" >
+         <h3 >🍜  Ẩm thực Hà Nội </h3>
+         <ul><li>🥣 Chả cá Lã Vọng	Lẩu cá độc đáo</li>
+          <li>🍲 Phở Bát Đàn – Phở Thìn Lò Đúc	Đặc sản Hà Nội</li>
+<li>🥢 Bún chả Hương Liên	Nơi từng tiếp đón Tổng thống Obama</li>
+
+<li>🥖 Bánh mì sốt vang – bánh cuốn Thanh Trì	Đặc sản dân dã</li>
+<li>🍡 Bún riêu – bún thang – bún mọc	Gánh hàng rong hoặc quán gia truyền</li>
+<li>🍮 Chè bưởi, chè khúc bạch, kem Tràng Tiền	Ăn vặt nổi tiếng</li>
+    <li>☕ Cà phê trứng – cà phê Giảng	Hương vị Hà Nội xưa</li>                         
+        </ul>
+                
+                    </div> </div>
+
+      <div class="card">
+        <img src="hanoilogo.png" >
+        <h3 >Dịch vụ hỗ trợ</h3>
+           Là nơi bạn có thể liên hệ để được hỗ trợ, tư vấn, phản ánh hoặc giải quyết các vấn đề liên quan đến hoạt động du lịch khi đến Hà Nội.
+<ul><li>☎️ Tổng đài hỗ trợ du lịch Hà Nội	1800 556896 (miễn phí)</li>
+<li>🚓 Công an Thành phố Hà Nội	113</li>
+<li>🚑 Cấp cứu y tế – Bệnh viện Việt Đức / Bạch Mai / Hồng Ngọc	115</li>
+<li>🏥 Bệnh viện quốc tế (thu nhận du khách nước ngoài)	Vinmec, Hồng Ngọc, Thu Cúc</li>
+<li>🧾 Sở Du lịch Hà Nội	(024) 3928 2572 – sodulich.hanoi.gov.vn</li>
+  
+        </ul>
+            
+     <h3> 💡 lưu ý: </h3>
+<ul><li>🚶‍♂️ Đi bộ phố cổ nên mang giày nhẹ, tránh mang đồ có giá trị nhiều.</li>
+<li>🚖 Dùng Grab, Gojek hoặc taxi hãng lớn (Mai Linh, Vinasun) để tránh bị "chặt chém".</li>
+<li>🧾 Hỏi giá trước khi mua hoặc ăn ở quán vỉa hè.</li>
+<li>🌧 Nếu đi mùa mưa, nên mang theo ô hoặc áo mưa mỏng.</li>
+
+        </ul>        
+     
+             </div>   </div> 
+    
+   
+
+
+    
+</body>
+</html>

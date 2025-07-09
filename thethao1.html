@@ -1,0 +1,457 @@
+<html lang="vi">
+<head>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>THE THAO</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #004080; color: white; padding: 01px; text-align: center; }
+
+     
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 3;
+      background-color:  #003366;
+      display: flex;
+      align-items: center;
+ border: 2px solid #00695c;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding:6px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color:  #005599;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #005599;
+      min-width: 120;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 10;
+            left: 0;
+
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.btn {
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+  .contact-box {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .contact-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .contact-box {
+        padding: 20px;
+      }
+    }
+
+ .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+       font-size:16;
+    }
+    .card img { width: 100%; height: auto; border-radius: 10px; }
+
+
+
+    nav { background-color: #e0f2f1; padding: 10px; text-align: center; }
+    nav a { color: #00695c; margin: 0 15px; text-decoration: none; font-weight: bold;}
+    nav a:hover { text-decoration: underline; }
+      
+    
+    footer {
+      background-color:#003366;
+      color: white;
+      padding: 0.5px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+
+    }
+  </style>
+
+
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    iframe {
+      border: none;
+	font-size: 14px;
+
+    }
+
+    h2 {
+      font-size:16px;
+      margin-bottom: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+ <ul class="navbar">
+    <li><a href="index.html" alt="Trang chủ">🏛️Trang chủ </a>  
+      <ul class="submenu">
+      <li> <a href="GIOITHIEU.html">Giới Thiệu </a></li>     
+      
+</ul>
+
+  <li><a href="thoisu.html" >Thời sự  </a>  
+      <ul class="submenu"> 
+      <li><a href= "nhansu.html">Nhân sự</a></li>
+      <li><a href= "dautu.html">Chứng khoán</a>        
+      <li><a href= "BAOVIET.html">Báo Việt</a></li>
+      
+      </ul>
+      
+      <li><a href="doisong.html">Đời Sống </a>
+      <ul class="submenu">
+      <li><a href="Vieclam.html">Việc làm</a></li>
+     <li><a href="phapluat.html">Pháp luật</a></li>
+      <li><a href="suckhoe.html">Sức khỏe</a></li>
+<li><a href="hinh.html">Thư Viện </a></li>
+
+
+</ul>
+      
+     <li>       
+
+      <li><a href="dulich.html">Du lịch </a>
+      <ul class="submenu">
+         <li><a href="diemden.html">Điểm đến</a></li>
+        <li><a href="amthuc.html">Ẩm thực</a></li>
+        <li><a href="tuvan.html">Tư vấn</a></li>
+
+      </ul>
+
+  <li><a href="hoidap.html">Chia Sẻ  </a>
+      <ul class="submenu">
+        <li><a href="https://script.google.com/macros/s/AKfycbybVt21OVZ_E_n68IQf0kjxxkJtHGPlHVCDPBjO-5RD0XulyCXikDltH6ExfOFOT1l1xg/exec">Kinh Nghiệm</a></li>
+        
+      </ul>
+
+<li>       
+
+   <li><a href="thethao1.html">Thể Thao </a>
+      <ul class="submenu">
+        
+	<li><a href="thanhvien.html">Thành viên</a></li> 
+
+        <li><a href="anh.html">Thư viện</a></li>
+
+      </ul>
+    </li>
+
+  <li><a href="giaitri.html">Giải Trí </a>
+
+      
+    </li>
+
+
+
+ <li>
+
+ 	<li><a href="quangcaofilter.html">Rao vặt & Quảng cáo</a>
+      <ul class="submenu">
+        <li><a href="quangcao1.html">Liên hệ</a></li>
+      
+      </ul>
+    </li>
+ 
+  </ul>
+
+
+
+
+<div class="banner">
+    <img src="512.JPG" alt="Wakefield Park Tennis and Pickleball">
+    <div class="banner-text">
+     <h1>Thể Thao Cộng Đồng Việt </h1>
+
+      <p>Tennis & Pickleball - Annandale, Virginia</p>
+    </div>
+  </div>
+
+<header>
+  
+</header>
+
+<nav>
+<a href="thanhvien.html">Thành viên</a>
+  <a href="https://wakefieldchapelrec.org/reservation-calendar/?DB=tennis&Grid=0">Lịch sân</a>
+	<a href="https://wakefieldchapelrec.org/reservations/?DB=tennis&Grid=0">Đặt sân</a>
+  
+ 
+  <a href="#Giải đấu">Giải đấu</a>
+  <a href="#lienhe">Liên hệ </a>
+	
+	
+        <a href="#Diễn đàn">Diễn đàn</a>
+        <a href="anh.html">Thư viện</a>
+        <a href="class.html">Học Tennis </a>
+
+</nav>
+
+
+      <div class="section">
+        <div class="columns">     
+          <div class="card"> 
+<H3>🎾Hoạt Động Thể Thao Cộng đồng người Việt</h3>
+<img src="mason.JPG" >
+
+        <p>Tại Fairfax, Virginia,cộng đồng người Việt thường xuyên tổ chức các buổi chơi tennis và pickleball vào cuối tuần tại các công viên địa phương đặc biệt là Wakefield Park và Mason District Park. Dưới đây là thông tin cụ thể và cơ sở vật chất hiện có:
+<H4>Lịch Trình Chơi: </h4>
+<p>📅 Thời gian: Mỗi buổi sáng Thứ Bảy và Chủ Nhật, từ 7:00 sáng đến 12:00 chiều <br>
+<p>📍 Địa điểm:<br>
+1. Mason District Park (6621 Columbia Pike, Annandale, VA).<br>
+<p>2. Wakefield Park (8100 Braddock Rd, Annandale, VA).  
+<a href="https://www.google.com/maps/dir/9502+Old+Creek+Dr,+Fairfax,+VA+22032-1236,+USA/6621+Columbia+Pike,+Annandale,+VA+22003/@38.8333236,-77.2067895,5699m/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0x89b64c3268c391a9:0x8d0103d892b15101!2m2!1d-77.2738252!2d38.833318!1m5!1m1!1s0x89b7b33c31aeee67:0x6d4d8143079c65cb!2m2!1d-77.1749149!2d38.8336478!3e0!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDYwMi4wIKXMDSoASAFQAw%3D%3D" class="btn">Xem bản đồ</a>
+
+</p>
+
+ </div>
+ 
+ 	<div class="card">
+<img src="tennis.JPG" >
+ 	
+<h4>Mason District Park (6621 Columbia Pike, Annandale, VA)</h4>
+<p>Cơ sở vật chất hiện tại có 6 sân tennis ngoài trời. Quận Fairfax đang xem xét việc xây dựng một sân pickleball gần các sân tennis hiện có ở góc tây nam của công viên. Đề xuất này nhằm đáp ứng nhu cầu ngày càng tăng về môn thể thao này trong cộng đồng. Đèn chiếu sáng của sân tennis sẽ được điều chỉnh để phục vụ sân pickleball. Đề xuất này đang hỏi ý kiến cư dân trước khi đưa ra quyết định.</p>  
+
+<img src="509.JPG" >
+<h4> Wakefield Park (8100 Braddock Rd, Annandale, VA). </h4>
+</div>
+
+
+    <div class="card">
+<h3>Thời tiết tại Wakefield Park</h3>   
+         
+<iframe src="https://www.meteoblue.com/en/weather/widget/three/annandale_united-states_4744468?geoloc=fixed&nocurrent=0&noforecast=0&days=4&tempunit=FAHRENHEIT&windunit=MILE_PER_HOUR&layout=image"  width="100%" height="260" frameborder="0" 
+  scrolling="yes"></iframe>
+
+
+        <p>Cơ sở vật chất hiện tại có 8 sân tennis và 6 sân pickleball ngoài trời, bao gồm 2 sân chuyên dụng và 4 sân được kẻ vạch trên sân tennis. Sân có đèn chiếu sáng và mở cửa miễn phí cho công chúng. Thường xuyên có các buổi chơi mở vào buổi sáng và chiều trong thời tiết ấm áp.</p>
+
+<img src="222.JPG" >
+<p>Kế hoạch nâng cấp năm 2025: Dự án cải tạo bắt đầu từ tháng 4 năm 2025, chia thành hai giai đoạn: </p>
+<p><b>Giai đoạn 1:</b> Chuyển đổi Sân Tennis 11 thành 4 sân pickleball chuyên dụng, cải tạo Sân Tennis 7 và 8, khôi phục Sân 9 và 10 cho tennis, và sửa chữa Sân 1 và 2.<p>
+
+
+</div> </div>
+      
+
+
+      <div class="section">
+        <div class="columns"> 
+         <div class="card">
+<p><b>Giai đoạn 2:</b> Thay thế một phần sân tập có tường bằng 2 sân pickleball chuyên dụng bổ sung. Sau khi hoàn thành, công viên sẽ có 10 sân tennis và 8 sân pickleball chuyên dụng. </p>
+   <img src="41.JPG" alt="Ảnh 1">
+<p><i>Sơ đồ phát triển Wakefield tennis & pickleball</i></p>
+       
+
+
+ </div>
+       
+      
+<div class="card">
+    <section id="Giải đấu">
+        <h3>Giải đấu mùa hè 2025</h3>
+      <p>Diễn ra vào tháng 7 tại Wakefield – đăng ký từ hôm nay.</p>
+    
+</section>
+
+
+  </div>  
+
+<div class="card">
+    <section id="congdong">
+  <h2>🏆 Giải đấu & Kết quả</h2>
+  <p>Thông tin về các giải đấu tại công viên, đăng ký và theo dõi kết quả.</p>
+
+</section>
+
+
+  </div>   
+  
+<div class="card">
+    <section id="congdong">
+   <h3>Lớp học Tennis </h3>
+<img src="trainning.JPG" >
+      <p>Học tennis cơ bản tại Long Nguyen Academy. Nền tảng vững chắc cho người mới bắt đầu.</br> <a href="class.html" class="btn"> 👉 Xem thêm chi tiết →</a>
+</p>
+</section>
+
+
+  </div>   </div>
+  
+
+
+<div class="section">
+        <div class="columns"> 
+         <div class="card">
+
+<section id="Diễn đàn">
+  <h2>🤝 Cộng đồng người chơi diễn đàn thảo luận</h2>
+  <p>Chia sẻ kinh nghiệm, tìm bạn đánh đôi và đăng bài trong nhóm Facebook.</p>
+
+
+ <div class="section">
+        <h2></h2>
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url = window.location.href;
+            this.page.identifier = 'vietnam-fairfax-sports';
+          };
+          (function() {
+            var d = document, s = d.createElement('script');
+            s.src = ' https://thethao.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+</section>
+      </div>
+    
+ 
+ <div class="card">
+<section id="lienhe">
+  <h2>📍 Liên hệ & Vị trí</h2>
+ 
+    <p>📞 Liên hệ: <a href="lienhe2.html"> tennis@wakefieldpark.org</a></p>
+    <p>📍 Địa chỉ: Wakefield Park, Annandale, VA</p>
+    <iframe src="https://www.google.com/maps/embed?..." width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+ </div>  </div>  </div>
+
+
+
+
+<footer>
+        <p> © 2025 Bản quyền thuộc về Ha Nguyen | Chính sách bảo mật |📬<a href="lienhe2.html"><font color="white">Liên hệ </a> </p>
+  </footer>
+
+
+</body>
+</html>

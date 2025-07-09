@@ -1,0 +1,456 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: auto; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+
+
+
+<style>
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+  <div class="sub-nav">
+<a href="doisong.html">Đời Sống </a> 
+   <a href="Vieclam.html">Việc làm</a>
+       <a href="phapluat.html">Pháp luật</a>
+    <a href="suckhoe.html">Sức khỏe</a>
+<a href="hinh.html">Thư Viện </a>
+
+
+    
+  </div>
+
+
+<div class="section">
+    <h3 >Tết Nguyên Đán 2025 Eden Center</h3>
+    <div class="columns">
+      <div class="card">
+        <img src="48.jpg" >
+              </div>
+
+      <div class="card">
+        <img src="49.jpg" >
+             </div>
+
+      <div class="card">
+        <img src="50.jpg" alt="Sự kiện">
+              </div>
+
+      <div class="card">
+        <img src="127.jpg" alt="Quảng cáo">
+        
+     </div>   </div> 
+    
+      
+<div class="section">    
+    <div class="columns">
+      <div class="card">
+        <img src="51.jpg" alt="Tin tức">
+          </div>  
+
+ 
+      <div class="card">
+        <img src="157.jpg" alt="Tin tức">
+              </div>
+
+      <div class="card">
+        <img src="158.jpg" alt="Việc làm">
+             </div> 
+
+     
+	<div class="card">
+        <img src="159.jpg" alt="Sự kiện">
+              </div></div>
+
+      <div class="section">    
+    <div class="columns">
+      <div class="card">
+        <img src="160.jpg" alt="Quảng cáo">
+        
+     </div> 
+     
+      <div class="card">
+        <img src="150.jpg" alt="Tin tức">
+          </div> 
+ 
+<div class="card">
+        <img src="127.jpg" alt="Quảng cáo">
+         </div>  
+
+
+<div class="card">
+        <img src="129.jpg" alt="Quảng cáo">
+         </div>  </div> 
+
+
+   <div class="section">
+    <h3 align="right">Tết Trung Thu 2025 Eden Center</h3>
+    <div class="columns">
+
+      <div class="card">
+        <img src="60.jpg" alt="Tin tức">
+              </div>
+
+      <div class="card">
+        <img src="61.jpg" alt="Việc làm">
+             </div>
+
+      
+      <div class="card">
+        <img src="59.jpg" alt="Quảng cáo">
+        
+     </div> 
+ 
+    
+      <div class="card">
+        <img src="16.webp" alt="Tin tức">
+          </div>  </div>
+
+
+      <div class="section">
+        <div class="columns">
+        <div class="card">
+        <img src="132.jpg" alt="Việc làm">
+             </div>
+
+      <div class="card">
+        <img src="133.jpg" alt="Sự kiện">
+             </div>     
+
+      
+      <div class="card">
+        <img src="58.jpg" alt="Sự kiện">
+              </div>     
+
+          <div class="card">
+        <img src="141.jpg" alt="Quảng cáo">
+        </div> </div>
+
+<div class="section">
+        <div class="columns">
+        <div class="card">       
+        <img src="142.jpg" alt="Quảng cáo">
+         </div>
+
+ <div class="card">
+        <img src="144.jpg" alt="Quảng cáo">
+        </div> 
+
+    <div class="card">
+        <img src="162.jpg" alt="Quảng cáo">
+        </div>  
+
+<div class="card">
+        <img src="165.jpg" alt="Quảng cáo">
+        </div> </div>  
+
+
+ 
+
+ <div class="section">
+<h3 >Lễ hội Châu Á</h3>
+        <div class="columns">
+        <div class="card">
+ 
+        <img src="63.jpg" alt="Việc làm"> 
+             </div>
+
+      <div class="card">
+        <img src="66.jpg" alt="Sự kiện">
+             </div>   
+      
+      <div class="card">
+        <img src="72.jpg" alt="Sự kiện">
+              </div>     
+
+      <div class="card">
+        <img src="167.jpg" alt="Quảng cáo">
+        </div> </div>
+
+<div class="section">
+        <div class="columns">
+          <div class="card">
+        <img src="169.jpg" alt="Quảng cáo">
+        </div>
+
+        <div class="card">       
+        <img src="170.jpg" alt="Quảng cáo">
+         </div>
+
+ <div class="card">
+        <img src="171.jpg" alt="Quảng cáo">
+        </div> 
+
+    <div class="card">
+        <img src="172.jpg" alt="Quảng cáo">
+        </div>  </div>
+ 
+<div class="section">
+         <div class="columns">
+<div class="card">
+        <img src="180.jpg" alt="Quảng cáo">
+        </div>   
+<div class="card">
+        <img src="181.jpg" alt="Quảng cáo">
+        </div>  
+
+<div class="card">
+        <img src="182.jpg" alt="Quảng cáo">
+        </div>  
+
+<div class="card">
+       <img src="173.jpg" > 
+
+        </div>  </div> 
+
+
+<div class="section">
+         <div class="columns">
+        <div class="card">
+  
+
+
+</div></div>
+
+
+ <div class="section">
+ <h3 align="right">Lễ Tưởng Niệm 50 Năm Quốc Hận 30 Tháng Tư</h3>
+        <div class="columns">
+        <div class="card">
+        <img src="56.jpg" alt="Việc làm">  
+             </div>
+
+      <div class="card">
+        <img src="17.webp" alt="Sự kiện">
+             </div>     
+      
+      <div class="card">
+        <img src="20.webp" alt="Sự kiện">
+              </div>     
+
+          <div class="card">
+        <img src="145.jpg" alt="Quảng cáo">
+        </div> </div>
+
+
+<div class="section">
+ <h3>Triển lãm nghệ thuật tại Eden Center</h3>
+        <div class="columns">
+        <div class="card">
+        <img src="110.jpg" alt="Việc làm"> 
+
+             </div>
+
+      <div class="card">
+        <img src="111.jpg" alt="Sự kiện">
+             </div>     
+
+      
+      <div class="card">
+        <img src="146.jpg" alt="Sự kiện">
+              </div>  </div>    
+
+          
+<div class="section">
+         <div class="columns">
+<div class="card">
+        <img src="147.jpg" alt="Quảng cáo">
+        </div> 
+
+
+<div class="card">
+        <img src="148.jpg" alt="Quảng cáo">
+        </div> 
+
+<div class="card">
+        <img src="149.jpg" alt="Quảng cáo">
+   </div> </div> </div>  </div> </div> </div>    </div> </div> </div>  </div> </div> </div> </div> </div> </div> 
+
+<div class="section">
+         <div class="columns">
+<div class="card">
+
+    <h2>🎥 Videos hoạt động lễ hội văn hóa & sự kiện </h2>
+
+<div class="video-grid">
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/_5uJnxFTMi4?si=gelgvgQkYIk-X8yd      " title="Video 4" allowfullscreen></iframe>
+
+  </div>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/V2RYWCN83QU?si=UFxFJLyalQ1VE4pJ      " title="Video 4" allowfullscreen></iframe>
+
+  </div>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/21jfGLcjylE?si=Jew2l8x9NYJqSIC_     " title="Video 4" allowfullscreen></iframe>
+
+  </div>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/efJUDV5bqHg?si=EKJLBmSzKc97h32c  " title="Video 4" allowfullscreen></iframe>
+</div>
+
+<div class="video-container">
+   
+<iframe src="https://drive.google.com/file/d/1sJp16-fg4SGO7nC8F4lIzzBzgZKWah0c/preview" 
+  width="640" height="360" allow="autoplay"></iframe>
+   
+  </div></div>
+
+
+
+
+
+    
+
+
+    
+</body>
+</html>

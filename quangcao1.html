@@ -1,0 +1,105 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng Quảng Cáo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 20px;
+    }
+    .form-container {
+      max-width: 600px;
+      background: #fff;
+      padding: 25px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #00695c;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #00695c;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+ <div class="form-container">
+  <h2>Đơn Xin Đăng Quảng Cáo</h2>
+  <form id="adForm" action="https://formspree.io/f/mdkgaylo" method="POST">
+    <label>Họ và tên:</label>
+    <input type="text" name="name" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Tên công ty:</label>
+    <input type="text" name="company">
+
+    <label>Số điện thoại:</label>
+    <input type="text" name="phone">
+
+    <label>Loại quảng cáo:</label>
+    <input type="text" name="ad_type">
+
+    <label>Mô tả nội dung quảng cáo:</label>
+    <textarea name="description" rows="5" required></textarea>
+
+    <button type="submit">Gửi Đơn</button>
+  </form>
+</div>
+
+<script>
+    const form = document.getElementById("adForm");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            form.reset();
+            window.location.href = "thank.html";
+          } else {
+            alert("Có lỗi xảy ra khi gửi. Vui lòng thử lại.");
+          }
+        })
+        .catch(() => {
+          alert("Không thể gửi biểu mẫu. Kiểm tra kết nối Internet.");
+        });
+    });
+  </script>
+</body>
+</html>

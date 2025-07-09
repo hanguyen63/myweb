@@ -1,0 +1,288 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="can.png" >
+    <div class="banner-text">
+     <h1>Du Lịch Cần Thơ</h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="traicay.jpg" >
+        <h3 >Thời Điểm</h3>
+        <ul><li>☀️ Tháng 12 – Tháng 4	Mùa khô, ít mưa – lý tưởng để tham quan chợ nổi, miệt vườn</li> 
+          <li>🌧 Tháng 5 – Tháng 11	Mùa mưa, cây trái phong phú nhưng cần tránh ngày mưa lớn</li>
+<li>👉 Thời gian đẹp nhất: Tết Nguyên đán, tháng 3–4 hoặc tháng 8–9 mùa trái cây</li>
+        </ul>
+       
+              </div>
+
+      <div class="card">
+        <img src="cai.png" >
+         <h3 >🌟 Điểm đến nổi bật ở Cần Thơ</h3>
+         <ul><li>🛶 Chợ nổi Cái Răng	Đặc sản văn hoá sông nước – đi sớm từ 5–7h sáng</li> 
+          <li>🌴 Làng du lịch Mỹ Khánh	Tham quan vườn trái cây, nhà cổ, câu cá, đi xe ngựa</li>
+<li>🏠 Nhà cổ Bình Thủy	Nhà cổ hơn 100 năm, kiến trúc Pháp – nổi tiếng trong phim</li>
+          <li>🌿 Thiền viện Trúc Lâm Phương Nam	Thiền viện lớn nhất miền Tây</li>
+          <li>🚲 Cầu đi bộ Ninh Kiều, Bến Ninh Kiều	Ngắm sông Hậu về đêm, chụp ảnh lung linh</li>
+       <li>⛵ Cù lao Tân Lộc – Thốt Nốt	Miệt vườn, rượu mận, sông nước thanh bình</li>            
+        </ul>
+               
+                    </div>
+
+              <div class="card">
+        <img src="cantho1.jpg" >
+         <h3 >🛏️ Khách sạn & homestay</h3>
+         <ul><li>⭐ 5 sao	Vinpearl Hotel Cần Thơ (view sông Hậu), Sheraton Cần Thơ</li> 
+          <li> ⭐ 3–4 sao giá hợp lý	TTC Hotel Premium, Holiday One</li> 
+              <li>🏡 Homestay miền Tây	Mekong Rustic Cần Thơ, Green Village Mekong</li> 
+              <li>🚢 Du thuyền Cần Thơ	Mekong Eyes Cruise (tour 2N1Đ trên sông Tiền – sông Hậu)</li>      
+             </ul>
+                     
+        
+       
+             </div>
+              <div class="card">
+        <img src="che.jpg" >
+         <h3 >🍜  Ẩm thực Cần Thơ </h3>
+         <ul><li>🍲 Bún cá, bún mắm, bún nước lèo	Quán Lý Hương, Bún mắm 12c</li> 
+          <li>🥬 Lẩu mắm Cần Thơ	Quán Sáu Hoài, Nhà hàng Hoa Sứ </li>
+          <li>🍖 Vịt nấu chao	Quán Thành Giao (trên đường Lý Tự Trọng)</li>
+<li>🌾 Bánh xèo miền Tây	Quán Bánh Xèo 7 Tới, Bánh Xèo Cái Sơn</li>
+ <li>🍹 Trái cây miệt vườn, rượu mận	Có tại Mỹ Khánh, Tân Lộ</li>                   
+        </ul>
+        
+        
+       
+             </div> </div>
+
+      <div class="card">
+        <img src="canthologo.png" >
+        <h3 >Dịch vụ hỗ trợ</h3>
+           Là nơi bạn có thể liên hệ để được hỗ trợ, tư vấn, phản ánh hoặc giải quyết các vấn đề liên quan đến hoạt động du lịch khi đến Cần Thơ.
+<ul><li> ☎️ Trung tâm hỗ trợ khách du lịch Cần Thơ	0292 3817 710</li>
+  <li>🚓 Công an TP. Cần Thơ (PCCC, hỗ trợ khẩn cấp)	113 – 114 – 115</li>
+<li>🚑 Bệnh viện Đa khoa Trung ương Cần Thơ	0292 3739 292</li>
+<li>🚌 Bến xe – hỗ trợ di chuyển	Bến xe Cần Thơ: 0292 3769 026</li>
+
+        </ul>
+            
+ <h3> 💡 lưu ý: </h3>
+<ul><li>⏰ Đi chợ nổi phải dậy sớm (khoảng 5–6 giờ sáng) – nên thuê thuyền riêng để thoải mái.</li>
+  <li>☔ Mang theo nón, áo mưa nhẹ, kem chống muỗi nếu đi miệt vườn.</li>
+<li>🛶 Nên đặt tour 1 ngày trọn gói gồm chợ nổi + vườn trái cây + nhà cổ.</li>
+<li>📸 Hãy giữ vệ sinh và cư xử lịch sự khi chụp hình hoặc tham quan nhà dân.</li>
+
+
+        </ul>        
+     
+             </div>   </div>             
+   
+      
+
+</body>
+</html>

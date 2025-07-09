@@ -1,0 +1,289 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="vinh5.webp" >
+    <div class="banner-text">
+     <h1>Du Lịch Hạ Long</h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="bai.webp" >
+        <h3 >Thời Điểm</h3>
+        <ul><li>☀️ Tháng 10 – Tháng 4	Trời se lạnh, ít mưa, phù hợp tham quan & chụp ảnh</li> 
+          <li>☀️ Tháng 5 – Tháng 9	Nắng đẹp, biển xanh, thích hợp nghỉ dưỡng, tắm biển 
+            (nhưng có thể mưa bão)</li>
+<li>👉 Tốt nhất: Tháng 10 đến tháng 12 – thời tiết khô ráo, không quá đông khách.</li>
+        </ul>
+       
+              </div>
+
+      <div class="card">
+        <img src="duthuyen.webp" >
+         <h3 >🌟 Điểm đến nổi bật ở Hạ Long</h3>
+         <ul><li>🛥️ Vịnh Hạ Long	Du thuyền tham quan hàng ngàn đảo đá, hang động</li> 
+          <li>⛴ Du thuyền nghỉ đêm 5 sao	Indochina Sails, Athena Cruise, Paradise Cruiseo</li>
+<li>🏞 Hang Sửng Sốt, Hang Đầu Gỗ, Động Thiên Cung	Các hang động đẹp nhất Vịnh</li>
+          <li>🏝 Đảo Titop, Bãi Cháy	Tắm biển, leo núi, ngắm toàn cảnh</li>
+          <li>🎡 Sun World Hạ Long Complex	Cáp treo Nữ Hoàng, công viên nước, Dragon Park</li>
+       <li>⛩ Chùa Long Tiên, Bảo tàng Quảng Ninh	Văn hoá & lịch sử địa phương</li>            
+        </ul>
+               
+                    </div>
+
+              <div class="card">
+        <img src="resort.jpg" >
+         <h3 >🛏️ Khách sạn & homestay</h3>
+         <ul><li>⭐ 5 sao	Vinpearl Resort & Spa Hạ Long (resort nằm trên đảo), FLC Grand Hotel, Royal Lotus</li> 
+          <li> 🏝 4 sao view biển	Muong Thanh Luxury, Novotel Ha Long</li> 
+              <li>🏠 Homestay đẹp giá hợp lý	Deja Vu House, Halong Ginger Homestay, Banana and Rose Homestay</li> 
+              <li>🚢 Du thuyền nghỉ đêm	Orchid Cruise, Stellar Cruise, Mon Cheri Cruise</li>      
+             </ul>
+                     
+        
+       
+             </div>
+              <div class="card">
+        <img src="cafe.jpg" >
+         <h3 >🍜  Ẩm thực Hạ Long </h3>
+         <ul><li>🦀 Chả mực Hạ Long	Ăn kèm xôi trắng hoặc bánh cuốn – nổi tiếng nhất cả nước</li> 
+          <li>🦪 Hải sản tươi sống	Hàu nướng, sò điệp, tu hài, ghẹ hấp </li>
+          <li>🥣 Bún hải sản, bánh đa cua Hạ Long	Quán ăn sáng địa phương </li>
+<li>🦐 Sam biển (nướng, gỏi, xào)	Đặc sản hiếm tại Bãi Cháy</li>
+ <li>🍹 Cà phê view biển	Rock House, Wander Station, Rooftop Coffee Marina Bay</li>                   
+        </ul>
+        
+        
+       
+             </div> </div>
+
+      <div class="card">
+        <img src="halonglogo.PNG" >
+        <h3 >Dịch vụ hỗ trợ</h3>
+           Là nơi bạn có thể liên hệ để được hỗ trợ, tư vấn, phản ánh hoặc giải quyết các vấn đề liên quan đến hoạt động du lịch khi đến Hạ Long.
+<ul><li> ☎️ Trung tâm hỗ trợ du khách TP. Hạ Long	0203 382 9086 hoặc hotline 0912 319 799</li>
+  <li>🚓 Công an TP. Hạ Long	0203 3832 253</li>
+<li>🚑 Bệnh viện Đa khoa Quảng Ninh	0203 3825 266</li>
+<li>🌐 Tổng đài du lịch Quảng Ninh	1800 555 882</li>
+
+        </ul>
+            
+ <h3> 💡 lưu ý: </h3>
+<ul><li>⛴️ Nên đặt vé du thuyền trước, nhất là mùa cao điểm.</li>
+  <li>🚗 Di chuyển từ Hà Nội nên đặt xe limousine đi Hạ Long (khoảng 2.5–3 tiếng).</li>
+<li>🌦 Xem dự báo thời tiết kỹ trước khi đặt tour đảo hoặc tàu.</li>
+<li>🛥 Mang theo chứng minh thư/hộ chiếu khi đi tàu.</li>
+<li>💸 Một số tour bao gồm bữa ăn – hãy kiểm tra kỹ giá trọn gói.</li>
+
+        </ul>        
+     
+             </div>   </div>             
+   
+      
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: auto; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+
+
+
+<style>
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+  <div class="sub-nav">
+<h1>Thư Viện Hình Ảnh</h1> </a> 
+   
+  </div>
+
+
+<div class="section">
+  
+    <div class="columns">
+      <div class="card"> 
+        <img src="longtennis.jpg" >
+Long Nguyen tại Wakefield Park vào ngày 10 tháng 5 năm 2025
+              </div>
+
+<div class="card"> 
+        <img src="27.jpg" >
+Long Nguyen tại Wakefield Park vào ngày 10 tháng 5 năm 2025
+              </div>
+<div class="card"> 
+        <img src="28.jpg" >
+Long Nguyen tại Wakefield Park vào ngày 10 tháng 5 năm 2025
+              </div>
+<div class="card"> 
+        <img src="69.jpg" >
+Long Nguyen tại Wakefield Park vào ngày 10 tháng 5 năm 2025
+              </div></div>
+
+
+<div class="section">
+  
+    <div class="columns">
+      <div class="card"> 
+        <img src="31.jpg" >
+Dung Vu tại Wakefield Park tham gia Pickleball vào ngày 10 tháng 5 năm 2025
+              </div>
+
+<div class="card"> 
+        <img src="33.jpg" >
+Mr. Burt & Tuấn Ma tại Wakefield Park vào ngày 10 tháng 5 năm 2025
+              </div>
+<div class="card"> 
+        <img src="506.jpg" >
+Long & Lam trận đấu đôi tại Wakefield Park vào ngày 10 tháng 5 năm 2025
+
+              </div>
+<div class="card"> 
+        <img src="508.jpg" >
+Tuan, Thanh, Dung trận chơi 3 tạiWakefield Park vào ngày 10 tháng 5 năm 2025
+              </div></div>
+
+
+<div class="section">
+  
+    <div class="columns">
+      <div class="card"> 
+        <img src="512.jpg" >
+Thanh, Tam, Le trận đấu pickleball Wakefield Park vào ngày 11 tháng 5 năm 2025 
+              </div>
+
+<div class="card"> 
+        <img src="511.jpg" >
+Ngoc & Tri thời gian thư giãn sau khi chơi pickleball 
+
+              </div>
+<div class="card"> 
+        <img src="513.jpg" >
+Dung Vu trận đấu pickleball Wakefield Park vào ngày 11 tháng 5 năm 2025 
+
+              </div>
+<div class="card"> 
+        <img src="505.jpg" >
+Lam & Hoang 
+
+              </div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>🎥 Videos </h2>
+
+<div class="video-grid">
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/mE0JHUYxL7A?si=bma6APhfOaY_5uuZ  " title="Video 4" allowfullscreen></iframe>
+
+  </div>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/LLcKmw5eeJM?si=9X9fJ0OqjZA0DsNX  " title="Video 4" allowfullscreen></iframe>
+</div>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/1oBqipsCh0Q?si=lD2vP3LoJbF0Jwz8    " title="Video 4" allowfullscreen></iframe>
+
+  </div>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/QgrJkHB8oLU?si=lEgSYFJexEwFPIkr " title="Video 4" allowfullscreen></iframe>
+</div>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/LGJGLlGe_S8?si=nbWHlQfVfCGISzdL" title="Video 4" allowfullscreen></iframe>
+
+
+  </div></div>
+
+
+
+
+
+    
+
+<footer>
+    
+    <p> © 2025 Bản quyền thuộc về Ha Nguyen | Chính sách bảo mật | 📬 Liên hệ quảng cáo: <a href="mailto:ha.nguyen@cox.net" style="text-decoration: none;"><font color="white"><u>@Ha Nguyen</u></a></p>
+  </footer>
+
+    
+</body>
+</html>

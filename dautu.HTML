@@ -1,0 +1,651 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAU TU</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #004080; color: white; padding: 01px; text-align: center; }
+
+
+     
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 3;
+      background-color:    #003366;
+      display: flex;
+      align-items: center;
+ border: 2px solid ;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding:6px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color:  #005599;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #005599;
+      min-width: 120;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 10;
+            left: 0;
+
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+.btn {
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: auto; border-radius: 10px; }
+
+ 
+  
+ .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+ background-color:  #005599; 
+    }
+    .left-column, .center-column .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .left-column {
+      width: 60%;
+    }
+
+    .right-column {
+      width: 38%;
+    }
+    .item {
+      display: flex;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .item img {
+      width: 200px;
+      height: 100%;
+      object-fit: cover;
+    }
+    .item .text {
+      padding: 10px;
+    }
+    .item .text h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+    .item .text p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+ 
+
+.grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .grid-item {
+      text-align: left;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f2f2f2;
+    }
+    .grid-item img {
+      width: 100%;
+      height: auto;
+      max-height:250px;
+      object-fit: cover;
+    }
+    .grid-item h3 {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    /* Responsive cho điện thoại */
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+footer {
+      background-color:#003366;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+    </style>
+
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .banner {
+      background-color: #333333;
+      color: #ffcc00;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .banner img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .scrolling-text {
+      white-space: nowrap;
+   font-size: 16px;
+      
+ 
+      animation: scroll-left 15s linear infinite;
+    }
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+
+    
+  </style>
+
+
+  </style>
+
+<style>
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+<style> 
+ 
+<title>U.S. Stock Market Overview</title>
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      background: #f8f9fa;
+     
+    }
+    h2 {
+      color: #333;
+    }
+     
+    table {
+      width: 100%;
+      height: auto;
+      border-collapse: collapse;
+      margin-top: 10px;
+   font-size: 12px;
+scrolling:yes;
+    }
+    th, td {
+      padding: 5px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+    .up {
+      color: green;
+    }
+    .down {
+      color: red;
+    }
+ canvas {
+      max-height: 600px;
+    }
+
+  </style>
+
+
+</head>
+<body>
+<header>
+    
+  </header>
+
+   <ul class="navbar">
+    <li><a href="index.html">🏛️Trang chủ </a>
+ <ul class="submenu">
+<a href="GIOITHIEU.html">Giới Thiệu </a></li>
+    
+</ul>
+
+<li><a href="thoisu.html" alt="Thoisu">Thời sự  </a>  
+      <ul class="submenu">          
+          <li><a href= "nhansu.html">Nhân sự</a></li>
+	  <li><a href= "dautu.html">Chứng khoán</a></li>
+
+      <li><a href= "BAOVIET.html">Xem báo Việt</a></li>
+</ul>
+
+
+    <li>       
+
+      <li><a href="doisong.html">Đời Sống </a>
+      <ul class="submenu">
+        <li><a href="vieclam.html">Việc làm</a></li>
+        <li><a href="phapluat.html">Pháp luật</a></li>
+        <li><a href="suckhoe.html">Sức khỏe</a></li>
+       <li><a href="hinh.html">Thư Viện </a></li>
+
+      </ul>
+    </li>
+<li>       
+
+      <li><a href="dulich.html">Du lịch </a>
+      <ul class="submenu">
+        <li><a href="diemden.html">Điểm đến</a></li>
+        <li><a href="amthuc.html">Ẩm thực</a></li>
+        <li><a href="tuvan.html">Tư vấn</a></li>
+
+      </ul>
+      
+     <li><a href="hoidap.html">Chia Sẻ  </a>
+      <ul class="submenu">
+        <li><a href="https://script.google.com/macros/s/AKfycbybVt21OVZ_E_n68IQf0kjxxkJtHGPlHVCDPBjO-5RD0XulyCXikDltH6ExfOFOT1l1xg/exec">Kinh Nghiệm</a></li>
+        
+      </ul>
+
+
+<li>       
+
+    <li><a href="thethao1.html">Thể Thao </a>
+      <ul class="submenu">
+        
+	<li><a href="thanhvien.html">Thành viên</a></li> 
+
+        <li><a href="anh.html">Thư viện</a></li>
+
+      </ul>
+    </li>
+
+ <li><a href="giaitri.html"> Giải Trí </a>
+      
+    </li>
+
+
+
+ 	<li><a href="quangcaofilter.html">Rao vặt & Quảng cáo </a>
+      <ul class="submenu">
+        <li><a href="quangcao1.html">Liên hệ</a></li>
+        
+      </ul>
+    </li>
+ 
+  </ul>
+
+
+
+
+<div class="banner">
+  
+  <div class="scrolling-text" id="bannerText">
+    Giá Vàng Hôm Nay tại Hoa Kỳ &  U.S. Stock Market ..
+  </div>
+</div>
+
+<script>
+  async function fetchWeatherAndNews() {
+    const apiKey = 'a9cdfaa28ffa1e116087f3df987bb108'; // Thay bằng API key thật của bạn
+    const city = 'Fairfax';
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    const newsUrl = 'https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=YOUR_NEWSAPI_KEY'; // Thay bằng News API key thật
+
+    let weatherText = '';
+    let newsText = '';
+
+    try {
+      const weatherResponse = await fetch(weatherUrl);
+      const weatherData = await weatherResponse.json();
+      const temp = Math.round(weatherData.main.temp);
+      const desc = weatherData.weather[0].description;
+      const humidity = weatherData.main.humidity;
+      const wind = weatherData.wind.speed;
+
+      weatherText = 📢 Giá Vàng Hôm Nay tại Hoa Kỳ  `;
+    } catch (error) {
+      weatherText = 'Không thể tải dữ liệu thời tiết | ';
+    }
+
+    
+
+    document.getElementById('bannerText').textContent = weatherText + newsText;
+  }
+
+  fetchWeatherAndNews();
+  setInterval(fetchWeatherAndNews, 300000); // Cập nhật mỗi 5 phút
+</script>
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="sub-nav">
+<a href="thoisu.html">Thời sự </a>
+    <a href= "nhansu.html">Nhân sự</a>
+       <a href= "dautu.html">Chứng khoán</a>
+    <a href= "BAOVIET.html">Xem báo Việt</a>
+    
+  </div>
+
+
+  <div class="section">
+<div class="columns">
+      <div class="card"> 
+     <h3>📉 Kinh tế & Đầu tư </h3>
+ <p><b> Giá Vàng Hôm Nay tại Hoa Kỳ</b> Giá giao ngay: dao động quanh mức 3.215 – 3.229 USD/ounce. Nguyên nhân biến động là do tâm lý thị trường lo ngại về triển vọng kinh tế 		và căng thẳng địa chính trị, đặc biệt là giữa Nga và Ukraine</p>
+	        <p><b> Đồng USD suy yếu: </b> Sau khi Moody’s hạ bậc tín nhiệm của Mỹ từ Aaa xuống Aa1, khiến nhà đầu tư tìm đến vàng như tài sản trú ẩn an toàn.</p>
+
+          
+      <!-- Biểu đồ giá vàng (XAU/USD) -->
+     <div class="tradingview-widget-container">
+    <div id="tradingview_xauusd"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+      new TradingView.widget({
+        "width": "100%",
+        "height": 400,
+        "symbol": "OANDA:XAUUSD",
+        "interval": "1",
+        "timezone": "Etc/UTC",
+        "theme": "light",
+        "style": "1",
+        "locale": "vi",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "hide_side_toolbar": false,
+        "allow_symbol_change": false,
+        "container_id": "tradingview_xauusd"
+      });
+    </script>
+    <p style="text-align:center; font-size: 14px; color: #777;">Giá vàng thế giới (XAU/USD) - Cập nhật theo thời gian thực</p>
+
+         </div>  </div>   
+
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+    {
+       "symbols": [
+  ["OANDA:SPX500USD|1D"],
+  ["NASDAQ:NDX|1D"],
+  ["OANDA:US30USD|1D"]
+] ,
+        "chartOnly": false,
+        "width": "100%",
+        "height": "100%",
+        "locale": "en",
+        "colorTheme": "light",
+        "autosize": true,
+        "showVolume": false,
+        "showMA": false,
+        "hideDateRanges": false,
+        "hideMarketStatus": true,
+        "hideSymbolLogo": false,
+        "scalePosition": "right",
+        "scaleMode": "Normal",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+        "fontSize": "10",
+        "noTimeScale": false,
+        "valuesTracking": "1",
+        "changeMode": "price-and-percent",
+        "chartType": "area",
+        "lineWidth": 2,
+        "lineType": 0,
+        "dateRanges": [
+          "1d|1",
+          "1m|1D",
+          "3m|60",
+          "12m|1D",
+          "60m|1W",
+          "all|1M"
+        ]
+    }
+    </script>
+
+                       </div>  </div>  </div>
+
+
+ <div class="section">
+  <div class="columns">
+    
+         <div class="card">
+   
+      
+   <label for="symbolFilter">Filter by Symbol:</label>
+  <select id="symbolFilter" onchange="updateStocks()">
+    <option value="all">All</option>
+  </select>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Price</th>
+        <th>Change</th>
+      </tr>
+    </thead>
+    <tbody id="stock-data">
+      <tr><td colspan="3">Loading...</td></tr>
+    </tbody>
+  </table>
+</div>
+    
+
+
+ 
+      <div class="card">
+        <h3>📊 Price Chart</h3>
+        <canvas id="stockChart"></canvas>
+    
+  <canvas id="stockChart" height="100"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const apiKey = 'd0adkhpr01qm3l9kphbgd0adkhpr01qm3l9kphc0'; // Replace with your Finnhub API key
+    const symbols = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'TLRY', 'PDD', 'INTC', 'NVDA', 'NIO', 'UBER', 'SPY', 'NFLX', 'COST', 'PLTR', 'LMND', 'ABNB', 'DELL', 'SMH'];
+
+    const filterDropdown = document.getElementById('symbolFilter');
+    symbols.forEach(sym => {
+      const opt = document.createElement('option');
+      opt.value = sym;
+      opt.text = sym;
+      filterDropdown.appendChild(opt);
+    });
+
+    const ctx = document.getElementById('stockChart').getContext('2d');
+    const stockChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [],
+        datasets: [{
+          label: 'Price',
+          backgroundColor: '#4e73df',
+          borderColor: '#4e73df',
+          data: []
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          },
+
+
+          title: {
+            display: true,
+            text: 'Stock Prices'
+          }
+        }
+      }
+    });
+
+     
+
+
+    async function fetchStock(symbol) {
+      const res = await fetch(`https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${apiKey}`);
+      const data = await res.json();
+      return {
+        symbol: symbol,
+        price: data.c,
+        change: data.d,
+        percent: data.dp
+      };
+    }
+
+    async function updateStocks() {
+      const tbody = document.getElementById('stock-data');
+      tbody.innerHTML = '';
+
+      const selected = filterDropdown.value;
+      const filteredSymbols = selected === 'all' ? symbols : [selected];
+
+      const chartLabels = [];
+      const chartData = [];
+
+      for (const symbol of filteredSymbols) {
+        const stock = await fetchStock(symbol);
+        const changeClass = stock.change >= 0 ? 'up' : 'down';
+        const row = `
+          <tr>
+            <td>${stock.symbol}</td>
+            <td>${stock.price.toFixed(2)} USD</td>
+            <td class="${changeClass}">${stock.change.toFixed(2)} (${stock.percent.toFixed(2)}%)</td>
+          </tr>
+        `;
+        tbody.innerHTML += row;
+
+        chartLabels.push(stock.symbol);
+        chartData.push(stock.price);
+      }
+
+      stockChart.data.labels = chartLabels;
+      stockChart.data.datasets[0].data = chartData;
+      stockChart.update();
+    }
+
+    updateStocks();
+    setInterval(updateStocks, 20000); // Refresh every 30 seconds
+  </script>
+
+  <style>
+    .up { color: green; }
+    .down { color: red; }
+    .card { padding: 20px; border: 1px solid #ddd; border-radius: 8px; background: #fff; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { padding: 8px 12px; border: 1px solid #eee; text-align: left; }
+    #symbolFilter { margin-bottom: 10px; padding: 5px; }
+  </style>
+</div></div>
+
+      
+
+
+
+<footer>
+        <p> © 2025 Bản quyền thuộc về Ha Nguyen | Chính sách bảo mật |📬<a href="lienhe1.html"><font color="white">Liên hệ </a> </p>
+  </footer>
+
+
+
+
+
+    
+</body>
+</html>

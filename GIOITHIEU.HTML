@@ -1,0 +1,347 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIOI THIEU</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 1; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+    /* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #003366;
+      display: flex;
+      align-items: center;
+border: 2px solid #00695c;
+
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color:  #005599;   
+    text-decoration: underline;  
+    }
+
+.submenu {
+      display: none;
+      position: absolute;
+      background-color:   #005599;
+      min-width: 120px;
+      box-shadow: 10px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: auto; border-radius: 10px; }
+
+
+
+
+
+
+ .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .left-column, .center-column .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .left-column {
+      width: 60%;
+    }
+
+    .right-column {
+      width: 38%;
+    }
+
+    .item {
+      display: flex;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .item img {
+      width: 200px;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .item .text {
+      padding: 10px;
+    }
+
+    .item .text h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+
+    .item .text p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+ 
+
+.grid-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0px;
+      padding: 50px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+
+    }
+
+    .grid-item {
+      text-align: left;
+      border: 1px solid #ccc;
+      padding: 50px;
+      background-color: #f2f2f2;
+    }
+
+    .grid-item img {
+      width: 300px;
+      height: 450px%;
+      max-height:500px;
+      object-fit: cover;
+    }
+
+    .grid-item h3 {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    /* Responsive cho điện thoại */
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+footer {
+      background-color: #003366;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+
+
+
+    /* Push this item to the right */
+    .right-menu {
+      margin-left: auto;
+    }
+
+    /* Dropdown submenu */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      right: 0; /* Align to right side */
+    }
+
+    .dropdown-content a {
+      color: #003366;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f2f2f2;
+    }
+
+    /* Show submenu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+
+  </style>
+
+
+</head>
+<body>
+<header>
+   
+  </header>
+
+
+   <ul class="navbar">
+    <li><a href="index.html">🏛️Trang chủ </a>
+ <ul class="submenu">
+<a href="GIOITHIEU.html">Giới Thiệu </a></li>
+    
+</ul>
+
+<li><a href="thoisu.html" alt="Thoisu">Thời sự  </a>  
+      <ul class="submenu">          
+     
+      <li><a href= "nhansu.html">Nhân sự</a></li>
+      <li><a href= "dautu.html">Chứng khoán</a></li>
+
+      <li><a href= "BAOVIETNAME.html">Xem báo Việt</a></li>
+</ul>
+
+   
+ <li>
+       
+
+      <li><a href="doisong.html">Đời Sống </a>
+      <ul class="submenu">
+        <li><a href="vieclam.html">Việc làm</a></li>
+      <li><a href="phapluat.html">Pháp luật</a></li>
+      <li><a href="suckhoe.html">Sức khỏe</a></li>
+
+	<li><a href="hinh.html">Thư Viện </a></li>
+
+
+      </ul>
+    </li>
+
+
+
+    
+    <li>       
+
+      <li><a href="dulich.html">Du lịch </a>
+      <ul class="submenu">
+        <li><a href="diemden.html">Điểm đến</a></li>
+        <li><a href="amthuc.html">Ẩm thực</a></li>
+        <li><a href="tuvan.html">Tư vấn</a></li>
+
+      </ul>
+   <li><a href="hoidap.html">Chia Sẻ  </a>
+      <ul class="submenu">
+        <li><a href="https://script.google.com/macros/s/AKfycbybVt21OVZ_E_n68IQf0kjxxkJtHGPlHVCDPBjO-5RD0XulyCXikDltH6ExfOFOT1l1xg/exec">Kinh Nghiệm</a></li>
+        
+      </ul>
+
+
+<li>       
+
+     <li><a href="thethao1.html">Thể Thao </a>
+      <ul class="submenu">
+        
+	<li><a href="thanhvien.html">Thành viên</a></li> 
+
+        <li><a href="anh.html">Thư viện</a></li>
+
+      </ul>
+    </li>
+ <li><a href="giaitri.html">Giải Trí </a>
+      
+    </li>
+
+
+ <li>
+
+ 	<li><a href="quangcaofilter.html">Rao vặt & Quảng cáo</a>
+      <ul class="submenu">
+        <li><a href="quangcao1.html">Liên hệ</a></li>
+        
+      </ul>
+    </li>
+ 
+  </ul>
+
+
+
+<div class="grid-container"> 
+<div class="grid-item">
+<h1 align="center">Giới thiệu </h1>      
+
+<H2> 👤 Về Người Sáng Lập: </h2> Tôi <b>Ha Nguyen</b>, một người Việt định cư tại Hoa Kỳ từ năm 1994 và hiện đang sinh sống tại Fairfax, Virginia. Sau hơn 20 năm làm việc cho chính phủ Hoa Kỳ tại Washington, DC. Với kinh nghiệm trong lĩnh vực giáo dục, công nghệ thông tin, nhân sự, tổ chức, và phân tích dữ liệu, tôi luôn mong muốn đóng góp một phần công sức nhỏ để gắn kết cộng đồng người Việt, chia sẻ thông tin hữu ích giúp đỡ những người mới đến dễ dàng hòa nhập cuộc sống tại Mỹ.
+  <h2> 🎯 Mục Đích Trang Web: </h2>Trang web này được xây dựng với mục tiêu trở thành cầu nối thông tin văn hóa, nơi bạn có thể cập nhật tin tức, sự kiện, tìm việc làm, chia sẻ kinh nghiem và kết nối cùng người Việt tại Virginia đặc biệt là tại Fairfax County, Falls Church, Annandale, Centreville, Arlington và vùng phụ cận.<br> 
+ <H2> Mục tiêu chính sau:</h2>
+✅ Cung cấp thông tin hữu ích: Thời sự, việc làm, đời sống, y tế, giáo dục, luật pháp và các dịch vụ xã hội dành cho cộng đồng người Việt.<br>
+✅ Giới thiệu sự kiện cộng đồng: Các lễ hội, hội chợ, chương trình văn hóa – giáo dục, du lịch, thể thao trong cộng đồng Việt.<br>
+✅ Kết nối đồng hương: Cộng đồng người Việt tại Virginia ngày càng phát triển, đây là nơi để chúng ta kết nối, chia sẻ kinh nghiệm và hỗ trợ lẫn nhau.<br>
+✅ Giữ gìn văn hóa Việt: Thúc đẩy bản sắc dân tộc qua ngôn ngữ, lễ Tết, âm nhạc, món ăn và truyền thống.</p>
+
+<h2> 🕊️ Tầm Nhìn: </h2>
+Phát triển một cổng thông tin hiện đại, gần gũi, thân thiện để người Việt tại Hoa Kỳ luôn được cập nhật, hỗ trợ và gắn kết với nhau.
+
+<H2>📬 Mời Góp Ý và Liên Hệ:</h2> Chúng tôi hoan nghênh mọi ý kiến đóng góp để trang web ngày càng hoàn thiện hơn. Nếu bạn có thông tin cần chia sẻ hoặc muốn tham gia hoạt động cộng đồng, hãy liên hệ qua địa chỉ email: <a href="mailto:ha.nguyen@cox.net" >@Ha Nguyen</a>
+
+</div>
+
+       
+  <div class="section">
+    <h2>Thành Viên </h2>
+    <div class="columns">
+      <div class="card">
+        <img src="62.jpg" alt="Tin tức">
+        <h3>HA NGUYEN</h3>
+        <p>Người Sáng Lập</p>
+      </div>
+
+      <div class="card">
+        <img src="jessi.jpg" alt="Việc làm">
+        <h3>JESSICA NGUYEN</h3>
+        <p>Quản lý chương trình chịu trách nhiệm chỉnh sửa thông báo sản phẩm và hệ thống công nghệ thông tin. </p>
+      </div>
+
+      <div class="card">
+        <img src="522.jpg" alt="Sự kiện">
+        <h3>ANDREW NGUYEN</h3>
+        <p>Trách nhiệm tương tác với khách hàng và quản lý thông tin liên lạc.</p>
+      </div></div>
+
+      
+
+
+   <footer>
+        <p> © 2025 Bản quyền thuộc về Ha Nguyen | Chính sách bảo mật |📬<a href="lienhe1.html"><font color="white">Liên hệ </a> </p>
+  </footer>
+
+
+
+
+    
+</body>
+</html>

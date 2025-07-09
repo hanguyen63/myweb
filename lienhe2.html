@@ -1,0 +1,118 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liên Hệ Chúng Tôi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color:  #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .contact-box {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .contact-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .contact-box {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-box">
+    <h2>Liên Hệ Chúng Tôi</h2>
+    <form id="contactForm" action="https://formspree.io/f/mdkgaylo" method="POST">
+      <label for="name">Họ và Tên:</label>
+      <input type="text" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" required>
+
+      <label for="message">Nội dung:</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <button type="submit">Gửi</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            form.reset();
+            window.location.href = "thank1-you.html";
+          } else {
+            alert("Có lỗi xảy ra khi gửi. Vui lòng thử lại.");
+          }
+        })
+        .catch(() => {
+          alert("Không thể gửi biểu mẫu. Kiểm tra kết nối Internet.");
+        });
+    });
+  </script>
+
+</body>
+</html>

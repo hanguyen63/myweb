@@ -1,0 +1,292 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="vungtau1.png" >
+   
+    <div class="banner-text">  
+       <br><br><br><br><br>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="hoagiay.webp" >
+        <h3 >Thời Điểm</h3>
+        <ul><li>🌤 Tháng 11 – tháng 4 (mùa khô): thời tiết mát mẻ, ít mưa, biển trong.</li>
+<li>🌧 Tháng 5 – tháng 10 (mùa mưa): có mưa rào ngắn, vẫn có thể tắm biển nhưng nên kiểm tra dự báo thời tiết.</li>
+<li>Tránh đi dịp lễ Tết, cuối tuần nếu không thích đông đúc (Vũng Tàu cách TP.HCM chỉ ~2 giờ nên rất đông dịp lễ).</li>
+        
+        </ul>     
+              </div>
+
+      <div class="card">
+        <img src="vungtau2.jpg" >
+         <h3 >🌟 Điểm đến nổi bật ở Vũng Tàu</h3>
+         <ul><li>🏖 Bãi Sau (Thùy Vân)	Bãi biển đẹp, nhiều khách sạn sát biển</li>
+<li>🏖 Bãi Trước	Ngắm hoàng hôn, gần trung tâm</li>
+<li>🌊 Hải đăng Vũng Tàu Check-in từ trên cao, đường lên đẹp</li>
+<li>🗿 Tượng Chúa Kitô	Leo núi Nhỏ, ngắm toàn cảnh Vũng Tàu</li>
+<li>⛪ Niết Bàn Tịnh Xá – Thích Ca Phật Đài	Tôn giáo, kiến trúc Phật giáo đẹp</li>
+<li>🐚 Hòn Bà – Mũi Nghinh Phong – Bãi Dứa	Biển hoang sơ, cảnh đẹp</li>
+<li>⛩ Đền Thánh Đức Mẹ Bãi Dâu	Địa điểm tĩnh lặng, thiêng liêng</li>
+<li>🧭 Bến tàu Marina – Hồ Mây Park	Giải trí + ngắm biển + check-in</li>
+                       
+        </ul>               
+                    </div>
+
+              <div class="card">
+        <img src="hotelvungtau.png" >
+         <h3 >🛏️ Khách sạn & homestay</h3>
+         <ul><li>⭐ 5 sao	The Imperial Hotel, Malibu Hotel, Pullman Vũng Tàu</li>
+<li>🏨 3–4 sao	Vũng Tàu Riva Hotel, Seaside Resort, Green Hotel</li>
+<li>🏠 Homestay/giá rẻ	Santoni Vũng Tàu, Gió Homestay, Cô Tư Homestay</li>
+
+              </ul>
+       
+         
+             </div>
+              <div class="card">
+        <img src="ganhhao.jpg" >
+         <h3 >🍜  Ẩm thực Vũng Tàu </h3>
+         <ul><li>🦀 Hải sản tươi sống	Gành Hào, Quán Cô 5</li>
+          <li>🥖 Bánh khọt	Bánh khọt Gốc Vú Sữa, Cây Sung</li>
+<li>🍜 Bún riêu, bánh canh ghẹ, bún mắm	Quán Bà Ba, bánh canh A Rơm</li>
+<li> 🍢 Ốc, sò nướng	Ốc Thiên Nhiên, Ốc Tự Nhiên 2</li>
+<li>🍡 Bún riêu – bún thang – bún mọc	Gánh hàng rong hoặc quán gia truyền</li>
+<li>🍮 Sữa chua cô Tiên – Kem Alibaba	Đặc sản ăn vặt nổi tiếng</li>
+                        
+        </ul>
+                
+                    </div> </div>
+
+      <div class="card">
+        <img src="vungtaulogo.PNG" >
+        <h3 >Dịch vụ hỗ trợ</h3>
+           Là nơi bạn có thể liên hệ để được hỗ trợ, tư vấn, phản ánh hoặc giải quyết các vấn đề liên quan đến hoạt động du lịch khi đến Vũng Tàu.
+<ul><li>☎️ Tổng đài hỗ trợ du khách Bà Rịa – Vũng Tàu	0254 385 5260</li>
+<li>🚓 Công an TP. Vũng Tàu	113 – hoặc trực tiếp đồn công an phường</li>
+<li>🚑 Cấp cứu y tế	Bệnh viện Lê Lợi – (0254) 3856 497</li>
+<li>🧾 Trung tâm xúc tiến du lịch BR-VT	dulich.baria-vungtau.gov.vn</li>
+<li>📱 Cảnh báo – tin tức	App "Du lịch Vũng Tàu" trên Android/iOS</li>
+  
+        </ul>
+            
+     <h3> 💡 lưu ý: </h3>
+<ul><li>⛱ Không tắm biển sau 17h do thủy triều mạnh.</li>
+<li>📷 Hạn chế xả rác ở bãi biển – có camera ở các khu công cộng.</li>
+<li>🚕 Đi taxi/xe công nghệ có đồng hồ để tránh bị tính giá cao.</li>
+<li>🚴‍♂️ Thuê xe máy cần kiểm tra kỹ, giữ biên nhận rõ ràng.</li>
+
+        </ul>        
+     
+             </div>   </div> 
+    
+   
+
+
+    
+</body>
+</html>

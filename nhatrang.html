@@ -1,0 +1,303 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="nhatrang1.png" >
+    <div class="banner-text">
+     <br><br><br>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="nnn.webp" >
+        <h3 >🗓️ Thời Điểm</h3>
+        <ul><li>Khí hậu ở Nha Trang tương đối ôn hòa, thời điểm đẹp nhất để đi Nha Trang tháng 3 – Tháng 8: 
+          Trời nắng đẹp, biển trong xanh, thích hợp tắm biển và tham quan đảo. </li>
+  <li>Tháng 6 – 8: Cao điểm du lịch, đông nhưng cũng nhộn nhịp và nhiều dịch vụ.</li>
+ 
+        </ul>
+       <b>Chú ý:</b> 🌧️ Nên tránh mùa mưa lũ: Tháng 10 – tháng 12 
+              </div>
+
+      <div class="card">
+        <img src="n.webp" >
+         <h3 >🌟 Điểm đến nổi bật ở Nha Trang</h3>
+         <ul><li>🏖️ Bãi biển Nha Trang	Bãi cát trắng dài, nước biển trong xanh, nằm ngay trung tâm.</li> 
+          <li>🏝️ Hòn Mun – Hòn Tằm	Tour đảo, lặn ngắm san hô, chơi các trò chơi biển.</li>
+<li>🕌 Tháp Bà Ponagar	Di tích Chăm cổ, linh thiêng, có thể tắm bùn gần đó.</li>
+          <li>🛕 Chùa Long Sơn	Có tượng Phật Trắng lớn, view toàn cảnh thành phố.</li>
+          <li>🐠 Viện Hải Dương Học	Nơi trưng bày sinh vật biển và khảo cổ biển.</li>
+                   <li>🌉 Cầu Gỗ Điệp Sơn	Nổi tiếng với đường đi bộ giữa biển (phải đi tour).</li>
+          <li>🚠 VinWonders Nha Trang (Hòn Tre)	Công viên giải trí lớn nhất miền Trung – đi cáp treo qua biển</li>
+        </ul>
+        
+        
+       
+             </div>
+
+              <div class="card">
+        <img src="nh.webp" >
+         <h3 >🛏️ Khách sạn & homestay</h3>
+         <ul><li>🏨 Khách sạn 4-5 sao: Một số khách sạn gợi ý là Mường Thanh, Novotel, 
+          InterContinental Nha Trang, Sheraton Nha Trang, Lodge, Amiana Resort, Vinpearl Resort & Spa ... 
+</li> 
+          <li>Đặt phòng: <a href="https://ttdhsdl.khanhhoa.gov.vn/Accommodation">Du lịch tỉnh Khánh Hòa</a> </li>
+          <li> 🏠 Homestay: Đẹp giá rẻ	Ccasa Hostel (thiết kế container), Tabalo Hostel, AnAn Homestay</li> 
+
+             </ul>
+            <b>Chú ý: </b>Chọn chỗ ở gần biển: Đường Trần Phú là trục đường chạy dọc bãi biển,
+            để tiện đi bộ, gần ăn uống, dịch vụ. <br>
+                             
+                   
+             </div>
+              <div class="card">
+        <img src="bun.webp" >
+         <h3 >🍜  Ẩm thực Nha Trang </h3>
+         <ul><li>🍜 Bún cá sứa / Bún cá Nha Trang	Quán Bà Thừa, Bún cá Mịn</li> 
+          <li>🥖 Bánh mì chả cá	Bánh mì Nguyên Loan, Bánh mì Bà Năm </li>
+           <li> Bò nướng Lạc Cảnh - 77 Nguyễn Bỉnh Khiêm </li>
+          <li>🍤 Nem nướng Ninh Hòa	Quán Đặng Văn Quyên, Quán Vũ Thành An </li>
+<li>🍚 Cơm gà	Cơm gà Trâm Anh, Cơm gà Hà</li>
+ <li>🐚 Hải sản tươi sống	Quán Gió Biển, Bờ Kè Tháp Bà, Hải sản Thanh Sương </li>
+  <li>🍮 Chè & ăn vặt	Chè sâm bổ lượng Chị Bông </li>
+        
+             
+        </ul>
+        
+        
+       
+             </div> </div>
+
+      <div class="card">
+        <img src="ho.png" >
+        <h3 >Dịch vụ hỗ trợ</h3>
+           Để phản ánh các vấn đề liên quan đến hoạt động du lịch trên địa bàn TP. Nha Trang (tỉnh Khánh Hòa), bạn có thể liên hệ theo các kênh sau:
+<ul><li>📞 Đường dây nóng Sở Du lịch Khánh Hòa (24/24) 0947 528 000 </li>
+  <li>Điện thoại cố định 0258 3528000</li>  
+  <li>Ứng dụng hỗ trợ du lịch trực tuyến: <a href="https://ttdhsdl.khanhhoa.gov.vn">
+    Trung tâm điều hành & hỗ trợ khách du lịch Khánh Hòa </a>
+</li></ul>
+
+ <h3>💡Lưu ý khi du lịch Nha Trang</h3>
+<ul><li>🚕 Dùng app gọi xe như Grab, Gojek để tránh chặt chém taxi.</li>
+<li>🧴 Mang theo kem chống nắng, mũ nón, kính mát.</li>
+<li>💳 Mang tiền mặt vừa đủ, nhiều hàng quán không nhận thẻ..</li>
+<li>📸 Giữ kỹ đồ cá nhân khi tắm biển & chụp ảnh đông người.</li>
+
+
+        </ul>
+             
+    
+        
+      </div>  </div> 
+    
+      
+
+
+
+    
+</body>
+</html>
