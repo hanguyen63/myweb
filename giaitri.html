@@ -87,8 +87,37 @@
     h2 {
       color: #4a90e2;
     }
-    iframe, audio {
+    	  .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
       width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
     }
 footer {
       background-color:#003366;
@@ -214,94 +243,84 @@ footer {
 
  </div> </div>
 
-
-<div class="container">
-  <div class="box">
+<div class="video-grid">
+  <div class="video-container">
     <h2>🎵 Nhạc Nhẹ Thư Giãn</h2>
-   <p>🎧 Sha Bang</p>
-    <audio controls>
-      <source src="sha.mp4" type="audio/mp3">      
-    </audio>
+	  <p>🎧 Le Quyen</p>
+	  <iframe src="https://drive.google.com/file/d/1G7Xm49T_6AsrXHvmN-ukmUbDksbexvEu/preview" 
+  width="640" height="360" allow="autoplay"></iframe>
+
+ </div>
+	  <div class="video-container">
+    	  <p>🎧 Sha Bang</p>
+	  <iframe src="https://drive.google.com/file/d/1cR0cygZvChgRh5M32Je2KcKC3Fu-9qLI/preview" 
+  width="640" height="360" allow="autoplay"></iframe>
+ </div>
+	<div class="video-container">    
 <p>🎧 Tuan Hung</p>
-    <audio controls>
-      <source src="hung.mp4" type="audio/mp3"> 
-         </audio>
+    <iframe src="https://drive.google.com/file/d/12XLccJy6s5qCUQC3vDvZpxkIT7LLSbwy/preview" 
+  width="640" height="360" allow="autoplay"></iframe>
+		
  </div>
 
-<div class="box">
+<div class="video-container"> 
  <p>🎧 Ho Le Thu</p>
-    <audio controls>
-      <source src="thu.mp4" type="audio/mp3"> 
-          </audio>
-
-<p>🎧 Le Quyen</p>
-    <audio controls>
-      <source src="quyen.mp4" type="audio/mp3"> 
-         </audio>
-</div>
-
-<div class="box">
-<p>🎧 Vo Ha Tram</p>
-    <audio controls>
-      <source src="tram.mp4" type="audio/mp3"> 
-         </audio>
-<p>🎧 Quoc Thien</p>
-    <audio controls>
-      <source src="thien.mp4" type="audio/mp3"> 
-         </audio>
-
-
-  </div></div>
-
-
-
-
-
-<div class="container">
-  <div class="box">
-<h2>🖼️ Slide Show Hình Ảnh</h2>
-
-   Chuyen xe cuoc doi
-<video width="100%" controls>
-  <source src="y5.mp4" type="video/mp4">
-</video>
-</div>
-
-  <div class="box">
-Nhung Loi Khuyen
-<video width="100%" controls>
-  <source src="y7.mp4" type="video/mp4">
-</video>
-</div>
-
-  <div class="box">
-Lời chúc Giáng sinh
-<video width="100%" controls>
-  <source src="y3.mp4" type="video/mp4">
-</video>
-</div></div>
-
-<div class="container">
- <div class="box">
-Y nghia hoa hong
-<video width="100%" controls>
-  <source src="y1.mp4" type="video/mp4">
-</video>
-</div>
-
+     <iframe src="https://drive.google.com/file/d/18L8CwxgOGpHIls11pLR4mmxhYqWtKmkD/preview" 
+  width="640" height="360" allow="autoplay"></iframe>
   
-  <div class="box">
-Nhiều điều để biết
-<video width="100%" controls>
-  <source src="y2.mp4" type="video/mp4">
-</video>
+</div></div>
+	<div class="video-grid">
+	<div class="video-container"> 
+ <p>🎧 Vo Ha Tram</p>
+     <iframe src="https://drive.google.com/file/d/1SqTkeXq0GBSKeaGraLPm0CeK06UEfwDg/preview" 
+  width="640" height="360" allow="autoplay"></iframe>
+  
+</div>
+	<div class="video-container"> 
+ <p>🎧 Quoc Thien</p>
+     <iframe src="https://drive.google.com/file/d/1WC2piLhwzKY4ssxWiNrmGzYWbdlT-l87/preview" 
+  width="640" height="360" allow="autoplay"></iframe>
+  
+</div>
+	<div class="video-container">
+	<h2>🖼️ Slide Show Hình Ảnh</h2>   
+ <p>Y nghia hoa hong</p>
+     <iframe src="https://drive.google.com/file/d/1MuxTemtFr4-uREma1h6awyMEN-LinTD6/preview" 
+  width="640" height="360" allow="autoplay"></iframe>
+		</div>
+
+<div class="video-container">	   
+ <p>Nhiều điều để biết</p>
+     <iframe src="https://drive.google.com/file/d/1UFe7LAzeLe5fGnSji3RWKfqAkZb3-VrZ/preview" 
+  width="640" height="360" allow="autoplay"></iframe>
+		</div></div>
+
+<div class="video-grid">
+	<div class="video-container"> 
+ <p>Lời chúc Giáng sinh</p>
+     <iframe src="https://drive.google.com/file/d/1r44KmIQ4oRJmF0SJ9ufksJTwr65jP4_o/preview" 
+  width="640" height="360" allow="autoplay"></iframe>
+  
 </div>
 
-  <div class="box">
-Merry Christmas
-<video width="100%" controls>
-  <source src="y6.mp4" type="video/mp4">
-</video>
+<div class="video-container"> 
+ <p> Chuyen xe cuoc doi</p>
+     <iframe src="https://drive.google.com/file/d/1wUzAKLFi9ee4nRWHS4ccfaxp3sLBusuf/preview" 
+  width="640" height="360" allow="autoplay"></iframe>
+  </div>
+	
+<div class="video-container"> 
+ <p>Merry Christmas</p>
+     <iframe src="https://drive.google.com/file/d/1xv6O4mRFP2xMds8MRFWlR9C5pmBUGYz2/preview" 
+  width="640" height="360" allow="autoplay"></iframe>
+
+</div>
+	<div class="video-container"> 
+ <p>Nhung Loi Khuyen</p>
+     <iframe src="https://drive.google.com/file/d/1zPycZu_b3iP49oMntc0Hy3Ifmjg-vzgc/preview" 
+  width="640" height="360" allow="autoplay"></iframe>
+
+
 </div></div>
 
   
