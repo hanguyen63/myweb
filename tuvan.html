@@ -13,7 +13,7 @@
         }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial, sans-serif; line-height: 1.6;
       margin: 0;
       padding: 0;
     }
@@ -75,36 +75,17 @@
       
     }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            padding: 10px;
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
 
-
-        }
-        .gallery-item {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 5px;
-            text-align: left;
-            line-height: 1.6;
-            font-family: Arial, sans-serif; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
-        }
-        .gallery-item img {
-          
-            max-width: 100%;
-            height: 200px;
-            
-           ;
-        }
-        .caption { font-family: Arial, sans-serif; margin: 0; padding: 1; line-height: 1.6; 
-            margin-top: 10px;
-            font-weight: bold;
-
-                  }
+ 
 
                   .sub-nav {
       background: #e0f2f1;
@@ -135,53 +116,65 @@
        
   </div>
 
-   <div class="gallery">
-        <div class="gallery-item">
-            <img src="pp.jpg" >
+
+
+<div class="section">
+  
+    <div class="columns">
+      <div class="card"> 
+<img src="pp.jpg" >
             
-            <div class="caption"> Công việc cần làm trước khi đi du lịch Việt Nam  </div>
+            <h4> Công việc cần làm trước khi đi du lịch Việt Nam  </h4>
  <ul><li>Hộ chiếu: Còn hạn ít nhất 6 tháng.</li>
 <li>Visa : Có thể xin visa điện tử qua <a href="https://evisa.xuatnhapcanh.gov.vn" class="btn"> 👉Evisa</a> (Thời hạn thường là 30 ngày, 1 lần nhập cảnh.)</li>
 <li>Có thể xin visa qua <a href="https://vnmvisa-assistant.web.app/" class="btn">👉 Visa</a> (Thời hạn thường là 180 ngày, 1 lần nhập cảnh.) </li>
  </ul>
-    
+
  </div>
-        
- <div class="gallery-item">
-            <img src="tien.webp" alt="Việc làm">
-            <div class="caption">Tài chính  </div>
+
+
+
+<div class="card"> 
+         <img src="tien.webp" alt="Việc làm">
+            <h4>Tài chính  </h4>
 <ul><li> Chuẩn bị tiền mặt USD (hoặc đổi trước một ít VND).</li>
 <li>Nên đổi tại ngân hàng hoặc tiệm vàng uy tín. Cẩn thận tiền giả hoặc trả dư tiền thừa.</li>
 <li>Mở thẻ tín dụng hoặc thẻ debit quốc tế (Visa/Mastercard).</li>
 <li>Báo với ngân hàng rằng bạn sẽ đi nước ngoài (tránh khóa thẻ vì nghi ngờ giao dịch lạ).
 </ul>
  
-        </div>
-        
-        <div class="gallery-item">
-            <img src="bta.jpg" alt="Việc làm">
-            <div class="caption"> Chỗ ở và đi lại</div>
+
+              </div>
+
+<div class="card"> 
+            <img src="bta.jpg" >
+            <h4> Chỗ ở và đi lại</h4>
 <ul><li>	Đặt phòng khách sạn/ Airbnb trước (Booking.com, Agoda, Traveloka).</li>
 <li>Nếu cần di chuyển nhiều, tham khảo đặt vé máy bay nội địa (Vietnam Airlines, Vietjet, Bamboo Airways).</li>
 <li>Grab là ứng dụng tiện nhất (thay taxi). Xe buýt giá rẻ nhưng cần biết tuyến.
 </ul>
- </div>
 
- <div class="gallery-item">
-            <img src="dien.jpg" alt="Việc làm">
-            <div class="caption">Điện thoại và Internet</div>
+              </div>
+
+<div class="card"> 
+         <img src="dien.jpg" alt="Việc làm">
+            <h4>Điện thoại và Internet</h4>
 <ul><li>Mua SIM 4G (Viettel, Vinaphone, Mobifone) ở sân bay hoặc cửa hàng tiện lợi.</li>
 <li>Giá rẻ, dung lượng lớn. <a href="Phone.pdf" class="btn"> 👉 Xem thêm chi tiết →</a></li>
 <li>Mở sẵn apps như: Grab (gọi xe), Google Maps, Zalo (chat Việt Nam).
   
 </ul>
-        </div></div>
 
-       
-<div class="gallery">
-        <div class="gallery-item">
-            <img src="hanh.webp" >            
-            <div class="caption">Chuẩn bị sức khỏe & Hành lý cần thiết </div>
+
+              </div></div>
+
+
+<div class="section">
+  
+    <div class="columns">
+      <div class="card"> 
+                      <img src="hanh.webp" >            
+            <h4>Chuẩn bị sức khỏe & Hành lý cần thiết </h4>
 <ul><li>Mua bảo hiểm du lịch quốc tế (nếu có). Mang theo thuốc cơ bản (thuốc tiêu hóa, cảm cúm, đau bụng...).</li>
 <li>Tiêm vaccine đầy đủ (Covid, hoặc các vaccine cơ bản).</li>
 <li>Quần áo gọn nhẹ phù hợp với khí hậu (mùa hè Việt Nam nóng ẩm, nhiều mưa).</li>
@@ -191,12 +184,13 @@
 
 </ul>
 
-     
-   </div>   
 
-        <div class="gallery-item">
-            <img src="anninh.png" ><img src="anninh.png" >
-            <div class="caption"> An ninh & giấy tờ</div>
+
+              </div>
+
+<div class="card"> 
+         <img src="anninh.png" >
+            <h4"> An ninh & giấy tờ</h4>
  <ul><li>Luôn mang theo bản photo hộ chiếu/visa.</li>
 <li>Tránh tụ tập chỗ đông người ban đêm, không mang theo nhiều tiền mặt</li>
 <li>Nếu đi tour, chọn công ty uy tín ví dụ: <a href="https://www.saigontouristvietnam.com/" class="btn">👉Saigon tourist </a> 
@@ -206,117 +200,130 @@ hoặc <a href="https://travel.com.vn/en" class="btn">👉Viet travel </a></li>
 <li>Tổng đài du lịch hỗ trợ khách quốc tế (VNAT): (+84) 24 3944 6753</li>
 
 </ul>
- </div>
-        
-             <div class="gallery-item">
-            <img src="l.jpg" >
-            <div class="caption"> Lãnh sự quán Mỹ - Thành phố Hồ Chí Minh</div>
+
+              </div>
+<div class="card"> 
+        <img src="l.jpg" >
+            <h4> Lãnh sự quán Mỹ - Thành phố Hồ Chí Minh</h4>
  <ul><li>Địa chỉ: số 4 Lê Duẩn, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh</li>
     <li>Điện thoại: +84-28-3520-4200</li>
  <li>Giờ làm việc: 8:00 – 17:00 từ thứ Hai – thứ Sáu</li>
    <li><a href="https://vn.usembassy.gov/vi/ho-chi-minh/" class="btn"> 👉Website</a></li> 
         
+</ul>
 
- </div>
-        
- <div class="gallery-item">
-            <img src="h.webp" alt="Việc làm">
-            <div class="caption">Đại sứ quán Hoa Kỳ tại Hà Nội  </div>
+              </div>
+
+<div class="card"> 
+        <img src="h.webp" alt="Việc làm">
+            <h4>Đại sứ quán Hoa Kỳ tại Hà Nội  </h4>
 <ul><li> Địa chỉ: Số 7 Láng Hạ, Ba Đình, Hà Nội</li>
 <li>Điện thoại: +84-24-3850-5000</li>
    <li>Giờ làm việc: 8:00 – 17:00 từ thứ Hai – thứ 
  <li><a href="https://vn.usembassy.gov/vi/" class="btn"> 👉Website</li></a>
  <li>Email:<a href="mailto:VnEmbassyWebMaster@state.gov" > VnEmbassyWebMaster@state.gov </a>
-        
- </p>
-        </div></div>
 
-        <div class="gallery">
-        <div class="gallery-item">
-            <img src="vv.jpg" alt="Việc làm">
-            <div class="caption">Thông tin Y tế</div>
+</ul>
+              </div></div>
+
+
+<div class="section">  
+    <div class="columns">
+      <div class="card"> 
+         
+          <img src="vv.jpg" alt="Việc làm">
+            <h4>Thông tin Y tế</h4>
 <p> Practice Name: Vinmec International Hospital<br> 
 Address: 208 Nguyen Huu Canh Street, Ward 22, Binh Thanh District, HCMC<br>
-Office Phone: +84 28 3622 1166</p>
- <a href="https://www.vinmec.com/vie" class="btn"> 👉Website</a> <br>  
+Office Phone: +84 28 3622 1166<br>
+ <a href="https://www.vinmec.com/vie" class="btn"> 👉Website</a> </p>  
 
   
  </p>
-        </div>
 
-       
 
-<div class="gallery-item">
-            <img src="f.jpg" alt="Việc làm">
+
+              </div>
+
+<div class="card"> 
+         <img src="f.jpg" alt="Việc làm">
             <div class="caption">Thông tin Y tế </div>
 <p> Practice Name:  Franco – Vietnamese (FV) Hospital 
 Address:  6 Nguyen Luong Bang Street, Nam Sai Gon, District 7, HCMC<br>
-Office Phone:  (08) 54 11 33 33 </p>
-<a href="http://www.fvhospital.com" class="btn" > 👉Website</a> <br>  
+Office Phone:  (08) 54 11 33 33 <br>
+<a href="http://www.fvhospital.com" class="btn" > 👉Website</a> </p>  
 
      
-   </div>  
+              </div>
 
-         <div class="gallery-item">
-            <img src="hanoi.webp" >
+<div class="card"> 
+       <img src="hanoi.webp" >
             <div class="caption"> Thông tin Y tế</div>
 
 <p> Practice Name: Hanoi French Hospital
 Address: Số 1 Phương Mai, Đống Đa, Hà Nội 100000, Vietnam<br>
-Office Phone:  +84 24 3577 1100 </p>
- <a href="https://www.hfh.com.vn/vi/trang-chu" class="btn">👉 Website</a> <br>  
-
- </div>
+Office Phone:  +84 24 3577 1100 <br>
+ <a href="https://www.hfh.com.vn/vi/trang-chu" class="btn">👉 Website</a> </p>  
 
 
+              </div>
 
- <div class="gallery-item">
-            <img src="da.png" >
-            <div class="caption"> Thông tin Y tế</div>
+<div class="card"> 
+      <img src="da.png" >
+            <h4> Thông tin Y tế</h4>
 
 <p> Practice Name: Hoan My Da Nang Hospital
 Address: 291 Đ. Nguyễn Văn Linh, Thạc Gián, Thanh Khê, Đà Nẵng 550000, Vietnam<br>
-Office Phone: +84 236 3650 676 </p>
-<a href="https://hoanmy.com/danang/" class="btn"> 👉Website</a> <br>  
+Office Phone: +84 236 3650 676 <br>
+<a href="https://hoanmy.com/danang/" class="btn"> 👉Website</a> </p>  
 
- </div></div>
 
- <div class="gallery">
-<div class="gallery-item">
-            <img src="over.png" >
-            <div class="caption"> Sử dụng bảo hiểm Blue Cross Blue Shield liên bang ở Việt Nam  </div>
+              </div></div>
+
+
+<div class="section">  
+    <div class="columns">
+      <div class="card"> 
+         <img src="over.png" >
+            <h4> Sử dụng bảo hiểm Blue Cross Blue Shield liên bang ở Việt Nam  </h4>
 <a href="oversea1.pdf" target="_blank">👉 Xem thêm chi tiết </a>
 <p><a href="overseas.pdf" target="_blank"> Tải Tài liệu Hướng dẫn </a>   </p>
 
- </div>
 
- <div class="gallery-item">
-            <img src="eva.jpg" >
-            <div class="caption"> Thông tin hàng không uy tín  </div><br>
-            <b>EVA Air</b> Một hãng hàng không Đài Loan nổi tiếng với chất lượng dịch vụ, EVA Air cung cấp các chuyến bay từ nhiều thành phố của Hoa Kỳ đến Việt Nam với các điểm dừng ở Đài Bắc.
- <a href="https://www.evaair.com/en-us/index.html" class="btn"> 👉 Website</a> 
+</div>
 
-  </div>
+<div class="card"> 
+       <img src="eva.jpg" >
+            <h4> Thông tin hàng không uy tín  </h4>
+            <b>EVA Air</b> Một hãng hàng không Đài Loan nổi tiếng với chất lượng dịch vụ, EVA Air cung cấp các chuyến bay từ nhiều thành phố của Hoa Kỳ đến Việt Nam với các điểm dừng ở Đài Bắc. <a href="https://www.evaair.com/en-us/index.html" class="btn"> 👉 Website</a> 
 
-  <div class="gallery-item">
-            <img src="cathay.jpg">
-            <div class="caption"> Cathay Pacific </div><br>
-Hãng hàng không Hong Kong này cung cấp các chuyến bay từ Hoa Kỳ đến Việt Nam với điểm dừng ở Hong Kong. Cathay Pacific nổi tiếng với dịch vụ khách hàng xuất sắc và các chuyến bay thoải mái. 
- <a href="https://www.cathaypacific.com/cx/en_US.html" class="btn"> 👉 Website</a> 
 
- </div>
+ 
+</div>
 
- <div class="gallery-item">
-            <img src="ja.webp" >
-            <div class="caption"> All Nippon Airways (ANA) </div><br>
+<div class="card"> 
+         <img src="cathay.jpg">
+            <h4> Cathay Pacific </h4>
+<p>Hãng hàng không Hong Kong này cung cấp các chuyến bay từ Hoa Kỳ đến Việt Nam với điểm dừng ở Hong Kong. Cathay Pacific nổi tiếng với dịch vụ khách hàng xuất sắc và các chuyến bay thoải mái. <a href="https://www.cathaypacific.com/cx/en_US.html" class="btn"> 👉 Website</a> </p>
+
+
+</div>
+
+ <div class="card">
+<img src="ja.webp" >
+            <h4> All Nippon Airways (ANA) </h4>
             hãng hàng không Nhật Bản này cung cấp các chuyến bay đến Việt Nam với điểm dừng tại Tokyo. Họ được khen ngợi vì sự hiếu khách và dịch vụ chất lượng cao. 
 <a href="https://www.ana.co.jp/en/us/" class="btn"> 👉 Website</a>
+
 </div></div>
 
+        
 
-<div class="gallery-item">
-            <img src="ghe.jpg" >
-            <div class="caption"> Mẹo Đặt Chỗ </div>
+<div class="section">  
+    <div class="columns">
+      <div class="card">         
+       <img src="ghe.jpg" >
+            <h4> Mẹo Đặt Chỗ </h4>
 <ul><li> So sánh Giá: Sử dụng các công cụ so sánh chuyến bay rẻ nhất: <a href="https://www.skyscanner.com" class="btn"> 👉 Skyscanner </a> 
   <a href="https://www.momondo.com" class="btn"> 👉 và Momondo </a></li>
   <li>Thoải mái nhất: <a href="https://www.google.com/travel/flights?gl=US&hl=en-US" class="btn"> 👉 Google Flights  </a> 
@@ -325,6 +332,9 @@ Hãng hàng không Hong Kong này cung cấp các chuyến bay từ Hoa Kỳ đ�
  <li>Chương trình Khách hàng thân thiết: Nếu bạn là thành viên của chương trình khách hàng thân thiết, hãy kiểm tra xem hãng hàng không bạn ưa thích có hợp tác với các hãng hàng không bay đến Việt Nam để kiếm hoặc đổi dặm không.</li>
      <li>Thời điểm: Nên đi từ tháng 11 đến tháng 4 giá vé thấp hơn và thứ ba hay thứ tư gần như luôn có giá rẻ hơn so với các ngày còn lại. </p>
 
+
+
+</div></div>
 
 
  
