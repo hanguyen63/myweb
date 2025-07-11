@@ -83,35 +83,18 @@ body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; 
       margin: 0 15px;
       text-decoration: none;
     }
-    .container {
-      display: flex;
-      padding: 20px;
+      .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
     }
-    .main {
-      flex: 70%;
-      padding-right: 20px;
-    }
-    .sidebar {
-      flex: 30%;
-      background: #e0f2f1;
-      padding: 10px;
-      border-radius: 8px;
-    }
-.sidebar img {
-      width: 450px;
-      height: 450px
-     
+    .card img { width: 100%; height: 350; border-radius: 10px; }
+
 }
-    section {
-      background: white;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #00695c;
-    }
+    
 footer {
       background-color:#003366;
       color: white;
@@ -262,28 +245,58 @@ footer {
     <a href="diemden.html">Điểm đến</a>
         <a href="amthuc.html">Ẩm thực</a>
         <a href="tuvan.html">Tư vấn</a>
-        <a href="#Diễn đàn">Diễn đàn</a>
+        
 
   </nav>
 
-  <div class="container">
-    <div class="main">
-      <section id="noiden">
-        <a href="diemden.html"> <h2>Điểm Đến Hấp Dẫn</h2></a>
-        <p>Khám phá những địa danh nổi tiếng như Huế, Đà Lạt, Đà Nẵng, Nha Trang, TP. Hồ Chí Minh, Hà Nội, Vũng Tàu, Hội An, Phú Quốc, Hạ Long, Cần Thơ, An Giang</p>
-      </section>
+  <div class="section">  
+    <div class="columns">
+      <div class="card">         
+  <img src="vietna.png" >           
+            <a href="diemden.html"> <h2>Điểm đến hấp dẫn</h2></a>
 
-      <section id="amthuc">
-        <a href="amthuc.html"> <h2>Ẩm Thực Việt Nam</h2></a>
-        <p>Thưởng thức phở, bún bò Huế, bánh xèo, bánh cuốn, cà phê trứng và nhiều món ngon vùng miền.</p>
-      </section>
+  <p>Khám phá những địa danh nổi tiếng như Huế, Đà Lạt, Đà Nẵng, Nha Trang, TP. Hồ Chí Minh, Hà Nội, Vũng Tàu, Hội An, Phú Quốc, Hạ Long, Cần Thơ, An Giang</p>
+          
 
-      <section id="tuvan">
-        <a href="tuvan.html"> <h2>Tư Vấn Du Lịch</h2></a>
-        <p>Thông tin hữu ich cho công dân Hoa Kỳ có kế hoạch đi du lịch đến Việt Nam bao gồm thông tin về vé máy bay, thủ tục visa, thời điểm tốt để về thăm quê, và mẹo tiết kiệm chi phí.</p>
-      </section>
 
-<section id="Diễn đàn">
+ </div>
+
+<div class="card"> 
+<img src="anuong.webp" > 
+<a href="amthuc.html"> <h2>Ẩm thực</h2></a>
+
+  <p>Thưởng thức phở, bún bò Huế, bánh xèo, bánh cuốn, cà phê trứng và nhiều món ngon vùng miền.</p>          
+           
+
+
+ </div>
+
+
+
+<div class="card"> 
+<img src="tuvan11.jpg" > 
+ <a href="tuvan.html"> <h2>Tư vấn</h2></a>
+
+  <p>Thông tin hữu ich cho công dân Hoa Kỳ có kế hoạch đi du lịch đến Việt Nam bao gồm thông tin về <a href="didau.pdf" class="btn">Đi đâu chơi ở Việt Nam? </a><br>
+Vé máy bay, thủ tục visa, thời điểm tốt để về thăm quê, và mẹo tiết kiệm chi phí.
+        
+ </div>
+
+<div class="card">
+<img src="jessica.png" >
+ <a href=https://www.starfruitfinance.com/><h2>Du lich cùng nhau (Starfruit finance)</h2> </a>
+<p>Chúng ta đều đã từng rơi vào tình huống này: Bạn muốn đi du lịch, nhưng quá trình lên kế hoạch thật quá sức. 
+Bạn phải phối hợp lịch trình, tìm chỗ ở và quản lý ngân sách. Nó có thể cảm thấy như một vòng lặp không bao 
+giờ kết thúc của những tin nhắn qua lại và bảng tính. <b>Starfruit Finance</b> ở đây để thay đổi điều đó.  
+</p>
+
+
+ </div> </div>
+
+<div class="section">  
+    <div class="columns">
+      <div class="card">
+
                <h2>💬 Diễn đàn cộng đồng</h2>
         <p>Tham gia thảo luận và chia sẻ kinh nghiệm du lịch tại diễn đàn người Việt Fairfax.</p>
 
@@ -300,9 +313,8 @@ footer {
             (d.head || d.body).appendChild(s);
           })();
         </script>           
-    </div>
-        
-      </section>
+    </div>   </div>
+   
 
 
 
@@ -310,29 +322,6 @@ footer {
 
 
  
-
-    <div class="sidebar">
-      <img src="vietna.png" >
-      <h3>Thông Tin Hữu Ích</h3>
-      <ul>
-         <li><strong>Gợi ý nhanh:</strong> <a href="didau.pdf" class="btn">Đi đâu chơi ở Việt Nam?</a></li>
-        <li><strong>Thủ tục:</strong> Visa, Passport .</li>
-        <li><strong>Thời điểm:</strong> Nên đi từ tháng 11 đến tháng 4. Giá rẻ </li>
-        <li><strong>Hãng bay:</strong> All Nippon Airways , EVA Air, Cathay Pacific.</li>
-        <li><strong>Khách sạn & homestay:</strong> Khách sạn Vinpearl là lựa chọn rất tốt phù hợp cho gia đình có trẻ nhỏ
-thích đông vui, dịch vụ trọn gói. Homestay - Giá rẻ & sạch sẽ phù hợp cho người đi một mình hoặc nhóm bạn trẻ</li>
-        <li><strong>Liên hệ:</strong> Đại sứ quán tại Việt Nam & Thông tin Y tế.</li>
-        <a href="tuvan.html" class="btn">👉 Xem thêm chi tiết </a> 	      
-      </ul>
- <h3>Du lich cùng nhau </h3>
-<p>Chúng ta đều đã từng rơi vào tình huống này: Bạn muốn đi du lịch, nhưng quá trình lên kế hoạch thật quá sức. 
-Bạn phải phối hợp lịch trình, tìm chỗ ở và quản lý ngân sách. Nó có thể cảm thấy như một vòng lặp không bao 
-giờ kết thúc của những tin nhắn qua lại và bảng tính. Starfruit Finance ở đây để thay đổi điều đó. Chúng tôi loại bỏ
-sự phiền phức trong việc lập kế hoạch chuyến đi bằng cách tự động hóa quy trình và cung cấp một trải nghiệm liền
-mạch cho bạn và bạn bè. Với Starfruit, bạn có thể tập trung vào những gì thực sự quan trọng: tạo ra những kỷ niệm cùng nhau. 👉 Xem thêm chi tiết →
-	<a href=https://www.starfruitfinance.com/>Starfruit finance </a>
-</p>
-    </div>
-  </div>
 </body>
 </html>
+
