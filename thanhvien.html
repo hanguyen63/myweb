@@ -1,224 +1,386 @@
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thư viện Hình ảnh</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 20px;
-
-        }
-        h1 {
-            text-align: center;
-        }
-.logo img {
-      width: 100px;
-      height: 70;
-      margin-right: 10px;
-      
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
     }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            padding: 10px;
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
 
-        }
-        .gallery-item {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 5px;
-            text-align: center;
-            font-family: Arial, sans-serif; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: auto; border-radius: 10px; }
 
-        }
-        .gallery-item img {
-            max-width: 100%;
-            height:250;
-        }
-        .caption { font-family: Arial, sans-serif; margin: 0; padding: 1; line-height: 1.6; 
-            margin-top: 10px;
-            font-weight: bold;
+ 
+ 
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-                  }
-    </style>
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+
+
+
+<style>
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
 </head>
 <body>
-    <h1>Thành Viên</h1>
-<div class="logo img" align="center">
-<img src="tennis1.png" ></div>
 
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="502.jpg" >
-            <div class="caption">Nguyễn Hà   </div>
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="tennis3.jpg" >    
+  </div>
+
+  
+
+<div class="section">
+  
+    <div class="columns">
+      <div class="card"> 
+        <img src="502.jpg" >
+<h3>Nguyễn Hà A </h3>
 <p> Ha Nguyen có hơn 25 năm chơi quần vợt và đã tham gia vao nhom thể thao cộng đồng người Việt có hơn 2 năm. </p>
-        </div>
-        <div class="gallery-item">
-            <img src="longtennis.jpg" alt="Sự kiện">
-            <div class="caption"> Nguyễn Long </div>
+ </div>
+
+
+<div class="card"> 
+         <img src="longtennis.jpg" >
+            <h3> Nguyễn Long </h3>
 <p>Long Nguyen có hơn 35 năm chơi quần vợt tai Viet Nam. Long thường chơi ở hai sân Wakefield Park & Mason District Park vao cuối tuần </p>
-        </div>
-        <div class="gallery-item">
-            <img src="510.jpg" alt="Việc làm">
-            <div class="caption">Đệ Hoành</div>
+
+              </div>
+
+<div class="card"> 
+         <img src="510.jpg" >
+            <h3>Đệ Hoành</h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park có thể chơi Tennis và Pickleball </p>
-        </div>
-        <div class="gallery-item">
-            <img src="555.jpg" alt="Việc làm">
-            <div class="caption">Lâm  </div>
+              </div>
+
+<div class="card"> 
+         <img src="555.jpg" >
+            <h3>Lâm  </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
 
-        </div></div>
+              </div></div>
 
-<div class="gallery">
-        <div class="gallery-item">
-            <img src="5000.jpg" >
-            <div class="caption">Hoàng  </div>
+
+<div class="section">
+  
+    <div class="columns">
+      <div class="card"> 
+                      <img src="5000.jpg" >
+            <h3>Hoàng  </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
 
 
-        </div>
+              </div>
 
-
-        <div class="gallery-item">
-            <img src="5001.jpg" >
-            <div class="caption"> Tuấn Ma</div>
+<div class="card"> 
+         <img src="5001.jpg" >
+            <h3> Tuấn Ma</h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 
-        </div>
-        <div class="gallery-item">
-            <img src="5002.jpg" >
-            <div class="caption">Ngọc Huỳnh </div>
+              </div>
+<div class="card"> 
+         <img src="5002.jpg" >
+            <h3>Ngọc Huỳnh </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
-        </div>
-        <div class="gallery-item">
-            <img src="burt.jpg" alt="Việc làm">
-            <div class="caption">Mr.Burt</div>
+
+
+              </div>
+<div class="card"> 
+       <img src="burt.jpg" >
+            <h3>Mr.Burt</h3>
 <p>Chuyên gia quần vợt hơn 40 năm, huấn luyện và tham gia nhiều trận đấu tại Fairfax, VA</p>
-        </div></div>
+
+              </div></div>
 
 
-<div class="gallery">
-        <div class="gallery-item">
+<div class="section">  
+    <div class="columns">
+      <div class="card"> 
+         
             <img src="kiet.jpg" >
-            <div class="caption"> Kiệt</div>
+            <h3> Kiệt</h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
 
 
-        </div>
+              </div>
 
-
-        <div class="gallery-item">
-            <img src="le1.jpg" >
-            <div class="caption"> Lễ Trần </div>
+<div class="card"> 
+        <img src="le1.jpg" >
+            <h3> Lễ Trần </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 
-        </div>
-        <div class="gallery-item">
-            <img src="thanh11.jpg" >
-            <div class="caption">Thành Vũ</div>
-<p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
-        </div>
-        <div class="gallery-item">
-            <img src="john.jpg" >
-            <div class="caption">John Nguyễn </div>
-<p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
-        </div></div>
 
-<div class="gallery">
-        <div class="gallery-item">
-            <img src="thanh12.jpg" >
-            <div class="caption">Thành Nguyễn  </div>
+
+              </div>
+<div class="card"> 
+        <img src="thanh11.jpg" >
+            <h3>Thành Vũ</h3>
+<p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
+
+              </div>
+
+<div class="card"> 
+        <img src="john.jpg" >
+            <h3>John Nguyễn </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
 
 
-        </div>
+              </div></div>
 
+<div class="section">  
+    <div class="columns">
+      <div class="card"> 
+        <img src="thanh12.jpg" >
+            <h3>Thành Nguyễn  </h3>
+<p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
+ 
+</div>
 
-        <div class="gallery-item">
-            <img src="tam1.jpg" >
-            <div class="caption">Tâm Ngô</div>
+<div class="card"> 
+        <img src="tam1.jpg" >
+            <h3>Tâm Ngô</h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 
-        </div>
-        <div class="gallery-item">
-            <img src="hai.jpg" >
-            <div class="caption">Hải Nguyễn</div>
+ 
+</div>
+
+<div class="card"> 
+        <img src="hai.jpg" >
+            <h3>Hải Nguyễn</h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
-        </div>
-        <div class="gallery-item">
-            <img src="dung.jpg" alt="Việc làm">
-            <div class="caption">Dũng Vũ  </div>
-        </div></div>
+</div>
 
+ <div class="card">
+<img src="dung.jpg" >
+            <h3>Dũng Vũ  </h3>
 
-<div class="gallery">
-        <div class="gallery-item">
-            <img src="dao.jpg" >
-            <div class="caption">Đạo Nguyễn </div>
+<p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
+
+</div></div>
+
+        
+
+<div class="section">  
+    <div class="columns">
+      <div class="card">         
+       <img src="dao.jpg" >
+         <h3>Đạo Nguyễn </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
 
 
-        </div>
+</div>
 
-
-        <div class="gallery-item">
-            <img src="tuan1.jpg" >
-            <div class="caption"> Tuấn Vũ </div>
+<div class="card"> 
+        <img src="tuan1.jpg" >
+            <h3> Tuấn Vũ </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 
-        </div>
-        <div class="gallery-item">
-            <img src="chau.jpg" >
-            <div class="caption"> Châu Bùi  </div>
-<p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
-        </div>
+ 
+</div>
 
-        <div class="gallery-item">
+<div class="card"> 
+         <img src="chau.jpg" >
+            <h3> Châu Bùi  </h3>
+<p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
+
+ </div>
+
+<div class="card">         
             <img src="ha11.jpg" >
-            <div class="caption"> Hà Nguyễn  </div>
+            <h3> Hà Nguyễn B </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 
-        </div></div>
+ 
+</div></div>
 
-
-
- <div class="gallery">
-        <div class="gallery-item">
-            <img src="binh.jpg" >
-           
-            <div class="caption"> Bình Trần  </div>
+     
+       
+    <div class="section">  
+    <div class="columns">
+<div class="card"> 
+       <img src="binh.jpg" >           
+            <h3> Bình Trần  </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
 
+      
+</div>
 
-        </div>
 
 
-        <div class="gallery-item">
-            <img src=".jpg" >
-            <div class="caption"> </div>
+<div class="card"> 
+        <img src=".jpg" >
+            <h3> </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 
-        </div>
-        <div class="gallery-item">
-            <img src=".jpg" >
-            <div class="caption">   </div>
-<p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
-        </div>
 
-        <div class="gallery-item">
-            <img src=".jpg" >
-            <div class="caption">   </div>
+ 
+</div>
+
+<div class="card"> 
+         <img src=".jpg" >
+            <h3>   </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 
-        </div></div>
 
+</div>
+
+<div class="card"> 
+         <img src=".jpg" >
+            <h3>   </h3>
+<p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
+
+
+ 
+</div></div>
+      
+    
+<footer>
+        <p> © 2025 Bản quyền thuộc về Ha Nguyen | Chính sách bảo mật |📬<a href="lienhe1.html"><font color="white">Liên hệ </a> </p>
+  </footer>
+
+
+    
 </body>
 </html>
