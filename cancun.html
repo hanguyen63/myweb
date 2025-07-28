@@ -1,0 +1,454 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="cancun.webp" >
+    <div class="banner-text">
+     <h1>Du Lịch Cancún Mexico</h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="cann.jpg" >
+         <h3>Tổng quan:</h3>
+        
+<ul><li>🔎 Chuyến bay
+Từ: Sân bay Quốc tế Dulles (IAD) hoặc Sân bay Quốc gia Reagan (DCA) - Sân bay Quốc tế Cancún (CUN)</li>
+
+<li>Hãng hàng không: American, United, JetBlue, Delta, Southwest, Frontier</li>
+
+<li>Thời lượng: ~4–6 giờ (không dừng hoặc 1 điểm dừng)</li>
+
+<li>Khứ hồi: Khoảng 250–500 USD tùy theo mùa</li>
+
+<li>🕒 Mẹo: Đặt trước ít nhất 4–8 tuần để có giá tốt.</li>
+</ul>
+
+ </div>
+
+      <div class="card">
+        <img src="is.jpg" >
+         <h3 >Điểm đến nổi bật ở Cancún</h3>
+         <ul><li>Bãi biển: Playa Delfines, Playa Tortugas</li>
+<li>Isla Mujeres: Đi thuyền trong ngày (~
+0 khứ hồi)</li>
+<li>Chichen Itza: Tàn tích của người Maya (cách đó khoảng 2 giờ)</li>
+<li>Xcaret/Xel-Há: Công viên sinh thái, tuyệt vời cho gia đình</li>
+<li>Cenotes: Bơi trong các hố sụt đá vôi tự nhiên</li>
+<li>Khu trung tâm Cancún (El Centro): Chợ địa phương & văn hóa</li>
+<li>Cuộc sống về đêm ở Khu Khách sạn: Coco Bongo, Mandala, Señor Frog’s</li>
+
+                           
+        </ul>
+        
+        
+       
+             </div>
+
+              <div class="card">
+        <img src=" hy.webp" >
+         <h3 >🏨 Khách sạn/Khu nghỉ dưỡng ở Cancún</h3>
+         <ul><li> <b>Hyatt Ziva Cancún</b>, khu nghỉ dưỡng sang trọng thân thiện với gia đình tốt nhất</li>
+<li>Ăn uống: Hơn 8 nhà hàng (nhà hàng bít tết, châu Á, Ý, buffet, tráng miệng)</li>
+<li>Điểm nổi bật: Mặt biển, công viên nước cho trẻ em, khu trưng bày cá heo, dịch vụ phòng 24/7</li>
+<li>Khoảng giá: <a href="https://www.hyatt.com">Website</a></li>
+<li>Các trang web đặt phòng: Expedia, Booking.com, Airbnb, Costco Travel</li>   </ul> 
+
+</div>
+
+      <div class="card">
+        <img src="gaaa.jpg" >
+<ul><li><b>Grand Fiesta Americana Coral Beach Cancún</b>.
+Tuyệt vời cho gia đình và những người yêu thích ẩm thực</li>
+<li>Ăn uống: Hơn 10 nhà hàng (Pháp, hải sản, Mexico, buffet)</li>
+<li>Điểm nổi bật: Phòng suite lớn có tầm nhìn ra biển, spa, câu lạc bộ trẻ em</li>
+<li>Khoảng giá:  <a href="https://www.grandfiestamericana.com">Website</a>
+
+
+                     </ul>    
+        
+   </div>   </div>  
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="mom.jpg" >         
+        
+<ul><li><b>Moon Palace Cancún</b>. Khu nghỉ dưỡng rộng lớn với mọi thứ đều có sẵn trong khuôn viên</li>
+<li>Ăn uống: Hơn 15 nhà hàng và quán ăn nhẹ</li>
+<li>Điểm nổi bật: Sân golf, công viên nước, spa, các buổi biểu diễn trực tiếp</li>
+<li>Khoảng giá:  <a href="https://www.moonpalace.com">Website</a></li>
+
+
+</ul>
+ </div>
+
+      <div class="card">
+        <img src="dre.jpg" >
+         <ul><li><b>Dreams Vista Cancún Golf & Spa</b>.Giá trị tốt, bao gồm tất cả với sự đa dạng
+<li>Ăn uống: 7 nhà hàng (Ý, kết hợp châu Á, Mexico, nướng, buffet)
+<li>Điểm nổi bật: Hồ bơi trên sân thượng, sân golf, phòng gia đình
+<li>Khoảng giá: <a href="https://www.dreamsresorts.com">Website</a>  </li> 
+        </ul>       
+                            </div>
+
+              <div class="card">
+        <img src=" chocu.jpg" >
+         <ul><li> <b>Royal Solaris Cancún</b>. Giá cả phải chăng, phù hợp cho những chuyến đi ngắn ngày
+
+<li>Ăn uống: 5 nhà hàng và quán bar (Mexico, buffet, pizza, sushi)</li> 
+<li>Điểm nổi bật: Câu lạc bộ trẻ em, các đêm theo chủ đề, lối ra bãi biển</li> 
+Khoảng giá: <a href="https://www.clubsolaris.com">Website</a></li>   </ul> 
+</div> </div>
+
+              
+
+             <div class="section">    
+    <div class="columns">       
+ 
+              <div class="card">
+        <img src="cancun1.jpg" >
+         <h3 >Dưới đây là hướng dẫn từng bước hoàn chỉnh cho chuyến đi của bạn từ Fairfax, VA đến Cancún, Mexico</h3>
+<p>✈️ <b>BƯỚC 1:</b> Chuẩn bị giấy tờ du lịch</p>
+ <ul><li> Hộ chiếu: Bạn cần có hộ chiếu Hoa Kỳ còn hiệu lực (phải còn hiệu lực ít nhất 6 tháng sau ngày đi lại của bạn).<br>
+Công dân Hoa Kỳ đến Mexico du lịch dưới 180 ngày không cần thị thực.</li>
+
+<li>FMM (Thẻ Du lịch): Bạn phải hoàn thành Thẻ Du lịch Mexico (FMM) bằng một trong hai cách sau:
+Trực tuyến: <a href="https://www.inm.gob.mx/fmme/publico/solicitud.html">Website</a>. Hoặc tại sân bay khi đến Cancún. 
+Giữ một bản sao in hoặc bản sao kỹ thuật số bên mình.</li>
+<li>Bảo hiểm du lịch (tùy chọn nhưng được khuyến khích). 
+Bao gồm các trường hợp khẩn cấp y tế, chậm trễ chuyến đi, trộm cắp, v.v.</li></ul> 
+
+
+</div>
+
+
+  <div class="card">
+<p>🧳 <b>BƯỚC 2:</b> Đặt chuyến đi của bạn</p>
+<ul><li>🔎 Chuyến bay: Sân bay Quốc tế Dulles (IAD) hoặc Sân bay Quốc gia Reagan (DCA)-->
+Sân bay Quốc tế Cancún (CUN)</li>
+<li>Hãng hàng không: American, United, JetBlue, Delta, Southwest, Frontier</li></ul>
+
+<p>🚖 <b>BƯỚC 3:</b> Đến Cancún</p>
+<ul><li>🛃Tại Hải quan: Xuất trình hộ chiếu và FMM (Giữ thẻ FMM để xuất cảnh). Cứ nói là bạn đến đây để du lịch. </li>
+<li>🚕 Từ sân bay đến khách sạn: Đặt xe đưa đón trước (USA Transfers, Cancun Shuttle). Chi phí: Khoảng 25–50 USD một chiều</li>
+
+<li>Taxi: Tránh bắt taxi ngẫu nhiên; sử dụng taxi chính thức của sân bay hoặc đặt trước.</li>
+
+</ul> 
+
+<p>🧳<b> BƯỚC 4: </b>🏨 Khách sạn/Khu nghỉ dưỡng ở Cancún (Đề xuất: Tất cả trong một ở khu khách sạn lựa chọn thân thiện với gia đình)</p>
+<ul><li>Khám phá bãi biển hoặc hồ bơi</li>
+<li>Bữa tối chào mừng tại nhà hàng buffet của khu nghỉ dưỡng hoặc nhà hàng bên bãi biển</li></ul>
+
+</div>
+
+
+<div class="card">
+
+<p>🚖 <b>BƯỚC 5:</b> khám phá Cancún.</p>
+<p>📅 Ngày 1: Điểm đến nổi bật ở Cancún</p>
+<ul><li> 🏖️ Buổi sáng:  (bãi biển công cộng đẹp và miễn phí).
+Tùy chọn dù lượn, đi mô tô nước hoặc đi thuyền chuối</li>
+<li>🏛️ Buổi chiều: Tham quan tàn tích El Rey (bên trong Khu Khách sạn, khoảng 1 giờ)</li>
+<li>🌮 Ăn uống bữa tối: tùy chọn tại nhà hàng buffet của khu nghỉ dưỡng hoặc nhà hàng bên bãi biển.</li></ul>
+
+<p>📅 Ngày 2: Tham quan Isla Mujeres</p>
+ <ul><li>🏖️ Buổi sáng: 🚤 Đi phà buổi sáng đến Isla Mujeres (từ Puerto Juárez hoặc Khu Khách sạn). Phà khứ hồi ~20 USD</li>
+<li>🏝️ Hoạt động: Thuê xe golf để khám phá đảo (~40–50 USD/ngày). Tham quan Bãi biển phía Bắc (bãi biển đẹp nhất)</li>
+<li>Trang trại rùa Tortugranja</li>
+<li>Vách đá và tác phẩm điêu khắc Punta Sur</li>
+<li>🍽️ Bữa tối: Ăn hải sản tươi sống trên đảo, sau đó đi phà về lại Cancún.</li></ul>
+
+</div></div>
+
+<div class="section">    
+    <div class="columns">                     
+
+<div class="card">
+<p>📅 Ngày 3: Tham quan Chichén Itzá (Kim tự tháp Maya)</p>
+          <ul><li>🚐 Đặt tour có hướng dẫn viên cả ngày (~12 giờ). Bao gồm cả vận chuyển khứ hồi, bữa trưa và phí vào cửa</li>
+<li>Bơi tại Cenote Ik-Kil hoặc Cenote Saamal</li>
+<li>🍽️ Bữa trưa: Buffet bao gồm trong hầu hết các tour</li>
+<li>🛌 Về khách sạn khoảng 6-7 giờ tối</li></ul>
+
+ </div>
+
+<div class="card">
+
+<p>📅 Ngày 4: Công viên Xcaret (Công viên chủ đề sinh thái)</p>
+<ul><li>🌿 Công viên phiêu lưu cả ngày với sông ngầm, chương trình văn hóa, lặn với ống thở, đường mòn trong rừng và động vật</li>
+<li>🎟️ Chi phí: Khoảng 100–130 USD/người (mua vé trực tuyến sớm)</li>
+
+<li>Xe buýt Có xe đưa đón khứ hồi từ Cancún (~1.5 giờ)</li>                         
+        </ul>       
+       
+             </div>
+<div class="card">
+<p>📅 Ngày 5:Ngày tự do + Khu trung tâm Cancún</p>
+<ul><li>🛍️ Buổi sáng: Thư giãn tại khu nghỉ dưỡng. Chăm sóc spa, massage bãi biển hoặc chỉ thư giãn.</li> 
+<li>🚕 Buổi chiều (tùy chọn): Hãy ghé thăm Mercado 28 hoặc Parque Las Palapas ở trung tâm thành phố Cancún. Mua quà lưu niệm địa phương</li> 
+<li>Đồ ăn đường phố 🍦 Hãy thử marquesitas, elote và paletas (kem que Mexico)</li></ul>
+
+
+</div>
+<div class="card">
+
+<p>📅 Ngày 6: Mua sắm quà lưu niệm & Khởi hành</p>
+<ul><li>🧳 Buổi sáng: Đóng gói, mua quà lưu niệm vào phút chót, trả phòng khách sạn.</li>
+<li>🚐 Di chuyển đến Sân bay Cancún (đến trước giờ bay 3 tiếng)</li>
+<li>📄 Nộp lại mẫu FMM của bạn tại cửa khẩu sân bay</li>
+<li>🛫 Bay về nhà với những vệt rám nắng và những kỷ niệm!</li></ul>
+
+
+
+</div></div>
+
+<div class="section">    
+    <div class="columns">           
+
+
+      <div class="card">
+        <img src="canbiet.jpg" >
+        <h3 >📝 Gợi ý khi du lịch ở Cancún Mexico</h3>
+         <ul><li>Tiền tệ Peso Mexico (MXN), tiền USD được chấp nhận rộng rãi.</li>
+<li>Nước Chỉ uống nước đóng chai</li>
+<li>Điện thoại Sử dụng chuyển vùng hoặc eSIM (như Airalo)</li>
+<li>An toàn Rất thân thiện với khách du lịch, chỉ cần dùng lý trí thông thường là được.</li>
+<li>Tiền boa ~10–15% tại nhà hàng, 1–2 đô la cho dịch vụ dọn phòng</li>
+<li>Thời tiết: Nóng và ẩm vào tháng 8. Đóng gói quần áo nhẹ, kem chống nắng. Bộ chuyển đổi ổ cắm điện.</li>
+<li>Xác nhận việc đưa đón từ sân bay.</li></ul>
+
+</div>
+
+<div class="card">
+<img src="phone.png" >
+<h3>Nếu bạn cần hỗ trợ</h3>
+<p>Bạn có thể liên hệ các dịch vụ hỗ trợ chính thức sau:</p>
+
+<ul><li>🏨Sở Du Lịch Quintana Roo (SEDETUR)
+<a href="https://qroo.gob.mx/sedetur">Website </a><br>
+Hotline du lịch: +52 998 881 2800 (có thể yêu cầu hỗ trợ tiếng Anh)</li>
+
+<li>🚨 3. Cảnh sát Du Lịch Cancún (Tourist Police)<br>
+Hotline khẩn cấp: 911. Số hỗ trợ du khách (không khẩn cấp): +52 998 885 2277</li>
+
+<li>Lãnh sự quán / Đại sứ quán gần nhất<br>
+Đại sứ quán U.S tại Mexico City: 
+📞 Telephone: +(52)(55) 5080-2000, Emergency After-Hours Telephone: +(52)(55) 5080-2000</li>
+<li>🌐 Website: <a href="https://mx.usembassy.gov/">Website U.S </a></li></ul>
+
+   
+             </div>             </div>
+     
+       
+      
+
+
+
+    
+</body>
+</html>

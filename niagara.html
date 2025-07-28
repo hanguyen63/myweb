@@ -1,0 +1,324 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="thac.webp" >
+    <div class="banner-text">
+     <h1>Du Lịch Thác Niagara, NY</h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="tu.jpg" >
+         <h3>Tổng quan:</h3>
+        
+<ul><li>Từ: Fairfax, VA Đến: Thác Niagara, NY (phía Hoa Kỳ) Khoảng cách: ~400–450 dặm</li>
+
+<li>Thời gian: ~7–8 giờ đi ô tô hoặc ~1,5 giờ đi máy bay (cộng thêm thời gian ở sân bay)</li>
+
+<li>Phương tiện đi lại tốt nhất: Ô tô nếu muốn linh hoạt hoặc máy bay se bị hạn chế về thời gian.</li>
+
+<li>Thời gian chuyến đi được đề xuất: 2–3 ngày.</li></ul>
+
+ </div>
+
+      <div class="card">
+        <img src="mind.jpg" >
+         <h3 >Điểm đến nổi bật ở Thác Niagara, NY</h3>
+         <ul><li>Maid of the Mist (Cô gái sương mù) – Đi thuyền vào thác</li> 
+<li>Cave of the Winds (Động Gió) – thong qua Động Gió bạn có thể đi bộ ngay bên cạnh thác Bridal Veil</li>
+<li>Công viên Bang Thác Niagara – Đường mòn phong cảnh, ngắm cảnh miễn phí</li>
+<li>Tháp quan sát – Khung cảnh toàn cảnh</li>
+<li>Chiếu sáng ban đêm – Thác nước được thắp sáng bằng nhiều màu sắc mỗi đêm</li> 
+                             
+        </ul>
+        
+        
+       
+             </div>
+
+              <div class="card">
+        <img src=" nhanghi.jpg" >
+         <h3 >🛏️ Khách sạn </h3>
+         <ul><li> Nếu bạn đang tìm khách sạn gần Công viên Bang Niagara Falls (phía Mỹ). Dưới đây là một số lựa chọn khách sạn phù hợp chỉ cách thác một đoạn đi bộ ngắn:
+
+
+<li>Comfort Inn The Pointe 1–2 phút Khách sạn gần nhất với lối vào công viên</li>
+<li>Hyatt Place Niagara Falls 5 phút Hiện đại, đi bộ được, gần các điểm tham quan</li>
+<li>Khách sạn Cambria Niagara Falls 6–8 phút Khách sạn phong cách, mới hơn</li>
+<li>Sheraton Niagara Falls 7 phút Rộng lớn với công viên nước trong nhà (tính thêm)</li>
+<li>Khách sạn Giacomo 6–7 phút Khách sạn boutique, được đánh giá cao </li> 
+                      </ul>    
+        
+        
+                    </div></div>
+
+<div class="section">    
+    <div class="columns">  
+              <div class="card">
+        <img src="meo.jpg" >
+         <h3 >Lịch trình Gợi Ý 3 Ngày ở Thác Niagara, NY </h3>
+         <ul><li>📅 Ngày 1: Di chuyển + Đến nơi<br>
+Lái xe hoặc đi máy bay đến. <br>Nhận phòng khách sạn.<br> Đi bộ đến thác và ngắm đèn đêm </li>
+
+
+
+
+          <li>📅 Ngày 2: Khám phá Thác<br>
+Sáng: Maid of the Mist + Đài quan sát<br>
+Bữa trưa: Niagara Grill hoặc Top of the Falls<br>
+Buổi chiều: Động Gió<br>
+Buổi tối: Hoàng hôn ở Đảo Goat + Pháo hoa</li>
+
+          <li>📅 Ngày 3: Các chuyến tham quan tùy chọn hoặc Trở về<br>
+Thủy cung Niagara hoặc tham quan thành phố Buffalo<br>
+
+Bắt đầu lái xe/bay trở lại Fairfax</li>
+                           
+        </ul>
+        
+        
+       
+             </div>
+
+      <div class="card">
+        <img src="goi.png" >
+        <h3 >Mẹo du lịch ở Thác Niagara, NY</h3>
+          <p>Ưu điểm & nhược điểm tại Thác Niagara (phía Mỹ):</p>
+<ul><li> Thuyền Maid of the Mist khởi hành từ phía Hoa Kỳ.</li> 
+<li>Từ phía Hoa Kỳ nhìn chung yên tĩnh và ít đông đúc hơn. Khách sạn + Ăn uống giá cả phải chăng hơn .</li>
+  <li>Đỗ xe: Khoảng 10–25 đô la Mỹ/ngày.</li>
+<li>Từ phía Hoa Kỳ bạn không thể nhìn toàn cảnh đẹp nhất của toàn bộ thác (Thác Móng Ngựa + Thác Mỹ). 
+Từ phía Canada: Bạn có thể nhìn toàn cảnh đẹp nhất của toàn bộ thác (Thác Móng Ngựa + Thác Mỹ). </li>
+<li>Từ phía Canada bạn có nhiều lựa chọn giải trí hơn: sòng bạc, nhà hàng, cuộc sống về đêm, khu vui chơi điện tử và khu vui chơi Clifton Hill. 
+nhưng có thể đắt hơn. Phí/thuế du lịch: 10–15% được cộng vào hóa đơn ở nhiều nơi. </li></ul>
+  
+   
+             </div>
+     
+   <div class="card">
+              
+<p>  📝 Gợi ý:</p>
+<ul><li>💰 Ưu tiên ngân sách hay không cần hộ chiếu? Ở lại phía Hoa Kỳ. </li>
+<li>🚶Bạn có thể đi bộ từ phía Mỹ sang phía Canada của Thác Niagara, nếu bạn có giấy tờ du lịch hợp lệ, và đây là một trong những cách tốt nhất để ngắm nhìn toàn cảnh thác nước.</li>
+<li> Các bước đi từ phía Mỹ sang phía Canada:<br>
+1. Bắt đầu từ khách sạn của bạn ở Mỹ (ví dụ, ở Niagara Falls, NY).<br>
+2. Đi bộ đến Cầu Cầu Vồng — cầu này nối liền Hoa Kỳ và Canada, mở cửa cho người đi bộ 24/7.<br>
+3. Qua kiểm soát biên giới Hoa Kỳ và Canada: Công dân Hoa Kỳ cần có hộ chiếu hợp lệ (hoặc thẻ hộ chiếu, hoặc bằng lái xe nâng cao).<br>
+   Các quốc tịch khác cần hộ chiếu và có thể cần thị thực du lịch Canada hoặc eTA (tùy thuộc vào quốc tịch của bạn).<br>
+4. Trả phí đi bộ: khoảng 1 USD khi quay lại Mỹ (bạn sẽ cần tiền xu hoặc thẻ của Mỹ).</li></ul>
+
+
+        
+     </div>   </div> 
+    
+      
+
+
+
+    
+</body>
+</html>

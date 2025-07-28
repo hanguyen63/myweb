@@ -1,0 +1,343 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="f1.jpg" >
+    <div class="banner-text">
+     <h1>Du Lịch Orlando, Florida</h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="f1.webp" >
+         <h3>Tổng quan:</h3>
+        
+<p>🚗Bằng ô tô (chuyến đi đường bộ) phù hợp nhất cho du lịch gia đình, sự linh hoạt, các điểm dừng ngắm cảnh</p>
+<ul><li>Quãng đường: ~850 dặm</li>
+<li>Thời gian: ~12–13 giờ không ngừng nghỉ</li>
+<li>Lộ trình gợi ý:
+I-95 S qua Richmond → Fayetteville → Savannah → Orlando
+Dừng qua đêm ở điểm giữa (ví dụ: Savannah, GA hoặc Jacksonville, FL)</li></ul>
+
+<p>✈️ Bằng máy bay (Khuyến khích vì sự tiện lợi)</p>
+<ul><li>Từ: DCA (Reagan) / IAD (Dulles) / BWI Đến: MCO (Sân bay Quốc tế Orlando)</li>
+<li>Thời gian bay: ~2,5 giờ</li>
+<li>Hãng hàng không: Southwest, JetBlue, Spirit, Delta, American</li>
+<li>Mẹo: Đặt vé máy bay khứ hồi sớm để tiết kiệm!</li>
+
+
+
+
+
+
+ </div>
+
+      <div class="card">
+        <img src="f2.jpg" >
+         <h3 >Điểm đến nổi bật ở Orlando, Florida</h3>
+<p>Chọn những điểm tham quan hàng đầu của bạn và mua trực tuyến để tiết kiệm thời gian/tiền bạc</p>
+<ul><li>Universal Studios & Islands of Adventure</li>
+<li>Disney World (Magic Kingdom, EPCOT, v.v.)</li>
+<li>SeaWorld Orlando</li>
+<li>ICON Park (Vòng đu quay Ferris, thủy cung)</li>
+<li>Trung tâm Vũ trụ Kennedy (Mũi Canaveral – cách 1 giờ lái xe)</li></ul>
+
+
+             
+        
+       
+             </div>
+
+              <div class="card">
+        <img src=" f4.jpg" >
+         <h3 >🏨 Khách sạn ở Orlando, Florida</h3>
+<p>Các khu vực nên ở :</p>
+
+<ul><li>International Drive (I-Drive): Nhà hàng, mua sắm, dễ dàng đến các công viên</li>
+<li>Hồ Buena Vista: Gần các công viên Disney</li>
+<li>Kissimmee: Khách sạn và khu nghỉ dưỡng giá cả phải chăng</li></ul>
+<p>Khách sạn được đề xuất (Tất cả đều có hồ bơi):</p>
+<ul><li>Holiday Inn Resort Orlando Suites – Công viên nước</li>
+<li>Floridays Resort Orlando</li>
+<li>Rosen Shingle Creek</li>
+<li>Khu nghỉ dưỡng Wyndham Orlando International Drive</li></ul>
+✅ Tìm kiếm "Bữa sáng miễn phí" và "Đỗ xe miễn phí" 
+
+   
+
+</div></div>
+
+<div class="section">    
+    <div class="columns">
+      <div class="card">
+        <img src="f5.jpg" >
+<h3 >Lịch trình 5 ngày ở Orlando</h3 >
+<p>🗓️ Ngày 1: Di chuyển và đến Orlando</p>
+<ul><li>Nhận phòng khách sạn/khu nghỉ dưỡng</li>
+<li>Thư giãn tại hồ bơi khách sạn hoặc khám phá I-Drive</li>
+<li>Ăn tối tại ICON Park hoặc nhà hàng địa phương</li></ul> 
+🗓️ Ngày 2: Magic Kingdom (Disney World)
+<ul><li>Đến sớm (mở cửa khoảng 9 giờ sáng). </li>
+<li>Các trò chơi: Thế giới nhỏ bé, Cướp biển vùng Caribbean, Space Mountain
+Diễu hành + Pháo hoa vào ban đêm</li>
+Mẹo: Sử dụng Disney Genie+ để giảm thời gian chờ</li>
+                     </ul>    
+        
+   </div>   
+
+      
+      <div class="card">
+        <img src="f6.jpg" >
+<p>🗓️ Ngày 3:Universal Studios Florida</p>
+ <ul><li>Thế giới phù thủy của Harry Potter</li>
+<li>Kẻ trộm mặt trăng, Người máy biến hình, Hollywood Rip Ride Rockit</li>
+<li>Bữa tối tại Universal CityWalk</li>
+        </ul>       
+<p>🗓️ Ngày 4: SeaWorld hay Trung tâm Vũ trụ Kennedy</p>
+<ul><li> SeaWorld: Trò chơi: Mako, Manta, Hành trình đến Atlantis</li>
+<li>Chương trình: Gặp gỡ cá heo, cá voi sát thủ</li>
+
+<li>Trung tâm Vũ trụ Kennedy (cách 1 giờ lái xe): Tàu con thoi Atlantis
+
+Gặp gỡ phi hành gia</li></ul>
+
+<p>🗓️ Ngày 5: Mua sắm + Trả phòng</p>
+
+<ul><li> Premium Outlets hoặc The Florida Mall</li>
+<li>Trả phòng và về nhà</li>
+<li>Trả xe hoặc đi sân bay</li></ul>
+
+
+                            </div>
+
+
+
+              <div class="card">
+        <img src=" f8.jpg" >
+<p>📝 Gợi ý khi du lịch ở Orlando, Florida</p>
+<ul><li>Giấy tờ du lịch (CMND/hộ chiếu cho chuyến bay)</li>
+<li>Bộ sạc di động</li>
+<li> Kem chống nắng, mũ, áo choàng (mưa mùa hè rất phổ biến)</li>
+<li>Bình nước có thể tái sử dụng</li>
+<li>📲 Ứng dụng hữu ích tim kiem ve trải nghiệm Disney của tôi</li>
+
+<li>Khu nghỉ dưỡng Universal Orlando</li>
+
+<li>Google Maps / Waze</li>
+
+
+   </ul> 
+</div> </div>
+
+              
+
+       
+
+  
+
+    
+</body>
+</html>

@@ -1,0 +1,356 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="newyork.jpg" >
+    <div class="banner-text">
+     <h1>Du Lịch New York</h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="ditau.webp" >
+         <h3>Tổng quan:</h3>
+        
+<ul><li> 🚘 Lái xe (tự túc tiện nhất cho gia đình). Khoảng 270 miles (~6 tiếng không dừng). Đi theo I-95 North, nên tránh giờ cao điểm tại NYC.</li>
+
+<li>🚌 Đi xe bus. Megabus hoặc Greyhound từ Tysons hoặc DC Union Station. Giá rẻ hơn nếu đặt sớm (~$30–$50/lượt).</li>
+
+<li>🚄 Đi tàu Amtrak từ Alexandria/Union Station đến NYC Penn Station (~4.5–5 tiếng).</li> 
+<li>✈️ Bay (nếu muốn tiết kiệm thời gian). Bay từ DCA/IAD đến JFK/LGA (~1.5 giờ bay + di chuyển nội đô NYC).</li> 
+
+         
+  </ul>
+
+ </div>
+
+      <div class="card">
+        <img src="time.jpg" >
+         <h3 >🌟 Điểm đến nổi bật ở New York</h3>
+<p>Dù bạn đang ở đâu, khi có cơ hội tới New York thì cũng đừng bỏ qua những địa danh dưới đây.</p>
+                    
+  <ul><li> Tượng Nữ Thần Tự Do (Statue of Liberty)
+Biểu tượng của nước Mỹ. Có thể đi phà từ Battery Park để tham quan tận nơi.
+Ghé đảo Liberty Island & Ellis Island.</li>
+         
+<li>Quảng trường Thời đại (Times Square)
+Trung tâm giải trí sôi động với biển quảng cáo LED khổng lồ. 
+Mua sắm, ăn uống, chụp hình về đêm rất đẹp.</li>
+
+<li>Công viên Trung tâm (Central Park)
+Nơi thư giãn, đạp xe, đi dạo, thuê thuyền, hoặc picnic.
+Có sở thú, hồ nước và nhiều hoạt động gia đình.</li>
+<li>Tòa nhà Empire State (Empire State Building)
+Lên tầng cao ngắm toàn cảnh thành phố.
+Mua vé trước để tránh xếp hàng.</li>
+<li>Bảo tàng Lịch sử Tự nhiên Mỹ (AMNH)
+Rất phù hợp cho gia đình và trẻ em.
+
+Có mô hình khủng long, vũ trụ, động vật toàn cầu.</li>
+<li>Brooklyn Bridge (Cầu Brooklyn)
+Cây cầu nổi tiếng có thể đi bộ từ Manhattan sang Brooklyn.
+View cực đẹp vào lúc hoàng hôn.</li>
+<li>Fifth Avenue
+Tuyến phố mua sắm nổi tiếng: Apple Store, Gucci, Tiffany, Saks, v.v.
+Có Thư viện New York và nhà thờ St. Patrick’s Cathedral.</li>
+ 
+<li>Chinatown & Little Italy
+Thưởng thức đồ ăn châu Á, Việt, Tàu và món Ý truyền thống.</li>                         
+        </ul>
+        
+        
+       
+             </div>
+
+              <div class="card">
+        <img src="khachsan.jpg" >
+         <h3 >🗽 Lịch trình Gợi Ý 5 Ngày ở New York</h3>
+
+
+
+         <ul><li>📅 Ngày 1: Đến NYC + Times Square + Rockefeller Center
+Nhận phòng khách sạn (gợi ý khu Midtown Manhattan để tiện đi lại)
+
+Dạo quanh Times Square buổi tối
+
+Thăm Rockefeller Center, Radio City Music Hall
+
+Nếu còn thời gian: Lên đài quan sát Top of the Rock
+
+  </li> 
+
+<li> 📅 Ngày 2: Statue of Liberty + Financial District
+Đi phà ra Tượng Nữ Thần Tự Do và Ellis Island
+
+Tham quan Wall Street, Charging Bull, NY Stock Exchange
+
+Ghé 9/11 Memorial & Museum
+
+Dạo Battery Park</li> 
+              <li>📅 Ngày 3: Central Park + Bảo tàng
+Buổi sáng: Thư giãn tại Central Park (đạp xe, đi dạo, chèo thuyền)
+
+Tham quan 1 trong 2 bảo tàng lớn:
+
+American Museum of Natural History
+
+The Metropolitan Museum of Art (The Met)
+
+Ghé Fifth Avenue mua sắm hoặc chụp ảnh
+ </li> 
+
+<li>📅 Ngày 4: Brooklyn + Cầu Brooklyn + DUMBO
+Đi bộ hoặc đạp xe qua Cầu Brooklyn
+
+Tham quan khu DUMBO (ảnh đẹp nhìn về Manhattan)
+
+Ăn trưa pizza nổi tiếng Juliana’s hoặc Grimaldi’s
+
+Buổi tối có thể xem Broadway Show (tùy chọn)</li>   
+
+<li>📅 Ngày 5: Tùy chọn + Quay về
+Tùy theo thời gian:
+
+High Line Park + Chelsea Market
+
+Little Italy hoặc Chinatown
+
+Museum of Modern Art (MoMA)</li>   
+             </ul>
+
+        </div>                    
+                
+       
+             </div>
+
+
+              <div class="card">
+        <img src="tietkiem.jpg" >
+         <h3 >💰 Lưu ý chi phí dự kiến </h3>
+
+         <ul><li>Khách sạn: ~$250–$350/đêm/phòng (cho 3–4 người)
+</li> 
+          <li>Phí phà Statue of Liberty: ~$24/người lớn
+ </li>
+          <li>Bảo tàng: ~$15–$30/người (nhiều nơi miễn phí cho trẻ em)
+</li>
+          <li>Đi lại: subway (MetroCard tiết kiệm)
+
+ </li>
+                  
+        </ul>
+        
+        
+       
+             </div> </div>
+    
+      
+
+
+
+    
+</body>
+</html>
