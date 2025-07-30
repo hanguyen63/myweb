@@ -1,0 +1,460 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="punta.webp" >
+    <div class="banner-text">
+     <h1>Du Lịch Punta Cana </h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="punta.jpg" >
+         <h3>Tổng quan:</h3>
+        
+<ul><li>🔎 Chuyến bay
+Từ: Sân bay Quốc tế Dulles (IAD) hoặc Sân bay Quốc gia Reagan (DCA) - đến: Sân bay Quốc tế Punta Cana (PUJ).</li>
+<li>Hãng hàng không: American, United, Delta, JetBlue (thường bay thẳng từ IAD hoặc JFK).</li>
+<li>Thời gian bay: ~4.5–5.5 giờ (bay thẳng hoặc nối chuyến 1 lần)</li>
+<li>🕒 Mẹo: Đặt trước ít nhất 4–8 tuần để có giá tốt.</li>
+<li>Tìm các gói bao gồm cả chuyến bay + khách sạn để tiết kiệm (Expedia, Costco Travel, v.v.)</li></ul>
+
+ </div>
+
+      <div class="card">
+        <img src="baba.jpg" >
+         <h3 >Điểm đến nổi bật ở Punta Cana. </h3>
+         <ul><li>🌴Playa Bávaro (Bãi biển Bávaro). Bãi biển nổi tiếng nhất Punta Cana</li>
+
+<li>🏝️ 2. Isla Saona (Đảo Saona). Đảo thiên nhiên tuyệt đẹp, thuộc Công viên Quốc gia </li>
+<li>🐠 3. Scape Park at Cap Cana. Khu phiêu lưu tự nhiên</li>
+<li>🏄 4. Macao Beach (Playa Macao). Bãi biển công cộng. Phù hợp lướt sóng</li>
+<li>⛵ 5. Bávaro Adventure Park. Công viên ngoài trời</li>
+<li>🐬 6. Dolphin Explorer. Gặp gỡ cá heo, hải cẩu, cá mập thân thiện</li>
+<li>🧘 7. Indigenous Eyes Ecological Park. Khu bảo tồn sinh thái.</li>
+<li>🛍️ 8. BlueMall Punta Canai. Trung tâm thương mại</li>
+  <li>🍽️ 9. Chuỗi nhà hàng nổi bật. La Yola; Jellyfish Restaurant </li>  
+        </ul>      
+             
+             </div>
+
+      <div class="card">
+        <img src=" ppp.jpg" >
+         <h3 >🏨 Khách sạn/Khu nghỉ dưỡng ở Punta Cana</h3>
+<p>Punta Cana nổi tiếng với các khu nghỉ dưỡng trọn gói sang trọng. Đề xuất tìm kiếm:</p>
+ <h4>🏆 Barceló Bávaro Palace</h4>
+<ul><li>11 nhà hàng: buffet, Ý, Nhật Teppanyaki, hải sản, steakhouse, Dominica</li>
+<li>13 quầy bar, quán cà phê và nightclub </li>
+<li> Gần biển, tiện nghi cao cấp, phù hợp gia đình </li>
+<li>Có khu riêng cho trẻ em và người lớn</li> 
+<li> 👉 Link chính thức:<a href="https://www.barcelo.com/en-us/"> Website</a></li></ul>
+
+
+ </div>
+
+
+<div class="card">
+  <img src=" pppp.jpg" >
+<h4>🍽️ Majestic Colonial Punta Cana</h4>
+<ul><li>7 nhà hàng à la carte + buffet
+Ẩm thực: châu Á, Ý, steakhouse, hải sản, Dominica</li>
+<li> Room service 24h miễn phí</li>
+<li> Phù hợp gia đình hoặc cặp đôi, hồ bơi lớn, bãi biển đẹp</li>
+ <li> 👉 Link chính thức:<a href="https://www.majestic-resorts.com/punta-cana/resorts/majestic-colonial-punta-cana?utm_source=google&utm_medium=organic&utm_campaign=GMB&utm_content=majesticcolonialpuntacana"> Website</a></li></ul>
+
+
+ </div> </div>
+
+<div class="section">    
+    <div class="columns">
+<div class="card">
+  <img src=" ppppp.jpg" >
+<h4>🌟 Hyatt Ziva Cap Cana (luxury)</h4>
+
+<ul><li>12 nhà hàng & quầy bar, ẩm thực quốc tế, grill, Dominica, Nhật Bản, sushi, tapas Tây Ban Nha</li>
+<li>Rất phù hợp với gia đình có trẻ em (có khu vui chơi nước)</li>
+<li>Nhiều lựa chọn ăn chay, không gluten</li>
+<li>Dịch vụ xuất sắc, phòng mới, rất sạch</li>
+<li>👉 Link chính thức:<a href="https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/dominican-republic/royal-beach-punta-cana/gallery/">Website</a></li> </ul>
+
+ </div>
+
+<div class="card">
+  <img src="pppppp.jpg" >
+<h4>🍷 Dreams Royal Beach Punta Cana</h4>
+
+<ul><li>9 nhà hàng (Mexican, French, Grill, Fusion, buffet)</li>
+<li>Có quán cà phê, quán bar bên hồ, nhà hàng trên bãi biển</li>
+<li> Phù hợp gia đình hoặc honeymoon</li>
+<li>👉 Link chính thức:<a href="https://www.royalbeachpuntacana.com/">Website</a></li> </ul>
+
+
+ </div>
+
+<div class="card">
+  <img src=" ppppppp.jpg" >
+<h4>🥂 TRS Turquesa Hotel (Adults Only)</h4>
+
+<ul><li>7 nhà hàng & quầy bar (dùng chung với Grand Palladium)</li>
+<li>Thức ăn cao cấp, phục vụ tận nơi, cocktail & rượu mạnh miễn phí</li>
+<li> Rất phù hợp cho cặp đôi, honeymoon, yên tĩnh, sang trọng</li>
+<li>👉 Link chính thức:<a href="https://www.palladiumhotelgroup.com/en/hotels/republicadominicana/puntacana/trs-turquesa-hotel?partner=10214&utm_source=organic&utm_medium=mybusiness&utm_campaign=EC_ES_suitesturquesa">Website</a></li> </ul>
+
+
+ </div>
+
+
+
+<div class="card">
+  <img src=" meo1.jpg" >
+<h4>Mẹo khi chọn Resort</h4>
+<ul><li>Xem kỹ: "All-Inclusive includes dining at all restaurants"</li>
+<li>Đặt loại phòng Club/VIP để được thêm quyền vào nhà hàng cao cấp</li>
+<li>Nên đặt trước nhà hàng à la carte sau khi check-in</li>
+ </ul>
+
+
+
+ </div></div>
+
+
+
+              <div class="card">
+        <img src="pppppppp.jpg" >
+         <h3 >Dưới đây là hướng dẫn từng bước hoàn chỉnh cho chuyến đi 5 ngày du lịch của bạn từ Fairfax, VA đến Punta Cana</h3>
+ </div></div>
+
+<div class="section">    
+    <div class="columns">
+ <div class="card">
+        <img src="aa.jpg" >
+<p>🎒<b>BƯỚC 1:</b> Chuẩn bị giấy tờ du lịch</p>
+<ul><li>Hộ chiếu + mẫu vé điện tử in ra</li>
+<li>Quần áo nhẹ, đồ bơi, dép xăng đan</li>
+<li>Kem chống nắng, kính râm, mũ</li>
+<li>Thuốc chống côn trùng</li>
+<li>Túi đi biển + ốp điện thoại chống nước</li>
+<li>Bản sao xác nhận đặt phòng</li></ul>
+<li>📲 Ứng dụng hữu ích & Liên kết hữu ích:
+Mẫu vé điện tử (yêu cầu nhập cảnh), Google Dịch (Tiếng Tây Ban Nha sang Tiếng Anh). WhatsApp (nhiều tour/khu nghỉ dưỡng sử dụng nó để liên lạc)
+
+</li> </ul>
+
+</div>
+
+<div class="card">
+        <img src="maybay.jpg" >
+<p>✈️ <b>BƯỚC 2:</b> Đặt chuyến đi của bạn</p>
+<ul><li>🔎 Chuyến bay: Bay từ sân bay Dulles (IAD) → Punta Cana International Airport (PUJ)</li>
+<li>Hãng hàng không: American, United, JetBlue, Delta, Southwest, Frontier</li></ul>
+
+<p>🚖 <b>BƯỚC 3:</b> Đến Punta Cana</p>
+<ul><li>📅 Ngày 1: Di chuyển về resort: Xe đưa đón (nên chọn All-Inclusive Resort như: Barceló Bávaro Palace, Grand Palladium, hoặc Dreams Royal Beach) </li>
+ <li>Nhận phòng, thư giãn</li>
+<li>Chiều: Tắm biển tại Playa Bávaro, nghỉ ngơi trong resort</li>
+<li>Tối: Ăn tối buffet tại nhà hàng trong resort, tham gia show giải trí nếu có</li>
+</ul> 
+
+
+</div>
+
+<div class="card">
+        <img src="saona.jpg" >
+<p> 📅Ngày 2: 🏝️ Tham quan Đảo Saona (Isla Saona) – Tour trong ngày</p>
+ <ul><li>Sáng: Đặt tour đi đảo Saona (có đưa đón tại resort)</li>
+<li>Đi bằng catamaran hoặc speedboat</li>
+<li>Tắm biển, lặn ngắm san hô, ngắm sao biển</li>
+<li>Trưa: Ăn trưa BBQ trên đảo</li>
+<li>Chiều: Về lại resort, thư giãn hồ bơi</li>
+<li>Tối: Dùng bữa tại nhà hàng A la Carte (ẩm thực Ý, Nhật, Dominican…)</li></ul>
+
+</div></div>
+
+
+<div class="section">    
+    <div class="columns">
+<div class="card">
+        <img src="aaa.jpg" >
+
+<p> 📅Ngày 3: 🌿 Scape Park Cap Cana – Hoyo Azul</p>
+ <ul><li>Sáng – Chiều: Trọn ngày khám phá Scape Park:
+Zipline, bơi trong hang xanh Hoyo Azul</li>
+<li>Tham quan hang động, thác nước, tắm thiên nhiên</li>
+<li>Tối: Thư giãn massage spa hoặc xem show tại resort</li>
+</li></ul>
+
+
+
+</div>
+
+
+<div class="card">
+        <img src="aa.webp" >
+
+<p> 📅Ngày 4: Tự do nghỉ dưỡng + Khám phá ẩm thực</p>
+ <ul><li>Sáng: Tự do tắm biển, bơi lội, chơi thể thao biển (jetski, kayak…)</li>
+<li>Trưa: Dùng bữa tại nhà hàng Jellyfish Restaurant (gần biển, hải sản nổi tiếng)</li>
+<li>Chiều: Tham quan Indigenous Eyes Ecological Park hoặc đi mua sắm tại BlueMall Punta Cana</li>
+<li>Tối: Thưởng thức bữa tối tại nhà hàng cao cấp như La Yola hoặc Passion by Martín Berasategui (cần đặt bàn trước)</li></ul>
+
+</div>
+
+<div class="card">
+        <img src="aaaa.jpg" >
+
+<p> 📅Ngày 5: ✈️ Mua quà – Trở về</p>
+<li>Sáng: Mua quà lưu niệm tại chợ địa phương hoặc cửa hàng miễn thuế</li>
+<li>Trưa: Trả phòng, di chuyển ra sân bay PUJ</li>
+<li>Chiều: Bay về lại Virginia (Fairfax)</li></ul>
+
+</div></div>
+
+
+
+
+ <div class="section">    
+    <div class="columns">
+      <div class="card">
+        <img src="aaaaa.jpg" >       
+
+<h3>Nếu bạn cần hỗ trợ ở Punta Cana</h3>
+<p>Dành cho công dân Hoa Kỳ cần hỗ trợ khẩn cấp (hộ chiếu bị mất, gặp rắc rối pháp lý, vấn đề y tế...)</p>
+<ul><li>Tên: U.S. Embassy in Santo Domingo.
+<li>Điện thoại khẩn cấp: +1-809-567-7775</li>
+<li><a href="SDOAmericans@state.gov">Email</a></li>
+<li><a href="do.usembassy.gov">Website</a></li></ul>
+</div>
+
+
+<div class="card">
+<img src="dulich.jpg" >  
+<p>🏨Tổng cục Du lịch Cộng hòa Dominica (Ministry of Tourism - MITUR)</p>
+<ul><li>Số điện thoại hỗ trợ khách du lịch: 📞 +1 (809) 221-4660</li>
+<li><a href="info@mitur.gob.do">Email</a>
+<li><a href="www.godominicanrepublic.com">Website</a></li></ul>
+
+<p>🚓 4. Cảnh sát du lịch (CESTUR – Politur)</p>
+<ul><li>Số điện thoại tại Punta Cana: 📞+1 (809) 552-1060 </li>
+</ul>
+</div>
+ <div class="card">
+<img src="trung.jpg" > 
+  <p>Trung tâm du lịch tại sân bay Punta Cana (PUJ)</p>
+<ul><li>Đưa đón, taxi, mất hành lý</li>
+<li>Gọi giúp khách sạn, cơ quan địa phương</li>
+<li>Phản ánh dịch vụ sai lệch so với quảng cáo</li></ul>
+
+
+             </div>             </div>
+     
+       
+      
+
+
+
+    
+</body>
+</html>
