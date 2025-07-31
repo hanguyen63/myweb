@@ -1,0 +1,462 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="ja1.jpg" >
+    <div class="banner-text">
+     <h1>Du Lịch Jamaica  </h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="ja.jpg" >
+         <h3>Tổng quan: </h3>
+<p>Thời điểm tốt nhất để đến thăm Montego Bay, Jamaica là vào mùa khô, từ giữa tháng 12 đến giữa tháng 4. Giai đoạn này có nhiều ánh nắng nhất, nhiệt độ thoải mái và độ ẩm thấp hơn, rất lý tưởng để tận hưởng bãi biển và các hoạt động ngoài trời.</p>
+        
+<ul><li>🔎 Chuyến bay
+Từ: Sân bay Quốc tế Dulles (IAD) đến: Sangster International Airport (MBJ) – gần Montego Bay. Hoặc
+Norman Manley International Airport (KIN) – gần Kingston.</li>
+<li>Hãng bay có thể chọn: American Airlines, JetBlue, Southwest, Delta..</li>
+<li>🕒 Mẹo: Đặt trước ít nhất 4–8 tuần để có giá tốt.</li>
+<li>Tìm các gói bao gồm cả chuyến bay + khách sạn để tiết kiệm (Expedia, Costco Travel, v.v.)</li></ul>
+
+ </div>
+
+      <div class="card">
+        <img src="ja3.jpg" >
+         <h3 >Điểm đến nổi bật ở Jamaica . </h3>
+         <ul><li>Dunn’s River Falls (Ocho Rios). ⛰️ Thác nước nổi tiếng nhất Jamaica – bạn có thể leo lên thác cùng nhóm du khách.
+🕒 Thời gian tham quan: 2–3 giờ. 🎟️ Có phí vào cổng (~$25 USD/người).</li>
+<li>Seven Mile Beach (Negril). 🏖️ Một trong những bãi biển đẹp nhất Caribbean.</li>
+<li>Rick’s Café (Negril). 🌅 Nơi ngắm hoàng hôn đẹp nhất Jamaica.</li>
+<li>Luminous Lagoon (Falmouth). 🌌 Đầm phát sáng sinh học hiếm có trên thế giới.
+🕒 Tour khởi hành sau hoàng hôn (~7:30 PM). 🎟️ Giá tour ~ $25–30 USD.</li>
+        </ul>      
+             
+             </div>
+
+      <div class="card">
+        <img src=" ja4.jpg" >
+         <h3 >🏨 Khách sạn/Khu nghỉ dưỡng ở Jamaica </h3>
+<p>Jamaica nổi tiếng với các khu nghỉ dưỡng trọn gói sang trọng. Đề xuất tìm kiếm:</p>
+ <h4> Hyatt Zilara Rose Hall (Adults Only)</h4>
+<ul><li>⭐ Đánh giá: 5 sao – sang trọng, dành cho người lớn</li>
+
+<li>🍽️ Số nhà hàng: 10+ (gồm cả khu Hyatt Ziva bên cạnh)</li>
+
+<li>🍴 Ẩm thực: Jamaica, Pháp, Ý, Á, steakhouse, buffet, grill</li>
+
+<li>🎉 Có bar, pool bar, beach bar, live music mỗi tối</li>
+
+<li>🎯 Phù hợp: cặp đôi, vợ chồng, muốn nghỉ ngơi yên tĩnh</li>
+
+
+<li> 👉 Link chính thức:<a href="https://www.hyatt.com/en-US/hotel/jamaica/hyatt-zilara-rose-hall/mbjia?src=corp_lclb_google_seo_mbjia&utm_source=google&utm_medium=organic&utm_campaign=lmr"> Website</a></li></ul>
+
+
+ </div>
+
+
+<div class="card">
+  <img src=" ja5.jpg" >
+<h4>Iberostar Grand Rose Hall (Adults Only)</h4>
+<ul><li>⭐ Đánh giá: 5 sao – cao cấp, phong cách châu Âu</li>
+<li>🍽️ Số nhà hàng: 6 nhà hàng a la carte + buffet + 24h room service</li>
+<li>🍴 Ẩm thực: Nhật Teppanyaki, Ý, steakhouse, Jamaica</li>
+<li>🧖 Spa lớn, hồ bơi vô cực, view biển</li>
+<li>🎯 Phù hợp: muốn dịch vụ sang trọng, chất lượng ẩm thực cao</li>
+ <li> 👉 Link chính thức:<a href="http://www.iberostarrosehall.com/"> Website</a></li></ul>
+
+
+ </div> </div>
+
+<div class="section">    
+    <div class="columns">
+<div class="card">
+  <img src=" ja6.jpg" >
+<h4>Sandals Montego Bay (Adults Only)</h4>
+<ul><li>⭐ Đánh giá: 5 sao – thương hiệu nổi tiếng toàn Caribbean</li>
+<li>🍽️ Số nhà hàng: 12 nhà hàng quốc tế</li>
+<li>🍴 Ẩm thực: seafood, Nhật, Ý, Caribbean, pizza, grill, patisserie</li>
+<li>🍹 Bar không giới hạn, hồ bơi + jacuzzi</li>
+<li>🎯 Phù hợp: cặp đôi muốn honeymoon, dịch vụ lãng mạn</li>
+<li>👉 Link chính thức:<a href="https://www.sandals.com/montego-bay/?gclsrc=aw.ds&gad_source=1&gad_campaignid=104221446&gbraid=0AAAAAD4_U5BnzltVAPPAgvhYmuaXQWfzY&gclid=Cj0KCQjwhafEBhCcARIsAEGZEKKHR9j_QbHRrZhAD1XYTB-bATo3T891PegyH2ND6Ik2px3lKhEcaFgaAqESEALw_wcB">Website</a></li> </ul>
+
+ </div>
+
+<div class="card">
+  <img src="j.png" >
+<h4>Secrets Wild Orchid Montego Bay (Adults Only)</h4>
+<ul><li>⭐ Đánh giá: 5 sao – riêng tư, lãng mạn, yên tĩnh</li>
+<li>🍽️ Số nhà hàng: 9 nhà hàng + buffet + snack bar</li>
+<li>🍴 Ẩm thực: Mexico, Pháp, Nhật, Jamaica, grill, coffee shop</li>
+<li>🎤 Có cả quán cà phê, quán lounge, club</li>
+<li>🎯 Phù hợp: người muốn nghỉ dưỡng có chiều sâu, không gian riêng tư</li>
+<li>👉 Link chính thức:<a href="https://www.hyattinclusivecollection.com/en/resorts-hotels/secrets/jamaica/wild-orchid-montego-bay/?src=corp_lclb_google_seo_sewmb&utm_source=google&utm_medium=organic&utm_campaign=lmr">Website</a></li> </ul>
+
+
+ </div>
+
+<div class="card">
+  <img src=" j.webp" >
+<h4>RIU Palace Jamaica (Adults Only)</h4>
+<ul><li>⭐ Đánh giá: 4.5 sao – all-inclusive giá tốt</li>
+<li>🍽️ Số nhà hàng: 5+ (bao gồm buffet & a la carte)</li>
+<li>🍴 Ẩm thực: Nhật, Ý, Jamaica, grill, steakhouse</li>
+<li>🎯 Phù hợp: ngân sách vừa phải nhưng vẫn muốn nhiều dịch vụ</li>
+<li>👉 Link chính thức:<a href="https://www.riu.com/en/hotel/jamaica/montego-bay/hotel-riu-palace-jamaica">Website</a></li> </ul>
+
+
+ </div>
+
+
+
+<div class="card">
+  <img src=" meo1.jpg" >
+<h4>📌 Lưu ý chung khi chọn resort all-inclusive</h4>
+<ul><li>Giá đã bao gồm: ăn uống, nước uống, snack, minibar, hoạt động giải trí, thể thao nước nhẹ, show đêm.</li>
+<li>Một số nhà hàng phải đặt chỗ trước (đặc biệt là Japanese hoặc steakhouse).</li>
+<li>Tip thường không bắt buộc, nhưng bạn có thể bo thêm cho phục vụ nếu hài lòng.</li>
+<li>Nếu bạn ở Hyatt Zilara có thể dùng dịch vụ chung với Hyatt Ziva (mở rộng thêm nhà hàng).</li>
+ </ul>
+
+ </div></div>
+
+
+
+              <div class="card">
+        <img src="ja7.jpg" >
+         <h3 >Dưới đây là hướng dẫn từng bước hoàn chỉnh cho chuyến đi 5 ngày du lịch của bạn từ Fairfax, VA đến Montego Bay, Jamaica</h3>
+ </div></div>
+
+<div class="section">    
+    <div class="columns">
+ <div class="card">
+        <img src="ja9.jpg" >
+<h3>🎒Chuẩn bị </h3>
+<ul><li>🎫 Giấy tờ cần thiết: Hộ chiếu (passport): còn hiệu lực ít nhất 6 tháng kể từ ngày nhập cảnh Jamaica.</li>
+<li>Vé máy bay khứ hồi. Giấy xác nhận đặt khách sạn / resort</li>
+<li>Bảo hiểm du lịch quốc tế (khuyến khích)</li>
+<li>Bản sao giấy tờ cá nhân (photo hộ chiếu, bảo hiểm, vé máy bay...) đề phòng mất</li>
+<li>💵 Tài chính: Đổi một ít tiền sang Đô la Jamaica (JMD) hoặc dùng USD (nhiều nơi ở Jamaica chấp nhận USD).</li>
+<li>Mang theo thẻ tín dụng/debit (Visa/Mastercard).</li>
+<li>📱 Thiết bị: Sim điện thoại quốc tế hoặc đăng ký roaming với nhà mạng (hoặc mua sim Jamaica khi đến nơi).</li>
+<li>Ứng dụng cần tải: Google Maps, Google Translate, WhatsApp, resort app nếu có.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+        <img src="ja8.jpg" >
+<p><b>📅 Ngày 1:</b> Đến Montego Bay – Nhận phòng – Thư giãn</p>
+<ul><li>✈️ Hạ cánh tại Sangster International Airport (MBJ)</li>
+<li>🚖 Di chuyển đến resort (10–30 phút)</li>
+<li>🏖️ Tắm biển riêng trong resort hoặc Doctor’s Cave Beach (nổi tiếng nhất Montego Bay)</li>
+<li>🍽️ Ăn tối tại nhà hàng trong resort hoặc The Pelican Grill (địa phương), Margaritaville (sôi động, ngay biển) </li>
+</ul>
+
+</div>
+
+<div class="card">
+        <img src="ja10.jpg" >
+<p><b>📅 Ngày 2:</b> Khám phá Montego Bay – Văn hoá – Shopping</p>
+<ul><li>🏚️ Tham quan Rose Hall Great House – biệt thự cổ, nghe chuyện về phù thủy White Witch</li>
+<li>🚣 Martha Brae Rafting – chèo bè tre dọc sông thơ mộng (~45 phút)</li>
+<li>🛍️ Mua sắm tại Whitter Village hoặc Shoppes at Rose Hall</li>
+<li>🎶 Buổi tối: Thư giãn với âm nhạc reggae tại resort hoặc quán bar ngoài trời</li>
+</ul> 
+
+</div></div>
+
+
+
+<div class="section">    
+    <div class="columns">
+<div class="card">
+        <img src="3.png" >
+<p><b>📅 Ngày 3:</b> Day Trip – Dunn’s River Falls & Ocho Rios</p>
+<ul><li>🚐 Tour nguyên ngày đến Ocho Rios (~1.5 giờ)</li>
+<li>⛰️ Leo thác nước Dunn’s River Falls (có người hướng dẫn, rất thú vị)</li>
+<li>🐬 Ghé Dolphin Cove nếu thích bơi cùng cá heo (tuỳ chọn)</li>
+<li>🍴 Ăn trưa tại Scotchies – món gà nướng jerk nổi tiếng Jamaica</li>
+<li>🕒 Trở về Montego Bay buổi chiều hoặc tối</li></ul>
+
+</div>
+
+
+<div class="card">
+        <img src="ja11.jpg" >
+
+<p> <b>📅Ngày 4:</b>  Thư giãn – Luminous Lagoon</p>
+<ul><li>🌴 Nghỉ ngơi, tắm biển, massage, bơi hồ bơi, trải nghiệm water sport tại resort</li>
+<li>🌌 Buổi tối: Tour Luminous Lagoon (30–40 phút từ Montego Bay)</li>
+<li>🚤 Đi thuyền buổi tối ra đầm nước phát sáng</li>
+<li>🧜 Có thể bơi dưới nước phát quang sinh học</li>
+<li>📸 Mang theo máy ảnh/điện thoại có chế độ chụp đêm</li>
+
+</ul>
+
+</div>
+
+
+<div class="card">
+        <img src="aaaa.jpg" >
+
+<p>  <b>📅Ngày 5: </b>✈️ Mua quà – Trở về</p>
+<ul><li>🧳 Thư giãn sáng sớm, ăn sáng</li>
+<li>Mua quà lưu niệm: rum, cà phê Blue Mountain, đồ thủ công bằng gỗ</li>
+<li>Di chuyển ra sân bay MBJ, kết thúc chuyến đi</li>
+ </ul>
+
+</div></div>
+
+
+<div class="section">    
+    <div class="columns">
+<div class="card">
+        <img src="ja12.jpg" >          
+<h3>📌 Lưu ý riêng khi ở Montego Bay</h3>
+<ul><li>Taxi địa phương không có đồng hồ đo – luôn hỏi giá trước.</li>
+<li>Không nên mang theo đồ trang sức đắt tiền nếu ra ngoài buổi tối.</li>
+<li>Có thể book tour trực tiếp tại khách sạn, an toàn và đúng lịch hơn.</li>
+<li>Mang theo chút snack nhẹ hoặc thanh năng lượng nếu đi tour dài.</li>
+<li>Hỏi trước khách sạn/resort có gói picnic box cho khách mang theo không (nhiều nơi có).</li>
+<li>Mọi nơi đều chấp nhận USD – không cần đổi sang tiền JMD nhiều.</li>
+<li>Không nên uống nước máy (mua nước đóng chai).</li>
+<li>Luôn dùng kem chống nắng SPF cao.</li>
+<li>Không nên ra ngoài khu du lịch vào ban đêm một mình.</li>
+<li>Để ý đến thời tiết (tháng 6–11 là mùa mưa bão, nên xem dự báo).</li>
+<li>Mặc trang phục nhẹ, chống nóng, và thoải mái.</li>
+
+</ul>
+</div>
+
+<div class="card">
+        <img src="ja13.jpg" >  
+<h3>Nếu bạn cần hỗ trợ ở Jamaica </h3>
+<ul><li>911: số khẩn cấp chung tại Jamaica.</li>
+<li>Đại sứ quán Mỹ tại Jamaica: Địa chỉ: 142 Old Hope Road, Kingston 6.</li>
+<li>Điện thoại: +1 876-702-6000</li>
+<li><a href="https://jm.usembassy.gov/"> Website</a></li>
+<li><a href="mailto:KingstonSocialMedia@state.gov"> Email</a></li>
+</ul>
+</div></div>
+
+
+
+
+
+    
+     
+       
+      
+
+
+
+    
+</body>
+</html>
