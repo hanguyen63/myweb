@@ -1,0 +1,428 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 250; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="aru.jpg" >
+    <div class="banner-text">
+     <h1>Du Lịch Aruba  </h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="aru9.jpg" >
+         <h3>Tổng quan: </h3>
+<p> Aruba một hòn đảo nhỏ thuộc Vương quốc Hà Lan, khí hậu khô ráo, an toàn, và rất thân thiện với du khách Mỹ.Thời điểm tốt nhất để đến thăm Aruba là từ giữa tháng 1 đến tháng 5, vì đây là mùa khô với thời tiết ấm áp và nắng đẹp nhất</p>        
+<ul><li>🔎 Chuyến bay Từ: Sân bay Quốc tế Dulles (IAD) đến: Aruba Queen Beatrix (AUA)</li>
+<li>Hãng bay có thể chọn: American Airlines, JetBlue, Southwest, Delta..</li>
+<li>🕒 Mẹo: Đặt trước ít nhất 4–8 tuần để có giá tốt.</li>
+<li>Tìm các gói bao gồm cả chuyến bay + khách sạn để tiết kiệm (Expedia, Costco Travel, v.v.)</li></ul>
+
+ </div>
+
+      <div class="card">
+        <img src="aru2.jpg" >
+         <h3 >Điểm đến nổi bật ở Aruba . </h3>
+         <ul><li>Eagle Beach. Bãi biển đẹp nhất Aruba, yên tĩnh, cát trắng, nước trong xanh</li>
+<li>Palm Beach. Khu nghỉ dưỡng sôi động nhất, nhiều hoạt động biển</li>
+<li>Arikok National Park. Công viên thiên nhiên hoang sơ, hang động, hồ tự nhiên (Conchi)</li>
+<li>Baby Beach. Bãi biển nông, an toàn cho trẻ em, nước trong vắt</li>
+<li>Flamingo Beach. Bãi biển với chim hồng hạc (flamingos) – thuộc Renaissance Island</li>
+<li>California Lighthouse. Ngọn hải đăng cổ với cảnh đẹp toàn đảo</li>
+<li>Oranjestad. Thủ phủ, phố cổ, mua sắm, kiến trúc Hà Lan-Caribbean</li>
+
+        </ul>      
+             
+             </div>
+
+      <div class="card">
+        <img src=" aru3.jpg" >
+         <h3 >🏨 Khách sạn/Khu nghỉ dưỡng ở Aruba </h3>
+<p>Top resort nhiều nhà hàng & dịch vụ cao cấp</p>
+ <h4> Barceló Aruba</h4>
+<ul><li> Vị trí: Palm Beach </li>
+<li>🍽️ Số nhà hàng: 7+ </li>
+<li>🍴 Ẩm thực: All-inclusive, có steakhouse, sushi, buffet</li></ul>
+
+</div>
+
+
+
+
+<div class="card">
+  <img src=" aru4.jpg" >
+<h4>Riu Palace Aruba</h4>
+<ul><li> Vị trí: Palm Beach </li>
+<li>🍽️ Số nhà hàng: 9+ </li>
+<li>🍴 Ẩm thực: Ẩm thực đa dạng: Ý, Nhật, Fusion, buffet</li></ul>
+
+</div></div>
+
+
+ <div class="section">    
+    <div class="columns">
+<div class="card">
+  <img src=" aru5.jpg" >
+<h4>Hilton Aruba Caribbean Resort & Casino</h4>
+<ul><li> Vị trí: Palm Beach </li>
+<li>🍽️ Số nhà hàng: 5+ </li>
+<li>🍴 Ẩm thực: Không all-inclusive nhưng có nhiều lựa chọn ăn uống</li></ul>
+
+</div>
+
+<div class="card">
+  <img src=" aru6.jpg" >
+<h4>Renaissance Wind Creek Aruba Resort</h4>
+<ul><li> Vị trí: Oranjestad </li>
+<li>🍽️ Số nhà hàng: 8+ </li>
+<li>🍴 Ẩm thực: Có đảo riêng (Flamingo Beach), ẩm thực quốc tế</li></ul>
+
+</div>
+
+
+<div class="card">
+  <img src=" aru7.jpg" >
+<h4>Divi Aruba All Inclusive</h4>
+<ul><li> Vị trí: Druif Beach </li>
+<li>🍽️ Số nhà hàng: 10+ </li>
+<li>🍴 Ẩm thực: Rộng, nhiều bãi biển, đa dạng món ăn</li></ul>
+
+</div>
+
+
+
+<div class="card">
+  <img src=" meo1.jpg" >
+<h4>📌 Lưu ý chung khi chọn resort all-inclusive</h4>
+<ul><li>Giá đã bao gồm: ăn uống, nước uống, snack, minibar, hoạt động giải trí, thể thao nước nhẹ, show đêm.</li>
+<li>🧾 Tipping 10–15% thường không bắt buộc, nhưng được khuyến khích.</li>
+ </ul>
+
+ </div></div>
+
+
+
+              <div class="card">
+        <img src="aru1.jpg" >
+         <h3 >Dưới đây là hướng dẫn từng bước hoàn chỉnh cho chuyến đi 5 ngày du lịch của bạn từ Fairfax, VA đến Aruba</h3>
+ </div></div>
+
+<div class="section">    
+    <div class="columns">
+ <div class="card">
+        <img src="aru8.jpg" >
+<h3>🎒Chuẩn bị </h3>
+<ul><li> Giấy tờ cần thiết: Hộ chiếu (passport): còn hiệu lực ít nhất 6 tháng kể từ ngày nhập cảnh Aruba.</li>
+<li>Không cần visa cho công dân Hoa Kỳ (ở dưới 30 ngày).</li>
+<li>Vé máy bay khứ hồi. Giấy xác nhận đặt khách sạn</li>
+<li>ED card (Embarkation/Disembarkation): phải điền online trước khi đến Aruba <a href="https://edcardaruba.aw/"> Website</a> </li>
+<li>Nên mang theo: Kem chống nắng, kính mát, mũ rộng.</li>
+<li>Đồ bơi, dép đi biển, trang phục nhẹ mát.</li>
+<li>Thuốc cá nhân, túi khô, khăn đi biển.</li>
+<li>Tài chính: Tiền tệ: Florin Aruba (AWG) nhưng USD được chấp nhận rộng rãi.</li>
+<li>Mang theo thẻ tín dụng/debit (Visa/Mastercard).</li>
+<li>Thiết bị: Aruba có sóng tốt, nhưng nên mua eSIM du lịch hoặc đăng ký roaming.</li>
+<li>Ứng dụng cần tải: Google Maps, WhatsApp, Aruba Health App (tùy chọn)</li></ul>
+
+</div>
+
+<div class="card">
+        <img src="aru10.jpg" >
+<p><b>📅 Ngày 1:</b> Đến Aruba – Check-in – Palm Beach</p>
+<ul><li>✈️Hạ cánh sân bay Aruba Queen Beatrix (AUA)</li>
+<li>Check-in resort (Barceló Aruba, Riu Palace, Renaissance...)</li>
+<li>Thư giãn ở Palm Beach</li>
+<li>Ăn tối trong resort và xem show/giải trí</li></ul>
+
+</div>
+
+<div class="card">
+        <img src="aru11.jpg" >
+<p><b>📅 Ngày 2:</b> Eagle Beach + Oranjestad</p>
+<ul><li>Sáng: Thư giãn tại Eagle Beach – chụp hình cây Divi nổi tiếng</li>
+<li>Trưa: Ăn tại nhà hàng Passions on the Beach</li>
+<li>Chiều: Mua sắm và tham quan phố cổ Oranjestad</li>
+<li>Tối: Dùng bữa tại Yemanja Woodfired Grill hoặc nhà hàng trong resort</li></ul> 
+
+</div></div>
+
+
+
+<div class="section">    
+    <div class="columns">
+<div class="card">
+        <img src="aru12.jpg" >
+<p><b>📅 Ngày 3:</b> Tour Arikok National Park + Baby Beach</p>
+<ul><li>Đặt jeep tour hoặc ATV tour khám phá</li> 
+<li>Hang động Fontein Cave</li> 
+<li>Natural Pool (Conchi)</li> 
+<li>Baby Beach</li> 
+<li>Trưa: Dùng bữa tại Rum Reef Bar & Grill</li> 
+<li>Tối: Nghỉ ngơi, ăn uống tại resort</li> </ul>
+
+</div>
+
+
+<div class="card">
+        <img src="aru13.jpg" >
+
+<p> <b>📅Ngày 4:</b> Flamingo Beach (Renaissance Island)</p>
+<ul><li>Nếu ở Renaissance Resort, đi thuyền riêng ra đảo ngắm flamingo</li> 
+<li>Nếu không ở đó, có thể mua vé vào đảo (~$125/người, giới hạn số lượng)</li> 
+<li>Chiều: Thư giãn massage biển hoặc water sport</li> 
+<li>Tối: Thưởng thức ẩm thực cao cấp (steak, seafood...)</li></ul>
+
+</div>
+
+
+<div class="card">
+        <img src="aru14.jpg" >
+
+<p>  <b>📅Ngày 5: </b>California Lighthouse – Check-out</p>
+<ul><li>Sáng: Đi bộ/xe đến California Lighthouse ngắm toàn cảnh đảo</li>
+<li>Chụp hình kỷ niệm tại điểm cao nhất Aruba</li> 
+<li>Trả phòng, ra sân bay AUA – làm thủ tục xuất cảnh Mỹ ngay tại Aruba</li>  </ul>
+
+</div></div>
+
+
+<div class="section">    
+    <div class="columns">
+<div class="card">
+        <img src="aru15.jpg" >          
+<h3>📌 Lưu ý riêng khi ở Aruba</h3>
+<ul><li>💧 Uống nước máy an toàn – Aruba có nhà máy lọc nước biển chất lượng cao.</li> 
+<li>🧾 Tipping 10–15% thường không bắt buộc, nhưng được khuyến khích.</li> 
+<li>☀️ Rất nắng và khô – dùng kem chống nắng SPF 50+ thường xuyên.</li> 
+<li>🛥️ Nên đặt tour trước qua resort hoặc trang tour đáng tin cậy (Tripadvisor, Viator).</li> 
+<li>💵 USD dùng được mọi nơi, nhận lại tiền thừa bằng USD.</li> 
+<li>🛂 Làm thủ tục hải quan và xuất cảnh Mỹ tại Aruba (trước khi bay về Mỹ, không phải ở Mỹ nữa).</li> </ul>
+</div>
+
+<div class="card">
+        <img src="aru16.jpg" >  
+<h3>Nếu bạn cần hỗ trợ ở Aruba </h3>
+<ul><li>Số khẩn cấp Aruba: ☎️ 911 (cảnh sát, cứu thương, cứu hỏa)</li>
+<li>Trung tâm Y tế: Dr. Horacio E. Oduber Hospital – Tel: +297 527-4000</li>
+<li>Lãnh sự quán Mỹ tại Aruba: Địa chỉ: J.B. Gorsiraweg 1, Curacao </li>
+<li>Điện thoại: +1-503-420-3115 or +5999-433-2200 or +1-301-985-8733</li>
+<li><a href="https://cw.usconsulate.gov/"> Website</a></li>
+</ul>
+</div></div>
+
+
+
+
+
+    
+     
+       
+      
+
+
+
+    
+</body>
+</html>
