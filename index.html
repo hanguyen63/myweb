@@ -201,7 +201,15 @@
         grid-template-columns: 1fr;
       }
     }
+ .zoom-img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
 
+  .zoom-img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+  }
 
 footer {
       background-color: #003366;
@@ -467,7 +475,7 @@ footer {
 
      </ul>
 <div class="banner1">
-    <img src="233.jpg" ">
+    <img src="233.jpg">
     <div class="banner1-text">
       <h1>Chào mừng đến với Ha Nguyen Website</h1>
       
@@ -546,7 +554,7 @@ updateDateTime();
   <div class="section">    
     <div class="columns">
       <div class="card">
-       <img src="au.jpg" alt="Tin tức">
+       <img src="au.jpg" class="zoom-img" style="width: 200 px;">
         <h3>Thời sự Hoa Kỳ</h3>     
         <UL><LI>Tổng thống Trump áp thuế nhập khẩu 100% đối với chip máy tính</LI>
             <LI>  Điều kiện gặp gỡ Putin</LI>
@@ -559,7 +567,7 @@ updateDateTime();
       </div>
 
       <div class="card"> 
-<img src="18.webp" alt="">
+<img src="18.webp" class="zoom-img" style="width: 200 px;">
         <h3> Tin tức cộng đồng</h3>
 
        
@@ -574,7 +582,7 @@ updateDateTime();
       </div>
 
 <div class="card">
-        <img src="184.jpg" alt="">  
+        <img src="184.jpg" class="zoom-img" style="width: 200 px;">
         <h3>Việc làm</h3>
       <UL><LI>Cơ hội việc làm cho người Việt tại Fairfax và khu vực lân cận.</LI>
 
@@ -588,7 +596,7 @@ updateDateTime();
 
      
 <div class="card">
-        <img src="55.png" alt="">
+        <img src="55.png" class="zoom-img" style="width: 200 px;">
         <h3>Sự kiện sắp tới</h3>
 
 <UL><LI> 📅 Vietnamese Heritage Day – Falls Church City</LI>	
@@ -604,7 +612,7 @@ updateDateTime();
     <div class="section">    
     <div class="columns">
       <div class="card">
-           <img src="24.jpg" alt="Tin tức"> 
+           <img src="24.jpg" class="zoom-img" style="width: 200 px;">
        
         <h3>Thể Thao </h3>
        
@@ -617,7 +625,7 @@ updateDateTime();
      </div>    
 
 <div class="card"> 
-<img src="183.jpg" >        
+<img src="183.jpg" class="zoom-img" style="width: 200 px;">    
         <h3>Du lịch </h3>  
  <p>Việt Nam là quê hương của chúng ta với những kỷ niệm tuyệt vời, nơi có những bãi biển rộng lớn, rừng xanh tươi tốt,
 	 và cảnh núi non đẹp đẽ. Hoặc hãy thực hiện một chuyến đi để thưởng thức những kỳ quan thiên nhiên, 
@@ -628,7 +636,7 @@ updateDateTime();
      </div> 
 
       <div class="card">
-<img src="21.png" >
+<img src="21.png" class="zoom-img" style="width: 200 px;">
          <h3>Rao vặt & Quảng cáo</h3>
 
         <p>Đăng tin quảng cáo và rao vặt miễn phí phục vụ cộng đồng.</p>
