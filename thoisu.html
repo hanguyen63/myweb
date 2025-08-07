@@ -169,7 +169,15 @@
         grid-template-columns: 1fr;
       }
     }
+ .zoom-img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
 
+  .zoom-img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+  }
 
 footer {
       background-color: #003366;
@@ -386,7 +394,7 @@ updateDateTime();
     <h3>Tin tức Hoa Kỳ</h3>
     <div class="columns">
       <div class="card">
-        <img src="au1.jpg" alt="Ảnh 1">
+        <img src="au1.jpg" class="zoom-img" style="width: 200 px;">
 
         <h3>🏛️ Chính trị & Đối ngoại</h3>
 
@@ -403,7 +411,7 @@ updateDateTime();
 
               
       <div class="card">
-        <img src="au2.jpg">
+        <img src="au2.jpg" class="zoom-img" style="width: 200 px;">
         <h3>📉 Kinh tế & Đầu tư </h3>
  <p><b>Giá vàng tăng mạnh</b> . Vàng giao ngay dao động quanh mức 3.378 USD/oz, trong khi
 	 vàng tương lai chạm 3.445 USD/oz, phản ánh dòng vốn trú ẩn khi thuế tăng cao và dữ liệu việc làm yếu </p>
@@ -418,7 +426,7 @@ updateDateTime();
      
 
       <div class="card">
-<img src="au3.jpg" alt="Ảnh 1">        
+<img src="au3.jpg" class="zoom-img" style="width: 200 px;">       
         <h3>⚖️ Pháp luật</h3>
 
 <p><b>FBI hỗ trợ truy tìm hạ nghị sĩ Texas bỏ trốn</b>. Đảng Dân chủ đã phản ứng trước thông tin trước đó rằng FBI đã đồng ý hỗ trợ lực lượng thực thi pháp luật 
@@ -435,7 +443,7 @@ updateDateTime();
  <div class="section">   
     <div class="columns">
 <div class="card">
-        <img src="au4.jpg" alt="Ảnh 1">  
+        <img src="au4.jpg" class="zoom-img" style="width: 200 px;">
         <h3>🌍Thế giới</h3>
 	<p> <b>Apple cam kết đầu tư 100 tỉ USD vào Mỹ </b> Apple hôm nay đã công bố cam kết mới trị giá 100 tỷ USD cho nước Mỹ, một sự tăng tốc đáng kể trong 
 			đầu tư của hãng tại Mỹ, nâng tổng số đầu tư lên 600 tỷ USD trong bốn năm tới. Thông báo hôm nay bao gồm Chương trình Sản xuất Hoa Kỳ (AMP) đầy tham vọng 
@@ -447,7 +455,7 @@ updateDateTime();
  </div>   
  
 <div class="card">
-        <img src="au5.jpg" alt="Ảnh 1">
+        <img src="au5.jpg" class="zoom-img" style="width: 200 px;">
 
         <h3>📰 Tin tức khác</h3>
  <p><b>Podcast mới cho phụ nữ bảo thủ của Katie Miller (cựu trợ lý Trump/Musk) chuẩn bị ra mắt</b>. Katie Miller, một trợ lý trung thành tuyệt đối trong 
