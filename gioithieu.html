@@ -156,6 +156,16 @@ border: 2px solid #00695c;
       }
     }
 
+  .zoom-img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
+
+  .zoom-img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+  }
+
 footer {
       background-color: #003366;
       color: white;
@@ -315,13 +325,13 @@ Phát triển một cổng thông tin hiện đại, gần gũi, thân thiện �
     <h2>Thành Viên </h2>
     <div class="columns">
       <div class="card">
-        <img src="haa.jpg" alt="Tin tức">
+       <img src="haa.jpg" class="zoom-img" style="width: 200 px;">
         <h3>HA NGUYEN</h3>
         <p>Người Sáng Lập</p>
       </div>
 
       <div class="card">
-        <img src="jessi.jpg" alt="Việc làm">
+        <img src="jessi.jpg" class="zoom-img" style="width: 200 px;">
         <h3>JESSICA NGUYEN</h3>
         <p>Quản lý chương trình chịu trách nhiệm chỉnh sửa thông báo sản phẩm và hệ thống công nghệ thông tin. </p>
 	      <p>Jessica hiện đang là người sáng lập du lich ứng dụng và trang web du lịch. xem liên kết để biết thêm về cô ấy
@@ -329,7 +339,7 @@ Phát triển một cổng thông tin hiện đại, gần gũi, thân thiện �
       </div>
 
       <div class="card">
-        <img src="522.jpg" alt="Sự kiện">
+        <img src="522.jpg" class="zoom-img" style="width: 200 px;">
         <h3>ANDREW NGUYEN</h3>
         <p>Trách nhiệm tương tác với khách hàng và quản lý thông tin liên lạc.</p>
       </div></div>
