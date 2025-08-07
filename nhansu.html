@@ -132,7 +132,15 @@ font-size: 16px;
 
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+ .zoom-img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
 
+  .zoom-img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+  }
  
 footer {
       background-color: #003366;
@@ -313,7 +321,7 @@ try {
 
 <div class="gallery">
 <div class="gallery-item">
-<img src="trump.jpg" >
+<img src="trump.jpg" class="zoom-img" style="width: 200 px;">>
     
 <p> Chính phủ liên bang Hoa Kỳ được tổ chức theo ba nhánh quyền lực chính: Hành pháp (Executive Branch), Lập pháp (Legislative Branch), và Tư pháp (Judicial Branch) </p>
 
@@ -323,19 +331,19 @@ try {
      
  
     <div class="gallery-item">
-            <img src="4.webp" alt="Ảnh 1">
+            <img src="4.webp" class="zoom-img" style="width: 200 px;">
        <p> Phó Tổng thống (Vice President): <b> JD Vance </b> (Đảng Cộng hòa) – Nhậm chức cùng ngày với Tổng thống Trump.​ Là người kế nhiệm nếu
      Tổng thống không thể tiếp tục nhiệm kỳ. Chủ tọa Thượng viện Hoa Kỳ (không bỏ phiếu trừ khi có kết quả hòa) </p>
   </div>
 
  <div class="gallery-item">
-       <img src="5.webp" alt="Ảnh 2">
+       <img src="5.webp" class="zoom-img" style="width: 200 px;">
       <p> Chánh Văn phòng Nhà Trắng (Chief of Staff)<b> Susie Wiles </b> Trách nhiệm chính: </p>
 <p>Cố vấn và hỗ trợ Tổng thống, Điều phối công việc trong Nhà Trắng, Kiểm soát lịch trình và tiếp xúc của Tổng thống, Liên lạc giữa Tổng thống và các cơ quan chính phủ, Xử lý các tình huống khẩn cấp hoặc khủng hoảng</p>
     </div>
 
  <div class="gallery-item">       
-      <img src="15.jpg" alt="Ảnh 1">
+      <img src="15.jpg" class="zoom-img" style="width: 200 px;">
       <p> <b><u>Lập pháp (Legislative Branch)</u></b> </p>
 <p>Quốc hội Hoa Kỳ (United States Congress) gồm hai viện: Thượng viện (Senate) và Hạ viện (House of Representatives)</p>
 <p>Thượng viện (Senate): 100 Thượng nghị sĩ (mỗi bang có 2 người). Lãnh đạo đa số Thượng viện: <b>John Thune </b> (Đảng Cộng hòa,
@@ -344,19 +352,19 @@ try {
 
 <div class="gallery">
 <div class="gallery-item">
-      <img src="16.jpg"  alt="Ảnh 3">      
+      <img src="16.jpg"  class="zoom-img" style="width: 200 px;">     
       <p> Lãnh đạo thiểu số Thượng viện:<b> Chuck Schumer </b>(Đảng Dân chủ, bang New York)</p>
 
   </div>
 
  <div class="gallery-item">
-      <img src="17.jpg" alt="Ảnh 2">
+      <img src="17.jpg" class="zoom-img" style="width: 200 px;">
       <p> Hạ viện (House of Representatives): 435 thành viên, đại diện theo dân số các bang. Chủ tịch Hạ viện <b>Mike Johnson</b> (Đảng Cộng
     hòa, bang Louisiana). </p></div>
 
 
  <div class="gallery-item">
- <img src="18.jpg" alt="Ảnh 2">
+ <img src="18.jpg" class="zoom-img" style="width: 200 px;">
 <p><b><u>Tư pháp (Judicial Branch)</u> </b> </p>
 <p>Tòa án Tối cao Hoa Kỳ (Supreme Court). Gồm 9 Thẩm phán, đứng đầu là Chánh án <b>John Roberts</b> có vai trò giám sát Hiến pháp và luật pháp
     quốc gia. </p>
