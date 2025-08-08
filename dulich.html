@@ -94,7 +94,15 @@ body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; 
     .card img { width: 100%; height: 350; border-radius: 10px; }
 
 }
-    
+  .zoom-img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
+
+  .zoom-img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+  }  
 footer {
       background-color:#003366;
       color: white;
@@ -234,7 +242,7 @@ footer {
   </ul>
 
 <div class="banner">
-    <img src="viet.jpg" >
+    <img src="viet.jpg" class="zoom-img" style="width: 200 px;">
     <div class="banner-text">
      <h1>Du Lịch Việt Nam</h1>
     <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
@@ -254,7 +262,7 @@ footer {
   <div class="section">  
     <div class="columns">
       <div class="card">         
-  <img src="vietna.png" >           
+  <img src="vietna.png" class="zoom-img" style="width: 200 px;">           
             <a href="diemden.html"> <h2>Điểm đến hấp dẫn</h2></a>
 
   <p>Khám phá những địa danh nổi tiếng như Huế, Đà Lạt, Đà Nẵng, Nha Trang, TP. Hồ Chí Minh, Hà Nội, Vũng Tàu, Hội An, Phú Quốc, Hạ Long, Cần Thơ, An Giang</p>
@@ -264,7 +272,7 @@ footer {
  </div>
 
 <div class="card"> 
-<img src="anuong.webp" > 
+<img src="anuong.webp" class="zoom-img" style="width: 200 px;"> 
 <a href="amthuc.html"> <h2>Ẩm thực</h2></a>
 
   <p>Thưởng thức phở, bún bò Huế, bánh xèo, bánh cuốn, cà phê trứng và nhiều món ngon vùng miền.</p>          
@@ -276,7 +284,7 @@ footer {
 
 
 <div class="card"> 
-<img src="tuvan11.jpg" > 
+<img src="tuvan11.jpg" class="zoom-img" style="width: 200 px;">
  <a href="tuvan.html"> <h2>Tư vấn</h2></a>
 
   <p>Thông tin hữu ich cho công dân Hoa Kỳ có kế hoạch đi du lịch đến Việt Nam bao gồm thông tin về <a href="didau.pdf" class="btn">Đi đâu chơi ở Việt Nam? </a><br>
@@ -285,7 +293,7 @@ Vé máy bay, thủ tục visa, thời điểm tốt để về thăm quê, và 
  </div>
 
 <div class="card">
-<img src="du.jpg" >
+<img src="du.jpg" class="zoom-img" style="width: 200 px;">
  <a href=https://www.starfruitfinance.com/><h2>Du lich cùng nhau (Starfruit finance)</h2> </a>
 <p>Chúng ta đều đã từng rơi vào tình huống này: Bạn muốn đi du lịch, nhưng quá trình lên kế hoạch thật quá sức. 
 Bạn phải phối hợp lịch trình, tìm chỗ ở và quản lý ngân sách. Nó có thể cảm thấy như một vòng lặp không bao 
