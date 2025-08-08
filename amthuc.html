@@ -124,7 +124,15 @@
         height: 300px;
       }
     }
+.zoom-img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
 
+  .zoom-img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+  }
 footer {
       background-color: #004d40;
       color: white;
