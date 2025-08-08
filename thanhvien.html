@@ -121,7 +121,15 @@
       margin-top: 10px;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     }
+.zoom-img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
 
+  .zoom-img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+  }
 
 footer {
       background-color: #004d40;
@@ -176,27 +184,27 @@ updateDateTime();
   
     <div class="columns">
       <div class="card"> 
-        <img src="502.jpg" >
+        <img src="502.jpg" class="zoom-img" style="width: 200 px;">
 <h3>Nguyễn Hà A </h3>
 <p> Ha Nguyen có hơn 25 năm chơi quần vợt và đã tham gia vao nhom thể thao cộng đồng người Việt có hơn 2 năm. </p>
  </div>
 
 
 <div class="card"> 
-         <img src="longtennis.jpg" >
+         <img src="longtennis.jpg" class="zoom-img" style="width: 200 px;">
             <h3> Nguyễn Long </h3>
 <p>Long Nguyen có hơn 35 năm chơi quần vợt tai Viet Nam. Long thường chơi ở hai sân Wakefield Park & Mason District Park vao cuối tuần </p>
 
               </div>
 
 <div class="card"> 
-         <img src="510.jpg" >
+         <img src="510.jpg" class="zoom-img" style="width: 200 px;">
             <h3>Đệ Hoành</h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park có thể chơi Tennis và Pickleball </p>
               </div>
 
 <div class="card"> 
-         <img src="555.jpg" >
+         <img src="555.jpg" class="zoom-img" style="width: 200 px;">
             <h3>Lâm  </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
 
@@ -207,7 +215,7 @@ updateDateTime();
   
     <div class="columns">
       <div class="card"> 
-                      <img src="5000.jpg" >
+                      <img src="5000.jpg" class="zoom-img" style="width: 200 px;">
             <h3>Khoa Nguyen </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
 
@@ -215,20 +223,20 @@ updateDateTime();
               </div>
 
 <div class="card"> 
-         <img src="5001.jpg" >
+         <img src="5001.jpg" class="zoom-img" style="width: 200 px;">
             <h3> Tuấn Ma</h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 
               </div>
 <div class="card"> 
-         <img src="5002.jpg" >
+         <img src="5002.jpg" class="zoom-img" style="width: 200 px;">
             <h3>Ngọc Huỳnh </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 
 
               </div>
 <div class="card"> 
-       <img src="burt.jpg" >
+       <img src="burt.jpg" class="zoom-img" style="width: 200 px;">
             <h3>Mr.Burt</h3>
 <p>Chuyên gia quần vợt hơn 40 năm, huấn luyện và tham gia nhiều trận đấu tại Fairfax, VA</p>
 
@@ -239,7 +247,7 @@ updateDateTime();
     <div class="columns">
       <div class="card"> 
          
-            <img src="kiet.jpg" >
+            <img src="kiet.jpg" class="zoom-img" style="width: 200 px;">
             <h3> Kiệt</h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
 
@@ -247,7 +255,7 @@ updateDateTime();
               </div>
 
 <div class="card"> 
-        <img src="le1.jpg" >
+        <img src="le1.jpg" class="zoom-img" style="width: 200 px;">
             <h3> Lễ Trần </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 
@@ -255,14 +263,14 @@ updateDateTime();
 
               </div>
 <div class="card"> 
-        <img src="thanh11.jpg" >
+        <img src="thanh11.jpg" class="zoom-img" style="width: 200 px;">
             <h3>Thành Vũ</h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 
               </div>
 
 <div class="card"> 
-        <img src="john.jpg" >
+        <img src="john.jpg" class="zoom-img" style="width: 200 px;">
             <h3>John Nguyễn </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
 
@@ -272,14 +280,14 @@ updateDateTime();
 <div class="section">  
     <div class="columns">
       <div class="card"> 
-        <img src="thanh12.jpg" >
+        <img src="thanh12.jpg" class="zoom-img" style="width: 200 px;">
             <h3>Thành Nguyễn  </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
  
 </div>
 
 <div class="card"> 
-        <img src="tam1.jpg" >
+        <img src="tam1.jpg" class="zoom-img" style="width: 200 px;">
             <h3>Tâm Ngô</h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 
@@ -287,13 +295,13 @@ updateDateTime();
 </div>
 
 <div class="card"> 
-        <img src="hai.jpg" >
+        <img src="hai.jpg" class="zoom-img" style="width: 200 px;">
             <h3>Hải Nguyễn</h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 </div>
 
  <div class="card">
-<img src="dung.jpg" >
+<img src="dung.jpg" class="zoom-img" style="width: 200 px;">
             <h3>Dũng Vũ  </h3>
 
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
@@ -305,7 +313,7 @@ updateDateTime();
 <div class="section">  
     <div class="columns">
       <div class="card">         
-       <img src="dao.jpg" >
+       <img src="dao.jpg" class="zoom-img" style="width: 200 px;">
          <h3>Đạo Nguyễn </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
 
@@ -313,7 +321,7 @@ updateDateTime();
 </div>
 
 <div class="card"> 
-        <img src="tuan1.jpg" >
+        <img src="tuan1.jpg" class="zoom-img" style="width: 200 px;">
             <h3> Tuấn Vũ </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 
@@ -321,14 +329,14 @@ updateDateTime();
 </div>
 
 <div class="card"> 
-         <img src="chau.jpg" >
+         <img src="chau.jpg" class="zoom-img" style="width: 200 px;">
             <h3> Châu Bùi  </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 
  </div>
 
 <div class="card">         
-            <img src="ha11.jpg" >
+            <img src="ha11.jpg" class="zoom-img" style="width: 200 px;">
             <h3> Hà Nguyễn B </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park </p>
 
@@ -340,7 +348,7 @@ updateDateTime();
     <div class="section">  
     <div class="columns">
 <div class="card"> 
-       <img src="binh.jpg" >           
+       <img src="binh.jpg" class="zoom-img" style="width: 200 px;">         
             <h3> Bình Trần  </h3>
 <p> Thành viên lâu năm cộng đồng người Việt tại Wakefield Park</p>
 
@@ -350,7 +358,7 @@ updateDateTime();
 
 
 <div class="card"> 
-        <img src=".jpg" >
+        <img src=".jpg" class="zoom-img" style="width: 200 px;">
             <h3> </h3>
 <p> </p>
 
@@ -359,7 +367,7 @@ updateDateTime();
 </div>
 
 <div class="card"> 
-         <img src=".jpg" >
+         <img src=".jpg" class="zoom-img" style="width: 200 px;">
             <h3>   </h3>
 <p> </p>
 
@@ -367,7 +375,7 @@ updateDateTime();
 </div>
 
 <div class="card"> 
-         <img src=".jpg" >
+         <img src=".jpg" class="zoom-img" style="width: 200 px;">
             <h3>   </h3>
 <p> </p>
 
