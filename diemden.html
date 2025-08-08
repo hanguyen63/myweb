@@ -124,7 +124,15 @@
         height: 300px;
       }
     }
+.zoom-img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
 
+  .zoom-img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+  }
 footer {
       background-color: #004d40;
       color: white;
@@ -152,7 +160,7 @@ footer {
 <body>
 
 <div class="banner">
-    <img src="y.jpg" >
+    <img src="y.jpg" class="zoom-img" style="width: 200 px;">
     <div class="banner-text">
      <h1>Những Điểm Đến - Việt Nam</h1>
       <p>Dành cho Cộng đồng người Việt tại Hoa Kỳ</p>
@@ -171,12 +179,12 @@ footer {
     <div class="columns">
       <div class="card">
         <a href="hue.html"><h3>Huế</h3></a>
-        <img src="hue1.jpg" >
+        <img src="hue1.jpg" class="zoom-img" style="width: 200 px;">
               </div>
 
       <div class="card">
         <a href="dalat.html"><h3 >Đà Lạt</h3></a>
-        <img src="dalat.jpg" >
+        <img src="dalat.jpg" class="zoom-img" style="width: 200 px;">
              </div>
 
       <div class="card">
@@ -186,7 +194,7 @@ footer {
 
       <div class="card">
          <a href="nhatrang.html"><h3 >Nha Trang</h3></a>
-        <img src="nhatrang.jpg" alt="Quảng cáo">
+        <img src="nhatrang.jpg" class="zoom-img" style="width: 200 px;">
         
      </div>   </div> 
     
@@ -195,24 +203,24 @@ footer {
     <div class="columns">
       <div class="card">
         <a href="hochiminh.html"><h3 >TP. Hồ Chí Minh</h3></a>       
-        <img src="saigon1.jpg" alt="Tin tức">
+        <img src="saigon1.jpg" class="zoom-img" style="width: 200 px;">
           </div>  
 
  
       <div class="card">
          <a href="hanoi.html"><h3 >Hà Nội</h3></a>        
-        <img src="hanoi.jpg" alt="Tin tức">
+        <img src="hanoi.jpg" class="zoom-img" style="width: 200 px;">
               </div>
 
       <div class="card">
         <a href="vungtau.html"><h3 >Vũng Tàu</h3></a>         
-        <img src="vungtau.jpg" alt="Việc làm">
+        <img src="vungtau.jpg" class="zoom-img" style="width: 200 px;">
              </div> 
 
      
 	<div class="card">
     <a href="hoian.html"><h3 >Hội An</h3></a>     
-        <img src="hoian.jpg" alt="Sự kiện">
+        <img src="hoian.jpg" class="zoom-img" style="width: 200 px;">
 
               </div></div>
 
@@ -220,24 +228,24 @@ footer {
     <div class="columns">
       <div class="card">
         <a href="phuquoc.html"><h3 >Phú Quốc</h3></a>         
-        <img src="phuquoc.jpg" alt="Quảng cáo">
+        <img src="phuquoc.jpg" class="zoom-img" style="width: 200 px;">
         
      </div> 
      
       <div class="card">
         <a href="halong.html"><h3 >Hạ Long</h3></a>      
-        <img src="halong.jpg" alt="Tin tức">
+        <img src="halong.jpg" class="zoom-img" style="width: 200 px;">
           </div> 
  
 <div class="card">
   <a href="cantho.html"><h3 >Cần Thơ</h3></a>   
-        <img src="cantho.jpg" alt="Quảng cáo">
+        <img src="cantho.jpg" class="zoom-img" style="width: 200 px;">
          </div>  
 
 
 <div class="card">
   <a href="angiang.html"><h3 >An Giang</h3></a> 
-        <img src="angiang.jpg" alt="Quảng cáo">
+        <img src="angiang.jpg" class="zoom-img" style="width: 200 px;">
          </div>  </div> 
 
 
