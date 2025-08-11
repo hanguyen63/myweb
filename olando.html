@@ -111,6 +111,15 @@
         height: 300px;
       }
     }
+.zoom-img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
+
+  .zoom-img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+  }  
 
 footer {
       background-color: #004d40;
@@ -212,7 +221,7 @@ updateDateTime();
 <div class="section">    
     <div class="columns">      
       <div class="card">
-        <img src="f1.webp" >
+        <img src="f1.webp" class="zoom-img" style="width: 200 px;"> 
          <h3>Tổng quan:</h3>
         
 <p>🚗Bằng ô tô (chuyến đi đường bộ) phù hợp nhất cho du lịch gia đình, sự linh hoạt, các điểm dừng ngắm cảnh</p>
@@ -236,7 +245,7 @@ Dừng qua đêm ở điểm giữa (ví dụ: Savannah, GA hoặc Jacksonville,
  </div>
 
       <div class="card">
-        <img src="f2.jpg" >
+        <img src="f2.jpg" class="zoom-img" style="width: 200 px;"> 
          <h3 >Điểm đến nổi bật ở Orlando, Florida</h3>
 <p>Chọn những điểm tham quan hàng đầu của bạn và mua trực tuyến để tiết kiệm thời gian/tiền bạc</p>
 <ul><li>Universal Studios & Islands of Adventure</li>
@@ -252,7 +261,7 @@ Dừng qua đêm ở điểm giữa (ví dụ: Savannah, GA hoặc Jacksonville,
              </div>
 
               <div class="card">
-        <img src=" f4.jpg" >
+        <img src=" f4.jpg" class="zoom-img" style="width: 200 px;"> 
          <h3 >🏨 Khách sạn ở Orlando, Florida</h3>
 <p>Các khu vực nên ở :</p>
 
@@ -273,7 +282,7 @@ Dừng qua đêm ở điểm giữa (ví dụ: Savannah, GA hoặc Jacksonville,
 <div class="section">    
     <div class="columns">
       <div class="card">
-        <img src="f5.jpg" >
+        <img src="f5.jpg" class="zoom-img" style="width: 200 px;"> 
 <h3 >Lịch trình 5 ngày ở Orlando</h3 >
 <p>🗓️ Ngày 1: Di chuyển và đến Orlando</p>
 <ul><li>Nhận phòng khách sạn/khu nghỉ dưỡng</li>
@@ -290,7 +299,7 @@ Mẹo: Sử dụng Disney Genie+ để giảm thời gian chờ</li>
 
       
       <div class="card">
-        <img src="f6.jpg" >
+        <img src="f6.jpg" class="zoom-img" style="width: 200 px;"> 
 <p>🗓️ Ngày 3:Universal Studios Florida</p>
  <ul><li>Thế giới phù thủy của Harry Potter</li>
 <li>Kẻ trộm mặt trăng, Người máy biến hình, Hollywood Rip Ride Rockit</li>
@@ -316,7 +325,7 @@ Gặp gỡ phi hành gia</li></ul>
 
 
               <div class="card">
-        <img src=" f8.jpg" >
+        <img src=" f8.jpg" class="zoom-img" style="width: 200 px;"> 
 <p>📝 Gợi ý khi du lịch ở Orlando, Florida</p>
 <ul><li>Giấy tờ du lịch (CMND/hộ chiếu cho chuyến bay)</li>
 <li>Bộ sạc di động</li>
@@ -340,4 +349,5 @@ Gặp gỡ phi hành gia</li></ul>
 
     
 </body>
+
 </html>
