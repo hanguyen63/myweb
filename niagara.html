@@ -111,7 +111,15 @@
         height: 300px;
       }
     }
+ .zoom-img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
 
+  .zoom-img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+  } 
 footer {
       background-color: #004d40;
       color: white;
@@ -212,7 +220,7 @@ updateDateTime();
 <div class="section">    
     <div class="columns">      
       <div class="card">
-        <img src="tu.jpg" >
+        <img src="tu.jpg" class="zoom-img" style="width: 200 px;"> 
          <h3>Tổng quan:</h3>
         
 <ul><li>Từ: Fairfax, VA Đến: Thác Niagara, NY (phía Hoa Kỳ) Khoảng cách: ~400–450 dặm</li>
@@ -226,7 +234,7 @@ updateDateTime();
  </div>
 
       <div class="card">
-        <img src="mind.jpg" >
+        <img src="mind.jpg" class="zoom-img" style="width: 200 px;"> 
          <h3 >Điểm đến nổi bật ở Thác Niagara, NY</h3>
          <ul><li>Maid of the Mist (Cô gái sương mù) – Đi thuyền vào thác</li> 
 <li>Cave of the Winds (Động Gió) – thong qua Động Gió bạn có thể đi bộ ngay bên cạnh thác Bridal Veil</li>
@@ -241,7 +249,7 @@ updateDateTime();
              </div>
 
               <div class="card">
-        <img src=" nhanghi.jpg" >
+        <img src=" nhanghi.jpg" class="zoom-img" style="width: 200 px;"> 
          <h3 >🛏️ Khách sạn </h3>
          <ul><li> Nếu bạn đang tìm khách sạn gần Công viên Bang Niagara Falls (phía Mỹ). Dưới đây là một số lựa chọn khách sạn phù hợp chỉ cách thác một đoạn đi bộ ngắn:
 
@@ -259,7 +267,7 @@ updateDateTime();
 <div class="section">    
     <div class="columns">  
               <div class="card">
-        <img src="meo.jpg" >
+        <img src="meo.jpg" class="zoom-img" style="width: 200 px;"> 
          <h3 >Lịch trình Gợi Ý 3 Ngày ở Thác Niagara, NY </h3>
          <ul><li>📅 Ngày 1: Di chuyển + Đến nơi<br>
 Lái xe hoặc đi máy bay đến. <br>Nhận phòng khách sạn.<br> Đi bộ đến thác và ngắm đèn đêm </li>
@@ -285,7 +293,7 @@ Bắt đầu lái xe/bay trở lại Fairfax</li>
              </div>
 
       <div class="card">
-        <img src="goi.png" >
+        <img src="goi.png" class="zoom-img" style="width: 200 px;"> 
         <h3 >Mẹo du lịch ở Thác Niagara, NY</h3>
           <p>Ưu điểm & nhược điểm tại Thác Niagara (phía Mỹ):</p>
 <ul><li> Thuyền Maid of the Mist khởi hành từ phía Hoa Kỳ.</li> 
@@ -321,4 +329,5 @@ nhưng có thể đắt hơn. Phí/thuế du lịch: 10–15% được cộng v�
 
     
 </body>
+
 </html>
