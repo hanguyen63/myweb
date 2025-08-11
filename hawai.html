@@ -1,0 +1,440 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 300; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+ .zoom-img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
+
+  .zoom-img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+  }  
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="hawai.jpg" >
+    <div class="banner-text">
+     <h1>Du Lịch Hawaii  </h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="hawai4.jpg" class="zoom-img" style="width: 200 px;">  
+         <h3>Tổng quan: </h3>
+<p> Đảo Hawaii nằm ở trung tâm nhiệt đới của Thái Bình Dương, là một quần đảo sở hữu 132 hòn đảo lớn nhỏ khác nhau. Thời tiết ở Hawaii vô cùng lý tưởng, quanh năm mát mẻ, ôn hòa.
+Thời điểm tốt nhất để đến Hawaii phụ thuộc vào những gì bạn mong muốn trong một kỳ nghỉ, nhưng nhìn chung, tháng 4-5 và tháng 9-10 mang lại thời tiết dễ chịu và ít đông đúc hơn.</p>        
+<ul><li>🔎 Chuyến bay Từ: Sân bay Quốc tế Dulles (IAD) đến: Daniel K. Inouye Int’l Airport (HNL)</li>
+<li>Hãng bay có thể chọn: American Airlines, JetBlue, Southwest, Delta..</li>
+<li>🕒 Mẹo: Đặt trước ít nhất 4–8 tuần để có giá tốt.</li>
+<li>Tìm các gói bao gồm cả chuyến bay + khách sạn để tiết kiệm (Expedia, Costco Travel, v.v.)</li></ul>
+
+ </div>
+
+      <div class="card">
+        <img src="hawai5.jpg" class="zoom-img" style="width: 200 px;">  
+         <h3 >Điểm đến nổi bật ở Hawaii . </h3>
+<ul><li>Hanauma Bay — snorkeling (giới hạn khách, mở cửa theo lịch).</li>
+         <li>Waikiki & Diamond Head (Honolulu) — bãi biển nổi tiếng + leo Diamond Head nhìn toàn cảnh.</li>
+  <li>Pearl Harbor / USS Arizona Memorial — lịch sử, nên đặt vé sớm. </li>
+  <li>North Shore (Waimea Bay, Banzai Pipeline, Haleiwa) — lướt sóng, shrimp trucks.</li>
+  <li>Haleakalā (Maui) — sunrise nổi tiếng, cần reservation cho sunrise. </li>
+  <li>Luau, hula show, farmers’ markets, local food (poke, shaved ice, loco moco).</li>
+
+        </ul>      
+             
+             </div>
+
+      <div class="card">
+        <img src=" hawai6.jpg" class="zoom-img" style="width: 200 px;">  
+         <h3 >🏨 Khách sạn/Khu nghỉ dưỡng ở Hawaii có nhiều nhà hàng (gợi ý theo đảo) </h3>
+
+ <h4> Halekulani (Waikiki) — La Mer, House Without a Key, Orchids… (ăn uống cao cấp + bình dân). </h4>
+<ul><li> Vị trí: Đảo Oʻahu (Waikiki / Ko Olina) </li>
+</ul>
+
+</div>
+</div>
+
+
+
+<div class="section">    
+    <div class="columns"> 
+<div class="card">
+<img src=" hawai10.jpg" class="zoom-img" style="width: 200 px;">  
+
+ <h4> Aulani, A Disney Resort & Spa (Ko Olina) — nhiều lựa chọn phù hợp gia đình (buffet, beachside, lounge).</h4>
+<ul><li> Vị trí: Đảo Oʻahu (Waikiki / Ko Olina) </li>
+</ul>
+</div>
+
+<div class="card">
+  <img src=" hawai7.jpg" class="zoom-img" style="width: 200 px;">  
+<h4>Grand Wailea (Waldorf Astoria) — nhiều nhà hàng, vừa cao cấp vừa casual </h4>
+<ul><li> Vị trí: Đảo Maui (Wailea) </li>
+</ul>
+
+</div>
+
+
+ 
+<div class="card">
+  <img src=" hawai8.jpg" class="zoom-img" style="width: 200 px;">  
+<h4>Four Seasons Hualālai — nhiều nhà hàng cao cấp và casual, ẩm thực biển/steak</h4>
+<ul><li> Vị trí: Đảo Big Island (Kona / Kohala Coast)</li>
+</ul>
+
+</div></div>
+
+<div class="section">    
+    <div class="columns"> 
+<div class="card">
+  <img src=" meo1.jpg" class="zoom-img" style="width: 200 px;">  
+<h4>📌 Lưu ý chung khi chọn resort all-inclusive</h4>
+<ul><li>Hawaii không có nhiều resort all-inclusive truyền thống như Caribbean hay Mexico. Tuy nhiên, 
+một số resort hoặc khách sạn cao cấp có gói "tương tự all-inclusive" — bao gồm ăn uống, hoạt động, và tiện ích trong giá hoặc phụ phí.
+</li>
+<li>Travaasa Hana (Maui): Gói bao gồm: chỗ ở, tất cả bữa ăn, Wi-Fi, credit resort $175/người (có thể dùng ở spa), tip và hoạt động. Gần như “all-inclusive” thực thụ.</li>
+<li>Wailea Beach Resort – Marriott (Maui): Có 10 nhà hàng, nhiều hồ bơi (pool slide lớn nhất Hawaii), spa, wellness pool, luau và trải nghiệm văn hóa — một khu nghỉ dưỡng rất đầy đủ tiện nghi  </li>
+<li>Royal Lahaina Resort (Maui): Gói “Royal Experience” bao gồm phòng oceanfront giá ưu đãi, buffet sáng, 1 buổi luau, và cruise ngắm hoàng hôn. Yêu cầu lưu trú tối thiểu 5 đêm. Gói semi-inclusive rất hấp dẫn. </li>
+<li>Royal Kona Resort (Big Island) – “Royal Experience”: Gói tương tự: bao gồm phòng, ăn sáng, luau và cruise hoàng hôn — dành cho kỳ nghỉ từ 5 đêm trở lên</li>
+<li>Aulani, A Disney Resort & Spa (Oʻahu): Không có gói all-inclusive đầy đủ, nhưng nhiều tiện ích đã được bao gồm: công viên nước, họp mặt nhân vật Disney, sự kiện, câu lạc bộ trẻ em… tạo cảm giác full-service cho gia đình.</li>
+ </ul>
+
+ </div></div>
+
+
+
+
+
+
+<div class="section">    
+    <div class="columns">
+<div class="card">
+           
+        <img src="hawai9.jpg" class="zoom-img" style="width: 200 px;">  
+         <h3 >Dưới đây là hướng dẫn từng bước hoàn chỉnh cho chuyến đi 5 ngày du lịch của bạn từ Fairfax, VA đến Oʻahu (Honolulu / Waikiki) Hawaii</h3>
+ </div></div>
+
+<div class="section">    
+    <div class="columns">
+ <div class="card">
+        <img src="hawai3.jpg" class="zoom-img" style="width: 200 px;">  
+<h3>🎒Chuẩn bị </h3>
+<ul><li> Giấy tờ cần thiết: Nếu bạn là công dân Mỹ không cần passport khi bay nội địa giữa các đảo.</li>
+<li>Vé máy bay khứ hồi. Giấy xác nhận đặt khách sạn</li>
+<li>Đặt vé trước: Haleakalā (sunrise at summit) yêu cầu reservation cho xe/khách để xem bình minh; phải đặt qua <a href="https://www.recreation.gov/ticket/facility/"> Website</a>
+Nếu không có vé, có thể vào sau 7:00 AM nhưng sunrise cần vé.</li>
+<li>USS Arizona / Pearl Harbor đặt vé qua <a href="https://www.recreation.gov/ticket/facility/"> Website</a> </li>
+<li>Book khách sạn & nhà hàng. Chọn khách sạn có nhiều nhà hàng nội khu nếu bạn thích ăn uống đa dạng (gợi ý: Halekulani, Aulani, Grand Wailea, Four Seasons Hualālai </li>
+<li>Phương tiện di chuyển: Nếu muốn tự lái: đặt xe thuê sớm (đặc biệt mùa cao điểm). Lưu ý phí “young driver”, quy định seatbelt, giới hạn tốc độ, bảo hiểm bắt buộc. 
+Nếu chỉ ở Waikiki: có thể không cần thuê xe, đi bộ + taxi/ride-share + tour.</li>
+<li>Kem chống nắng SPF50+, mũ, kính râm, đồ bơi, dép/chạy bộ, áo nhẹ cho chiều tối, bộ sơ cứu cá nhân, thuốc say tàu/thuyền.
+Ổ cắm/adapter, pin dự phòng, túi chống nước cho điện thoại.</li></ul>
+
+</div>
+
+<div class="card">
+        <img src="hawai2.jpg" class="zoom-img" style="width: 200 px;">  
+<p><b>📅 Ngày 1:</b> Đến Hawaii </p>
+<ul><li>✈️Hạ cánh sân bay Daniel K. Inouye Int’l Airport (HNL)</li>
+<li> Di chuyển vào Waikiki (~20–30 phút tuỳ giao thông). Check-in, dạo biển Waikiki lúc hoàng hôn, ăn tối nhẹ </li>
+</ul>
+
+</div>
+
+<div class="card">
+        <img src="hawai11.jpg" class="zoom-img" style="width: 200 px;">  
+<p><b>📅 Ngày 2:</b> Waikiki + Diamond Head</p>
+<ul><li>Sáng: Ăn sáng, leo Diamond Head (2-3h cả đi về).</li>
+<li>Trưa: Ăn ở Waikiki (nhà hàng resort hoặc casual).</li>
+<li>Chiều: Thư giãn bãi biển, paddleboard hoặc lesson lướt sóng.</li>
+<li>Tối: Luau / hula show (nên đặt trước).</li>
+</ul> 
+
+</div></div>
+
+
+
+<div class="section">    
+    <div class="columns">
+<div class="card">
+        <img src="hawai12.jpg" class="zoom-img" style="width: 200 px;">  
+<p><b>📅 Ngày 3:</b>Pearl Harbor & Downtown</p>
+<ul><li>Sáng sớm: USS Arizona Memorial / Pearl Harbor — đặt vé Recreation.gov (vé phát hành theo lịch, book sớm). </li> 
+<li>Trưa: Downtown/Chinatown (ăn trưa, tham quan).</li> 
+<li>Chiều: Iolani Palace hoặc Ala Moana Center shopping.</li> 
+<li>Tối: Dinner fine dining (gợi ý La Mer tại Halekulani nếu muốn đặc biệt). </li> 
+ </ul>
+
+</div>
+
+
+<div class="card">
+        <img src="hawai13.jpg" class="zoom-img" style="width: 200 px;">  
+
+<p> <b>📅Ngày 4:</b> Hanauma Bay + Makapuʻu / Byodo-in (option)</p>
+<ul><li>Sáng: Hanauma Bay snorkeling (mở cửa theo lịch, giới hạn khách) — hãy đến sớm.</li> 
+<li>Trưa: Dùng bữa ven biển.</li> 
+<li>Chiều: Drive đến Makapuʻu Lookout hoặc Koko Head (view).</li> 
+<li>Tối: Nghỉ ngơi, thưởng thức ẩm thực địa phương.</li> </li> 
+ 
+</ul>
+
+</div>
+
+
+<div class="card">
+        <img src="hawai14.jpg" class="zoom-img" style="width: 200 px;">  
+
+<p>  <b>📅Ngày 5: </b>North Shore & Haleiwa</p>
+<ul><li>Cả ngày: lái/thuê tour đi North Shore: Waimea Bay, Banzai Pipeline, lunch tại Haleiwa (shrimp trucks, shave ice).
+Nếu thích, ghé surf school, xem sunset ở Sunset Beach. </li> 
+ 
+</ul>
+
+
+
+</div></div>
+
+
+<div class="section">    
+    <div class="columns">
+<div class="card">
+        <img src="hawai15.jpg" class="zoom-img" style="width: 200 px;">          
+<h3>📌 Lưu ý riêng khi ở Hawaii</h3>
+<ul><li>An toàn biển: một số bãi có dòng chảy mạnh — luôn quan sát cờ cảnh báo, hỏi cứu hộ. (goHawaii travel tips). </li> 
+<li>Tôn trọng văn hoá địa phương (aloha): đừng lấy san hô/ vỏ ốc, tôn trọng cảnh báo & biển cấm.  </li> 
+<li>Tipping: 15–20% ở nhà hàng là chuẩn; tips cho bellhop/housekeeping/tour guide theo tình hình.  </li> 
+<li>Luật giao thông: bắt buộc thắt dây an toàn, không dùng điện thoại khi lái, tốc độ giới hạn nghiêm. Xem quy định thuê xe & bảo hiểm.  </li> 
+<li>Sóng & thời tiết: Hawaii có microclimates — vùng núi lạnh hơn, bắc/nam đảo khác nhau; kiểm tra dự báo cẩn thận.</li> 
+
+ </ul>
+</div>
+
+<div class="card">
+        <img src="hawai17.jpg" class="zoom-img" style="width: 200 px;">   
+<h3>Nếu bạn cần hỗ trợ ở Hawaii</h3>
+<ul><li>Số khẩn cấp: 911 (mọi đảo). </li> 
+<li>Bệnh viện lớn (Honolulu): The Queen’s Medical Center — main: 808-691-1000 (đường dẫn & emergency info). </li> 
+<li>Trang chính thức du lịch Hawaii (thông tin bản đồ, cảnh báo, events): <a href="https://www.gohawaii.com/"> Website</a></li>
+<li> Hướng dẫn tài liệu<a href="https://www.hvcb.org/hawaiivisitorsguide/"> Website</a></li>
+
+</ul>
+</div></div>
+
+
+
+
+
+    
+     
+       
+      
+
+
+
+    
+</body>
+</html>
