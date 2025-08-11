@@ -111,6 +111,15 @@
         height: 300px;
       }
     }
+.zoom-img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
+
+  .zoom-img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+  }  
 
 footer {
       background-color: #004d40;
@@ -212,7 +221,7 @@ updateDateTime();
 <div class="section">    
     <div class="columns">      
       <div class="card">
-        <img src="ditau.webp" >
+        <img src="ditau.webp" class="zoom-img" style="width: 200 px;"> 
          <h3>Tổng quan:</h3>
         
 <ul><li> 🚘 Lái xe (tự túc tiện nhất cho gia đình). Khoảng 270 miles (~6 tiếng không dừng). Đi theo I-95 North, nên tránh giờ cao điểm tại NYC.</li>
@@ -228,7 +237,7 @@ updateDateTime();
  </div>
 
       <div class="card">
-        <img src="time.jpg" >
+        <img src="time.jpg" class="zoom-img" style="width: 200 px;"> 
          <h3 >🌟 Điểm đến nổi bật ở New York</h3>
 <p>Dù bạn đang ở đâu, khi có cơ hội tới New York thì cũng đừng bỏ qua những địa danh dưới đây.</p>
                     
@@ -266,7 +275,7 @@ Thưởng thức đồ ăn châu Á, Việt, Tàu và món Ý truyền thống.<
              </div>
 
               <div class="card">
-        <img src="khachsan.jpg" >
+        <img src="khachsan.jpg" class="zoom-img" style="width: 200 px;"> 
          <h3 >🗽 Lịch trình Gợi Ý 5 Ngày ở New York</h3>
 
 
@@ -328,7 +337,7 @@ Museum of Modern Art (MoMA)</li>
 
 
               <div class="card">
-        <img src="tietkiem.jpg" >
+        <img src="tietkiem.jpg" class="zoom-img" style="width: 200 px;"> >
          <h3 >💰 Lưu ý chi phí dự kiến </h3>
 
          <ul><li>Khách sạn: ~$250–$350/đêm/phòng (cho 3–4 người)
@@ -353,4 +362,5 @@ Museum of Modern Art (MoMA)</li>
 
     
 </body>
+
 </html>
