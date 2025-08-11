@@ -111,7 +111,15 @@
         height: 300px;
       }
     }
+ .zoom-img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
 
+  .zoom-img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+  }  
 footer {
       background-color: #004d40;
       color: white;
@@ -212,7 +220,7 @@ updateDateTime();
 <div class="section">    
     <div class="columns">      
       <div class="card">
-        <img src="ba.png" >
+        <img src="ba.png" class="zoom-img" style="width: 200 px;">
          <h3>Tổng quan: </h3>
 <p> Bahamas là một chuỗi đảo gồm hơn 700 hòn đảo và bãi cát, nổi tiếng với biển màu ngọc lam, bãi cát trắng mịn và các hoạt động biển sôi động. Thời điểm tốt nhất để đến Bahamas là vào mùa cao điểm, từ tháng 11 đến tháng 4, khi thời tiết ấm áp và nhiều nắng với ít mưa. Giai đoạn này mang đến điều kiện lý tưởng để tận hưởng bãi biển và các hoạt động ngoài trời.</p>        
 <ul><li>🔎 Chuyến bay Từ: Sân bay Quốc tế Dulles (IAD) đến: Lynden Pindling (NAS)</li>
@@ -236,7 +244,7 @@ updateDateTime();
              </div>
 
       <div class="card">
-        <img src=" ba7.jpg" >
+        <img src=" ba7.jpg" class="zoom-img" style="width: 200 px;">
          <h3 >🏨 Khách sạn/Khu nghỉ dưỡng ở Bahamas</h3>
 
 
@@ -249,7 +257,7 @@ updateDateTime();
 
 
 <div class="card">
-  <img src=" ba8.jpg" >
+  <img src=" ba8.jpg" class="zoom-img" style="width: 200 px;">
 <h4>Baha Mar (Grand Hyatt)</h4>
 <ul><li> Vị trí: Nassau </li>
 <li>🍽️ Số nhà hàng: 30+ </li>
@@ -261,7 +269,7 @@ updateDateTime();
  <div class="section">    
     <div class="columns">
 <div class="card">
-  <img src=" ba9.jpg" >
+  <img src=" ba9.jpg" class="zoom-img" style="width: 200 px;">
 <h4>Sandals Royal Bahamian (Adults Only)</h4>
 <ul><li> Vị trí: Nassau </li>
 <li>🍽️ Số nhà hàng: 10+ </li>
@@ -270,7 +278,7 @@ updateDateTime();
 </div>
 
 <div class="card">
-  <img src=" ba10.jpg" >
+  <img src=" ba10.jpg" class="zoom-img" style="width: 200 px;">
 <h4>RIU Palace Paradise Island (Adults Only)</h4>
 <ul><li> Vị trí: Paradise Island </li>
 <li>🍽️ Số nhà hàng: 5+ </li>
@@ -282,7 +290,7 @@ updateDateTime();
 
 
 <div class="card">
-  <img src=" meo1.jpg" >
+  <img src=" meo1.jpg" class="zoom-img" style="width: 200 px;">
 <h4>📌 Lưu ý chung khi chọn resort all-inclusive</h4>
 <ul><li>Giá đã bao gồm: ăn uống, nước uống, snack, minibar, hoạt động giải trí, thể thao nước nhẹ, show đêm.</li>
 <li>🧾 Tipping 10–15% thường không bắt buộc, nhưng được khuyến khích.</li>
@@ -300,7 +308,7 @@ updateDateTime();
 <div class="section">    
     <div class="columns">
  <div class="card">
-        <img src="ba.png" >
+        <img src="ba.png" class="zoom-img" style="width: 200 px;">
 <h3>🎒Chuẩn bị </h3>
 
 <ul><li> Giấy tờ cần có: Hộ chiếu Mỹ: còn hạn đến hết thời gian ở Bahamas.</li>
@@ -316,7 +324,7 @@ updateDateTime();
 </div>
 
 <div class="card">
-        <img src="ba1.jpg" >
+        <img src="ba1.jpg" class="zoom-img" style="width: 200 px;">
 <p><b>📅 Ngày 1:</b> Đến Nassau – Check-in – Thư giãn bãi biển</p>
 <ul><li> Hạ cánh sân bay Lynden Pindling (NAS)</li>
 <li>Check-in khách sạn/resort (Baha Mar, Atlantis, Sandals…)</li>
@@ -344,7 +352,7 @@ updateDateTime();
 <div class="section">    
     <div class="columns">
 <div class="card">
-        <img src="ba12.jpg" >
+        <img src="ba12.jpg" class="zoom-img" style="width: 200 px;">
 <p><b>📅 Ngày 3:</b> Tour đảo Exuma – bơi với lợn</p>
 <ul><li>Ngày trọn vẹn đi tour bằng thuyền đến Exuma Cays</li>
 <li>Bơi với lợn, cho cá mập ăn, Sandbar, Thunderball Grotto</li>
@@ -371,7 +379,7 @@ updateDateTime();
 
 
 <div class="card">
-        <img src="aaaa.jpg" >
+        <img src="aaaa.jpg" class="zoom-img" style="width: 200 px;">
 
 <p>  <b>📅Ngày 5: </b>Thư giãn – Mua sắm – Trở về Mỹ</p>
 <ul><li>Sáng: Tắm biển lần cuối hoặc spa</li>
@@ -390,7 +398,7 @@ updateDateTime();
 </html><div class="section">    
     <div class="columns">
 <div class="card">
-        <img src="ba2.jpg" >          
+        <img src="ba2.jpg" class="zoom-img" style="width: 200 px;">        
 <h3>📌 Lưu ý riêng khi ở Bahamas</h3>
 <ul><li>💧 Nước máy uống được, nhưng nên dùng nước đóng chai cho an toàn.</li>
 <li>☀️ Trời rất nắng – luôn dùng kem chống nắng mạnh.</li>
@@ -404,7 +412,7 @@ updateDateTime();
 </div>
 
 <div class="card">
-        <img src="ba14.jpg" >  
+        <img src="ba14.jpg" class="zoom-img" style="width: 200 px;">
 <h3>Nếu bạn cần hỗ trợ ở Bahamas</h3>
 <ul><li>📞 Số khẩn cấp: 919 (tương đương 911 ở Mỹ)</li>
 <li>🏥 Bệnh viện Princess Margaret (Nassau): +1 242-322-2861</li>
@@ -427,4 +435,5 @@ updateDateTime();
 
     
 </body>
+
 </html>
