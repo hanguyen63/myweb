@@ -1,0 +1,471 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu có Submenu bên phải</title>
+  <style>
+     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+     header { background: #4CAF50; color: white; padding: 1px; text-align: center; }
+
+/* Navigation Bar */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10;
+      background-color: #004d40;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px 10px;
+    }
+
+    .navbar li a:hover {
+      background-color: #00695c;   
+    text-decoration: underline;  
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color:  #00695c;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+        left: 0;
+ 
+    }
+
+    .submenu li {
+      display: block;
+
+    }
+
+    /* Show submenu on hover */
+    li:hover .submenu {
+      display: block;       
+    }
+
+.sub-nav {
+      background: #e0f2f1;
+      padding: 10px;
+      text-align: center;
+    }
+    .sub-nav a {
+      margin: 0 10px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .section { padding: 1rem; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .card img { width: 100%; height: 300; border-radius: 10px; }
+
+ 
+ 
+.video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+ .zoom-img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
+
+  .zoom-img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+  }  
+footer {
+      background-color: #004d40;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+  </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+	object-fit: cover;
+      filter: brightness(70%);
+            
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+  
+  .datetime {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="datetime" class="datetime"></div>
+
+<script>
+
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('vi-VN', options);
+  const timeStr = now.toLocaleTimeString('vi-VN');
+  document.getElementById('datetime').textContent = `${dateStr} - ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+<div class="banner">
+    <img src="mal1.jpg" >
+    <div class="banner-text">
+     <h1>Du Lịch Maldives  </h1>
+    <p>Hướng dẫn & Tư vấn cho cộng đồng người Việt tại Fairfax</p>
+    </div>
+  </div>
+
+  
+
+
+<div class="section">    
+    <div class="columns">      
+      <div class="card">
+        <img src="mal6.jpg" class="zoom-img" style="width: 200 px;">  
+         <h3>Tổng quan: </h3>
+<p> Maldives nằm ngay phía dưới Ấn Độ và Sri Lanka thuộc khu vực khí hậu nhiệt đới nên thời tiết quanh năm nóng, khô</p>        
+<ul><li>🌤 Thời điểm đẹp nhất để du lịch Maldives tháng 11 – tháng 4. Thời tiết nắng đẹp, biển trong xanh, ít mưa.
+Thích hợp tắm biển, lặn ngắm san hô, chụp ảnh.</li>
+<li>✈️Chuyến bay Từ: Sân bay Quốc tế Dulles (IAD) đến: Malé (Velana International Airport)</li>
+<li>Hãng bay có thể chọn: Singapore Airlines, Qatar Airways, Emirates, Scoot, AirAsia.</li>
+<li>🕒 Mẹo: Đặt trước ít nhất 4–8 tuần để có giá tốt.</li>
+<li>Tìm các gói bao gồm cả chuyến bay + khách sạn để tiết kiệm (Expedia, Costco Travel, v.v.)</li>
+<li>Tour tại chỗ: Maldives Traveller, Secret Paradise Maldives.</li></ul>
+
+
+ </div>
+
+      <div class="card">
+        <img src="mal9.jpg" class="zoom-img" style="width: 200 px;">  
+         <h3 >Điểm đến nổi bật ở Maldives . </h3>
+<ul><li>Maafushi – Đảo giá rẻ, nhiều homestay, tour ngắm cá mập voi, rùa biển.</li>
+<li>Biyadhoo – Nổi tiếng lặn biển ngắm san hô.</li>
+<li>Male – Thủ đô, nơi dừng chân đầu tiên, có chợ cá, nhà thờ Hồi giáo Grand Friday Mosque.</li>
+<li>Resort islands – Mỗi đảo 1 resort riêng biệt, dịch vụ cao cấp, phù hợp nghỉ dưỡng.</li>
+
+<li>Ari Atoll – Thiên đường ngắm cá mập voi và lặn bình dưỡng khí.</li>        
+
+        </ul>      
+             
+             </div>
+
+      <div class="card">
+        <img src=" mal8.jpg" class="zoom-img" style="width: 200 px;">  
+         <h3 >🏨 Khách sạn/Khu nghỉ dưỡng ở Maldives có nhiều nhà hàng </h3>
+
+ <h4>Soneva Jani </h4> 
+<ul><li> Biệt thự trên biển với cầu trượt xuống biển, phục vụ riêng.</li>
+<li> 🍽 Ăn uống không giới hạn , thực đơn ẩm thực đa dạng. </li>
+	<li> Giá tham khảo /đêm ~2.500 – 5.000 USD. Sang trọng, trăng mật  </li>
+<li><a href="https://soneva.com/resorts/soneva-jani/"> Website</a></li>
+
+</ul>
+
+</div>
+</div>
+
+
+
+<div class="section">    
+    <div class="columns"> 
+<div class="card">
+<img src=" mal10.jpg" class="zoom-img" style="width: 200 px;">  
+
+ <h4> Baros Maldives</h4> 
+<ul><li>Gần sân bay, bãi biển đẹp, lặn biển & lặn ống thở tuyệt vời</li>
+
+<li> Giá tham khảo /đêm ~800 – 1.500 USD. Cặp đôi, honeymoon. </li>
+<li><a href="https://www.baros.com/"> Website</a></li>
+
+</ul>
+</div>
+
+<div class="card">
+  <img src=" mal11.jpg" class="zoom-img" style="width: 200 px;">  
+<h4>Hurawalhi Island Resort</h4>
+<ul><li>Lãng mạn, nghỉ ngơi yên tĩnh resort chỉ dành cho người lớn</li>
+ <li>Giá tham khảo /đêm ~900 – 1.800 USD</li> 
+ <li>Nhà hàng 5.8 Undersea nổi tiếng, nhiều nhà hàng, vừa cao cấp vừa casual </li>
+<li><a href="https://www.hurawalhi.com/"> Website</a></li>
+
+</ul>
+
+</div>
+
+
+ 
+<div class="card">
+  <img src=" mal12.jpg" class="zoom-img" style="width: 200 px;">  
+<h4>Centara Grand Island Resort & Spa</h4>
+<ul> <li>Dành cho gia đình, cặp đôi</li>
+<li> All-inclusive rất toàn diện: ăn uống, tour snorkeling, massage
+<li>Giá tham khảo /đêm ~500 – 900 USD</li>  
+<li><a href="https://www.centarahotelsresorts.com/"> Website</a></li>		
+ 
+</ul>
+</div></div>
+
+<div class="section">    
+    <div class="columns"> 
+<div class="card">
+  <img src=" meo1.jpg" class="zoom-img" style="width: 200 px;">  
+<h4>📌 Lưu ý chung khi chọn resort all-inclusive</h4>
+<ul><li>Kiểm tra gói bao gồm gì: Có nơi bao gồm cả tour ngắm cá heo, snorkeling, kayak; có nơi chỉ bao gồm ăn uống.</li>
+<li>Chọn đảo gần hoặc xa sân bay: Đảo gần tiện đi speedboat, đảo xa thường phải đi thủy phi cơ (tốn thêm $300–600/người).</li>
+<li>Xác định phong cách: Muốn yên tĩnh, lãng mạn → resort adults-only</li>
+<li>Muốn vui nhộn, nhiều hoạt động → resort có nhiều nhà hàng và thể thao biển</li>
+<li>Đặt sớm mùa cao điểm: Ít nhất 6 tháng trước để có giá tốt và phòng đẹp.</li>
+
+ </ul>
+
+ </div></div>
+
+
+
+
+
+
+<div class="section">    
+    <div class="columns">
+<div class="card">
+           
+        <img src="mal13.jpg" class="zoom-img" style="width: 200 px;">  
+         <h3 >Dưới đây là hướng dẫn từng bước hoàn chỉnh cho chuyến đi 5 ngày du lịch của bạn từ Fairfax, VA đến Maldives</h3>
+ </div></div>
+
+<div class="section">    
+    <div class="columns">
+ <div class="card">
+        <img src="mal2.jpg" class="zoom-img" style="width: 200 px;">  
+<h3>🎒Chuẩn bị </h3>
+<ul><li> Giấy tờ cần thiết: Nếu bạn là công dân Mỹ không cần passport khi bay nội địa giữa các đảo.</li>
+<li>Vé máy bay khứ hồi. Giấy xác nhận đặt khách sạn</li>
+<li>Đặt vé trước: Haleakalā (sunrise at summit) yêu cầu reservation cho xe/khách để xem bình minh; phải đặt qua <a href="https://www.recreation.gov/ticket/facility/"> Website</a>
+Nếu không có vé, có thể vào sau 7:00 AM nhưng sunrise cần vé.</li>
+<li>USS Arizona / Pearl Harbor đặt vé qua <a href="https://www.recreation.gov/ticket/facility/"> Website</a> </li>
+<li>Book khách sạn & nhà hàng. Chọn khách sạn có nhiều nhà hàng nội khu nếu bạn thích ăn uống đa dạng (gợi ý: Halekulani, Aulani, Grand Wailea, Four Seasons Hualālai </li>
+<li>Phương tiện di chuyển: Nếu muốn tự lái: đặt xe thuê sớm (đặc biệt mùa cao điểm). Lưu ý phí “young driver”, quy định seatbelt, giới hạn tốc độ, bảo hiểm bắt buộc. 
+Nếu chỉ ở Waikiki: có thể không cần thuê xe, đi bộ + taxi/ride-share + tour.</li>
+<li>Kem chống nắng SPF50+, mũ, kính râm, đồ bơi, dép/chạy bộ, áo nhẹ cho chiều tối, bộ sơ cứu cá nhân, thuốc say tàu/thuyền.
+Ổ cắm/adapter, pin dự phòng, túi chống nước cho điện thoại.</li></ul>
+
+</div>
+
+<div class="card">
+        <img src="mal.jpg" class="zoom-img" style="width: 200 px;">  
+<p><b>📅 Ngày 1:</b> Đến Maldives & Check-in Resort </p>
+<ul><li> Sáng: ✈️Hạ cánh sân bay Malé (Velana International Airport)</li>
+<li>Chuyển tiếp đến resort bằng thủy phi cơ hoặc speedboat (tùy vị trí đảo).</li>
+<li>Trưa: Ăn trưa tại nhà hàng buffet chính của resort.</li>
+<li>Chiều: Tắm biển hoặc thư giãn bên hồ bơi. Chụp ảnh hoàng hôn ở bãi biển riêng. </li>
+<li>Tối: Dùng bữa tối tại nhà hàng hải sản (trong gói all-inclusive).
+Ngắm sao hoặc xem show giải trí tại resort </li>
+</ul>
+
+</div>
+
+<div class="card">
+        <img src="mal14.jpg" class="zoom-img" style="width: 200 px;">  
+<p><b>📅 Ngày 2:</b> Snorkeling & Thư giãn Spa</p>
+<ul><li>Sáng: Đi tour snorkeling ngắm san hô và cá nhiệt đới (thường bao gồm trong gói).</li>
+<li>Trưa: Ăn tại nhà hàng phong cách quốc tế.</li>
+<li>Chiều: Thư giãn với liệu trình spa (nhiều resort tặng 1–2 lần miễn phí).
+Tự do tắm nắng, bơi hoặc paddle board.</li>
+<li>Tối: Ăn tối BBQ ngoài trời hoặc tại nhà hàng Ý/Nhật của resort.</li>
+
+</ul> 
+
+</div></div>
+
+
+
+<div class="section">    
+    <div class="columns">
+<div class="card">
+        <img src="mal15.jpg" class="zoom-img" style="width: 200 px;">  
+<p><b>📅 Ngày 3:</b>Ngắm cá heo & Lặn bình khí (Scuba Diving)</p>
+<ul><li>Sáng: Tham gia tour ngắm cá heo hoặc cá mập voi (whale shark watching). </li>
+<li>Trưa: Picnic trên bãi cát giữa biển (nhiều resort tổ chức). </li>
+<li>Chiều: Lặn bình khí (có huấn luyện viên nếu chưa có chứng chỉ). </li>
+<li>Tối: Ăn tối tại nhà hàng dưới nước (nếu resort có, như Hurawalhi 5.8 Undersea).</li>  
+ </ul>
+
+</div>
+
+
+<div class="card">
+        <img src="mal16.jpg" class="zoom-img" style="width: 200 px;">  
+
+<p> <b>📅Ngày 4:</b> Khám phá đảo & Hoạt động giải trí</p>
+<ul><li>Sáng: Tham gia lớp yoga buổi sáng bên biển. Chèo kayak hoặc đi catamaran.</li>
+<li>Trưa: Thưởng thức hải sản tươi tại nhà hàng. </li>
+<li>Chiều: Tham quan đảo địa phương gần resort (Local Island Tour).<ul><li>
+<li>Tối: Private dinner trên bãi biển (romantic dinner setup).</li>  
+ </ul>
+
+</div>
+
+<div class="card">
+        <img src="mal17.jpg" class="zoom-img" style="width: 200 px;">  
+
+<p>  <b>📅Ngày 5: </b>Tạm biệt Maldives</p>
+<ul><li>Sáng: Ăn sáng, chụp ảnh cuối cùng.</li>
+<li> Check-out và di chuyển về sân bay Malé.</li>
+<li> Trưa/Chiều: Bay về Fairfax VA </li> 
+ 
+</ul>
+
+
+
+</div></div>
+
+
+<div class="section">    
+    <div class="columns">
+<div class="card">
+        <img src="mal18.jpg" class="zoom-img" style="width: 200 px;">          
+<h3>⚠️ Lưu ý riêng khi ở Maldives</h3>
+<ul><li>Là quốc gia Hồi giáo → Trang phục lịch sự khi ở đảo dân sinh (không bikini ngoài bãi tắm riêng).</li>
+<li>Giá cả dịch vụ trên resort thường cao hơn đất liền.</li>
+<li>Không được mang rượu vào quốc gia này (resort có phục vụ).</li>
+<li>Luôn đặt tour qua dịch vụ uy tín để đảm bảo an toàn khi ra đảo xa.</li>
+<li>Giữ hộ chiếu và giấy tờ quan trọng trong két an toàn của khách sạn; scan lưu bản mềm trên email hoặc cloud.</li>
+<li>Luôn kiểm tra dự báo thời tiết (mùa mưa ở Maldives thường từ tháng 5–11).</li>
+<li>Giữ hộ chiếu và giấy tờ quan trọng trong két an toàn của khách sạn; scan lưu bản mềm trên email hoặc cloud.</li>
+ 
+
+ </ul>
+</div>
+
+<div class="card">
+        <img src="mal19.jpg" class="zoom-img" style="width: 200 px;">   
+<h3>Nếu bạn cần hỗ trợ ở Maldives</h3>
+<ul><li>Ở Maldives không có Đại sứ quán/Lãnh sự quán Hoa Kỳ</li>
+<li>Đại sứ quán Hoa Kỳ tại Colombo, Sri Lanka</li>
+<li>Điện thoại khẩn: +94 11 249 8500 (hoạt động 24/7 cho công dân Mỹ gặp sự cố khẩn cấp).
+<a href="https://lk.usembassy.gov/"> Website</a></li>
+<li>Trước khi đi, hãy đăng ký chuyến đi tại: <a href="https://step.state.gov/"> Website</a>, nếu có sự cố (thiên tai, biểu tình, dịch bệnh…),
+ Đại sứ quán sẽ dễ dàng liên lạc và hỗ trợ bạn.</li>
+<li>Số khẩn cấp: Cảnh sát: 119</li>
+<li>Cấp cứu y tế: 102 </li>
+<li>Cứu hỏa: 118</li>
+<li>Sân bay quốc tế Velana (Male): +960 332 3506 </li> 
+
+
+</ul>
+</div></div>
+
+
+
+
+
+    
+     
+       
+      
+
+
+
+    
+</body>
+</html>
